@@ -1,0 +1,265 @@
+\begin{thebibliography}{10}
+
+\bibitem{Ambler}
+S.~W. Ambler.
+\newblock Agile/lean documentation, May 2020.
+\newblock \\ http://www.agilemodeling.com/essays/agileDocumentation.htm.
+
+\bibitem{anquetil2005tool}
+N.~Anquetil, K.~M. Oliveira, A.~dos Santos, P.~da~Silva~jr, L.~C. de~Araujo~jr,
+  and S.~Vieira.
+\newblock A tool to automate re-documentation.
+\newblock In {\em Forum of the CAISE, Conference on Advanced Information
+  Systems Engineering (CAiSE’05)}, 2005.
+
+\bibitem{chambers2010flumejava}
+C.~Chambers, A.~Raniwala, F.~Perry, S.~Adams, R.~R. Henry, R.~Bradshaw, and
+  N.~Weizenbaum.
+\newblock Flumejava: easy, efficient data-parallel pipelines.
+\newblock {\em ACM Sigplan Notices}, 45(6):363--375, 2010.
+
+\bibitem{cioch1996documentation}
+F.~A. Cioch, M.~Palazzolo, and S.~Lohrer.
+\newblock A documentation suite for maintenance programmers.
+\newblock In {\em 1996 Proceedings of International Conference on Software
+  Maintenance}, pages 286--286. IEEE Computer Society, 1996.
+
+\bibitem{danial2009cloc}
+A.~Danial.
+\newblock Cloc--count lines of code.
+\newblock {\em Open source}, 2009.
+
+\bibitem{de2005study}
+S.~C.~B. de~Souza, N.~Anquetil, and K.~M. de~Oliveira.
+\newblock A study of the documentation essential to software maintenance.
+\newblock In {\em Proceedings of the 23rd annual international conference on
+  Design of communication: documenting \& designing for pervasive information},
+  pages 68--75, 2005.
+
+\bibitem{dean2004mapreduce}
+J.~Dean and S.~Ghemawat.
+\newblock Mapreduce: Simplified data processing on large clusters.
+\newblock 2004.
+
+\bibitem{dourish1992awareness}
+P.~Dourish and V.~Bellotti.
+\newblock Awareness and coordination in shared workspaces.
+\newblock In {\em Proceedings of the 1992 ACM conference on Computer-supported
+  cooperative work}, pages 107--114, 1992.
+
+\bibitem{dyer2013boa}
+R.~Dyer, H.~A. Nguyen, H.~Rajan, and T.~N. Nguyen.
+\newblock Boa: A language and infrastructure for analyzing ultra-large-scale
+  software repositories.
+\newblock In {\em 2013 35th International Conference on Software Engineering
+  (ICSE)}, pages 422--431. IEEE, 2013.
+
+\bibitem{eick2001does}
+S.~G. Eick, T.~L. Graves, A.~F. Karr, J.~S. Marron, and A.~Mockus.
+\newblock Does code decay? assessing the evidence from change management data.
+\newblock {\em IEEE Transactions on Software Engineering}, 27(1):1--12, 2001.
+
+\bibitem{forward2002relevance}
+A.~Forward and T.~C. Lethbridge.
+\newblock The relevance of software documentation, tools and technologies: a
+  survey.
+\newblock In {\em Proceedings of the 2002 ACM symposium on Document
+  engineering}, pages 26--33, 2002.
+
+\bibitem{goodman1995building}
+S.~Goodman, P.~Wolcott, and G.~Burkhart.
+\newblock {\em Building on the basics: an examination of high-performance
+  computing export control policy in the 1990s}.
+\newblock Center for International Security \& Cooperation, 1995.
+
+\bibitem{gousios2013ghtorent}
+G.~Gousios.
+\newblock The ghtorent dataset and tool suite.
+\newblock In {\em 2013 10th Working Conference on Mining Software Repositories
+  (MSR)}, pages 233--236. IEEE, 2013.
+
+\bibitem{gousios2013exploration}
+G.~Gousios, M.~Pinzger, and A.~Van~Deursen.
+\newblock An exploration of the pull-based software development model.
+\newblock In {\em ICSE}, volume~10, pages 2568225--2568260, 2013.
+
+\bibitem{grubb2003software}
+P.~Grubb and A.~A. Takang.
+\newblock {\em Software maintenance: concepts and practice}.
+\newblock World Scientific, 2003.
+
+\bibitem{landau2000standing}
+S.~Landau.
+\newblock Standing the test of time: The data encryption standard.
+\newblock {\em Notices of the AMS}, 47(3):341--349, 2000.
+
+\bibitem{lehman1980programs}
+M.~M. Lehman.
+\newblock Programs, life cycles, and laws of software evolution.
+\newblock {\em Proceedings of the IEEE}, 68(9):1060--1076, 1980.
+
+\bibitem{lerner2002some}
+J.~Lerner and J.~Tirole.
+\newblock Some simple economics of open source.
+\newblock {\em The journal of industrial economics}, 50(2):197--234, 2002.
+
+\bibitem{lindvall2002empirical}
+M.~Lindvall, V.~Basili, B.~Boehm, P.~Costa, K.~Dangle, F.~Shull, R.~Tesoriero,
+  L.~Williams, and M.~Zelkowitz.
+\newblock Empirical findings in agile methods.
+\newblock In {\em Conference on extreme programming and agile methods}, pages
+  197--207. Springer, 2002.
+
+\bibitem{macbeth2011cliff}
+G.~Macbeth, E.~Razumiejczyk, and R.~D. Ledesma.
+\newblock Cliff's delta calculator: A non-parametric effect size program for
+  two groups of observations.
+\newblock {\em Universitas Psychologica}, 10(2):545--555, 2011.
+
+\bibitem{mockus2000case}
+A.~Mockus, R.~T. Fielding, and J.~Herbsleb.
+\newblock A case study of open source software development: the apache server.
+\newblock In {\em Proceedings of the 22nd international conference on Software
+  engineering}, pages 263--272, 2000.
+
+\bibitem{munaiah2017curating}
+N.~Munaiah, S.~Kroh, C.~Cabrey, and M.~Nagappan.
+\newblock Curating github for engineered software projects.
+\newblock {\em Empirical Software Engineering}, 22(6):3219--3253, 2017.
+
+\bibitem{Munaiah}
+C.~C. Munaiah~N, Kroh~S and N.~M.
+\newblock Home of the reporeapers, Feb. 2020.
+\newblock \\https://reporeapers.github.io.
+
+\bibitem{nagappan2005providing}
+N.~Nagappan, L.~Williams, J.~Osborne, M.~Vouk, and P.~Abrahamsson.
+\newblock Providing test quality feedback using static source code and
+  automatic test suite metrics.
+\newblock In {\em 16th IEEE international symposium on software reliability
+  engineering (ISSRE'05)}, pages 10--pp. IEEE, 2005.
+
+\bibitem{Nextu}
+Nextu.
+\newblock ¿qué es github?, Feb. 2020.
+\newblock \\https://www.nextu.com/blog/que-es-github.
+
+\bibitem{pfleeger1998software}
+S.~L. Pfleeger and J.~M. Atlee.
+\newblock {\em Software engineering: theory and practice}.
+\newblock Pearson Education India, 1998.
+
+\bibitem{phoha1997standard}
+V.~Phoha.
+\newblock A standard for software documentation.
+\newblock {\em Computer}, 30(10):97--98, 1997.
+
+\bibitem{pigoski1996practical}
+T.~M. Pigoski.
+\newblock {\em Practical software maintenance: best practices for managing your
+  software investment}.
+\newblock Wiley Publishing, 1996.
+
+\bibitem{pike2005interpreting}
+R.~Pike, S.~Dorward, R.~Griesemer, and S.~Quinlan.
+\newblock Interpreting the data: Parallel analysis with sawzall.
+\newblock {\em Scientific Programming}, 13(4):277--298, 2005.
+
+\bibitem{pressman2005software}
+R.~S. Pressman.
+\newblock {\em Software engineering: a practitioner's approach}.
+\newblock Palgrave macmillan, 2005.
+
+\bibitem{rajlich2000incremental}
+V.~Rajlich.
+\newblock Incremental redocumentation using the web.
+\newblock {\em IEEE Software}, 17(5):102--106, 2000.
+
+\bibitem{raymond1999cathedral}
+E.~Raymond.
+\newblock The cathedral and the bazaar.
+\newblock {\em Knowledge, Technology \& Policy}, 12(3):23--49, 1999.
+
+\bibitem{richards2011eval}
+G.~Richards, C.~Hammer, B.~Burg, and J.~Vitek.
+\newblock The eval that men do.
+\newblock In {\em European Conference on Object-Oriented Programming}, pages
+  52--78. Springer, 2011.
+
+\bibitem{seacord2003modernizing}
+R.~C. Seacord, D.~Plakosh, and G.~A. Lewis.
+\newblock {\em Modernizing legacy systems: software technologies, engineering
+  processes, and business practices}.
+\newblock Addison-Wesley Professional, 2003.
+
+\bibitem{sirera:_2015estudio}
+A.~Sirera~Mart{\'\i}nez.
+\newblock {\em Trabajo fin de grado: Estudio sobre uso de Big Data en pymes}.
+\newblock Universitat Oberta de Catalunya, 2015.
+
+\bibitem{syer2013revisiting}
+M.~D. Syer, M.~Nagappan, A.~E. Hassan, and B.~Adams.
+\newblock Revisiting prior empirical findings for mobile apps: An empirical
+  case study on the 15 most popular open-source android apps.
+\newblock In {\em Proceedings of the 2013 Conference of the Center for Advanced
+  Studies on Collaborative Research}, pages 283--297, 2013.
+
+\bibitem{teles2004extreme}
+V.~M. TELES.
+\newblock Extreme programming: aprenda como encantar seus usu{\'a}rios
+  desenvolvendo software com agilidade e alta qualidade novatec editora.
+\newblock {\em S{\~a}o Paulo}, 2004.
+
+\bibitem{thomas2001documentation}
+B.~Thomas and S.~Tilley.
+\newblock Documentation for software engineers: what is needed to aid system
+  understanding?
+\newblock In {\em Proceedings of the 19th annual international conference on
+  Computer documentation}, pages 235--236, 2001.
+
+\bibitem{tilley1991info}
+S.~Tilley and H.~M{\"u}ller.
+\newblock Info: a simple document annotation facility.
+\newblock In {\em Proceedings of the 9th annual international conference on
+  Systems documentation}, pages 30--36, 1991.
+
+\bibitem{tilley1993documenting}
+S.~R. Tilley.
+\newblock Documenting-in-the-large vs. documenting-in-the-small.
+\newblock In {\em CASCON}, pages 1083--1090. Citeseer, 1993.
+
+\bibitem{tilley1992documenting}
+S.~R. Tilley, H.~A. M{\"u}ller, and M.~A. Orgun.
+\newblock Documenting software systems with views.
+\newblock In {\em Proceedings of the 10th annual international conference on
+  Systems documentation}, pages 211--219, 1992.
+
+\bibitem{weiss2007long}
+C.~Weiss, R.~Premraj, T.~Zimmermann, and A.~Zeller.
+\newblock How long will it take to fix this bug?
+\newblock In {\em Fourth International Workshop on Mining Software Repositories
+  (MSR'07: ICSE Workshops 2007)}, pages 1--1. IEEE, 2007.
+
+\bibitem{whitehead2010collaborative}
+J.~Whitehead, I.~Mistr{\'\i}k, J.~Grundy, and A.~Van~der Hoek.
+\newblock Collaborative software engineering: concepts and techniques.
+\newblock In {\em Collaborative Software Engineering}, pages 1--30. Springer,
+  2010.
+
+\bibitem{zaidman2008mining}
+A.~Zaidman, B.~Van~Rompaey, S.~Demeyer, and A.~Van~Deursen.
+\newblock Mining software repositories to study co-evolution of production \&
+  test code.
+\newblock In {\em 2008 1st international conference on software testing,
+  verification, and validation}, pages 220--229. IEEE, 2008.
+
+\bibitem{zapponi2016githut}
+C.~Zapponi.
+\newblock Githut-programming languages and github, 2016.
+
+\bibitem{zhu1997software}
+H.~Zhu, P.~A. Hall, and J.~H. May.
+\newblock Software unit test coverage and adequacy.
+\newblock {\em Acm computing surveys (csur)}, 29(4):366--427, 1997.
+
+\end{thebibliography}

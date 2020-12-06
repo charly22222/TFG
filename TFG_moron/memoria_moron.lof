@@ -1,0 +1,25 @@
+\babel@toc {spanish}{}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Fases de an\'alisis}}{3}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Planificaci\'on temporal del Trabajo Fin de Grado}}{6}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Imagen extra\IeC {\'\i }da de guides.github.com}}{13}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Imagen extra\IeC {\'\i }da de guides.github.com}}{14}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Imagen extra\IeC {\'\i }da de guides.github.com}}{15}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Imagen extra\IeC {\'\i }da de guides.github.com}}{16}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces M\'etrica SLOC de un repositorio}}{21}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces N\'umero de repositorios en la organizaci\'on agrupados por lenguajes de programaci\'on.}}{42}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces N\'umero de repositorios en la utilidad del conjunto de datos agrupados por lenguajes de progamaci\'on.}}{43}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Distribuci\'on del n\'umero de puntuaci\'on de los repositorios; (a) en la organizaci\'on y (b) utilidad del conjunto de datos}}{44}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Distribuci\'on de las dimensiones de repositorios en el conjunto de datos de la organizaci\'on.}}{45}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Distribuci\'on de las dimensiones obtenidas de los repositorios en el conjunto de datos de utilidad.}}{46}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces $\rho $ de Spearman entre pares de dimensiones en la organizaci\'on (a) y conjuntos de datos de utilidad (b) con - (gui\'on) representando las correlaciones estad\IeC {\'\i }sticamente insignificantes.}}{47}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Distribuci\'on de las dimensiones de los repositorios en el conjunto de validaci\'on.}}{50}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces N\'umero de repositorios obtenidos por los clasificadores basados en la puntuaci\'on y Random Forest agrupados por lenguajes de programaci\'on (ORGANIZACI\'ON).}}{56}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces N\'umero de repositorios obtenidos por los clasificadores basados en la puntuaci\'on y Random Forest agrupados por los lenguajes de programaci\'on (UTILIDAD).}}{57}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Comparaci\'on de la distribuci\'on de las dimensiones de los repositorios con diferentes etiquetas de clasificaci\'on manual pero todas propiedad de organizaciones.}}{58}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Comparaci\'on de la distribuci\'on de las dimensiones de los repositorios que contienen proyectos inform\'aticos de ingenier\IeC {\'\i }a propiedad de organizaciones y usuarios.}}{60}
+\addvspace {10\p@ }

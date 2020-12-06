@@ -1,0 +1,51 @@
+\babel@toc {spanish}{}
+\contentsline {chapter}{\numberline {1}Introducci\'on}{1}
+\contentsline {section}{\numberline {1.1}Retos del Big Data}{2}
+\contentsline {subsection}{\numberline {1.1.1}An\'alisis de los datos}{2}
+\contentsline {section}{\numberline {1.2}Estructura de la memoria}{3}
+\contentsline {chapter}{\numberline {2}Objetivos}{5}
+\contentsline {section}{\numberline {2.1}Objetivo general}{5}
+\contentsline {section}{\numberline {2.2}Objetivos espec\IeC {\'\i }ficos}{5}
+\contentsline {section}{\numberline {2.3}Planificaci\'on temporal}{6}
+\contentsline {chapter}{\numberline {3}Estado del arte - Tecnolog\IeC {\'\i }as relacionadas}{7}
+\contentsline {section}{\numberline {3.1}Contexto}{10}
+\contentsline {section}{\numberline {3.2}Definici\'on de Git}{11}
+\contentsline {section}{\numberline {3.3}Funcionamiento de GitHub}{12}
+\contentsline {section}{\numberline {3.4}Marco de evaluaci\'on}{16}
+\contentsline {section}{\numberline {3.5}Fuentes de datos}{17}
+\contentsline {subsection}{\numberline {3.5.1}Metadatos}{17}
+\contentsline {subsection}{\numberline {3.5.2}C\'odigo fuente}{19}
+\contentsline {section}{\numberline {3.6}Dimensiones}{20}
+\contentsline {subsection}{\numberline {3.6.1}Comunidad}{22}
+\contentsline {subsection}{\numberline {3.6.2}Integraci\'on continua}{23}
+\contentsline {subsection}{\numberline {3.6.3}Documentaci\'on}{24}
+\contentsline {subsection}{\numberline {3.6.4}Historia}{28}
+\contentsline {subsection}{\numberline {3.6.5}Problemas}{29}
+\contentsline {subsection}{\numberline {3.6.6}Licencia}{30}
+\contentsline {subsection}{\numberline {3.6.7}Pruebas unitarias (Unit testing)}{31}
+\contentsline {section}{\numberline {3.7}Herramientas estad\IeC {\'\i }sticas empleadas}{33}
+\contentsline {subsection}{\numberline {3.7.1}Coeficiente de correlaci\'on de Spearman}{33}
+\contentsline {subsection}{\numberline {3.7.2}Test de mann\@inpenc@undefined@ {latin1}whitney\@inpenc@undefined@ {latin1}wilcoxon}{33}
+\contentsline {subsection}{\numberline {3.7.3}Estad\IeC {\'\i }stico Delta de Cliff}{35}
+\contentsline {subsection}{\numberline {3.7.4}Clasificador basado en la puntuaci\'on}{36}
+\contentsline {subsection}{\numberline {3.7.5} Random Forest}{37}
+\contentsline {chapter}{\numberline {4}Dise\~no e implementaci\'on}{39}
+\contentsline {section}{\numberline {4.1}Training Data Sets}{39}
+\contentsline {subsection}{\numberline {4.1.1}Organizaci\'on del conjunto de datos}{41}
+\contentsline {subsection}{\numberline {4.1.2}Utilidad del conjunto de datos}{41}
+\contentsline {subsection}{\numberline {4.1.3}Datos de instancias negativas}{42}
+\contentsline {subsection}{\numberline {4.1.4}Resumen de los conjuntos de datos}{43}
+\contentsline {chapter}{\numberline {5}Resultados}{49}
+\contentsline {section}{\numberline {5.1}Validaci\'on}{49}
+\contentsline {subsection}{\numberline {5.1.1}Establecer la verdad fundamental}{51}
+\contentsline {subsection}{\numberline {5.1.2}Validaci\'on interna}{51}
+\contentsline {subsection}{\numberline {5.1.3}Validaci\'on externa}{53}
+\contentsline {section}{\numberline {5.2}Predicci\'on}{54}
+\contentsline {section}{\numberline {5.3}Discusi\'on}{55}
+\contentsline {section}{\numberline {5.4}Puntos d\'ebiles del estudio}{59}
+\contentsline {chapter}{\numberline {6}Conclusiones}{61}
+\contentsline {section}{\numberline {6.1}Consecuci\'on de objetivos}{61}
+\contentsline {section}{\numberline {6.2}Aplicaci\'on de lo aprendido}{62}
+\contentsline {section}{\numberline {6.3}Lecciones aprendidas}{62}
+\contentsline {section}{\numberline {6.4}Futuros trabajos}{62}
+\contentsline {chapter}{Bibliograf\'{\i }a}{63}
