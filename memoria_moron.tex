@@ -31,11 +31,19 @@
 \usepackage[nottoc, notlot, notlof, notindex]{tocbibind} %% Opciones de índice
 \usepackage{latexsym}  %% Logo LaTeX
 \usepackage[table,xcdraw]{xcolor}
+\usepackage{multirow}
 
 \title{Aplicación de Big Data a Proyectos de Ingeniería en GitHub}
 \author{Carlos Morón Barrios}
 
 \renewcommand{\baselinestretch}{1.5}  %% Interlineado
+
+\newif\ifdraft
+\drafttrue
+%\draftfalse
+
+\input{macros}
+
 
 \begin{document}
 
@@ -52,11 +60,11 @@
 \vspace{1.75cm}
 
 \Large
-GRADO EN INGENERÍA EN TECNOLOGÍA DE LA TELECOMUNICACIÓN
+GRADO EN INGENIERÍA EN TECNOLOGÍAS DE LA TELECOMUNICACIÓN
 \vspace{0.4cm}
 
 \large
-Curso Académico 2019/2020
+Curso Académico 2020/2021
 
 \vspace{0.8cm}
 
@@ -65,7 +73,7 @@ Trabajo Fin de Grado
 \vspace{2.5cm}
 
 \LARGE
-APLICACIÓN DE BIG DATA A PROYECTOS DE INGENIERÍA EN GitHub
+APLICACIÓN DE BIG DATA A PROYECTOS DE INGENIERÍA EN GITHUB
 \vspace{4cm}
 
 \large
@@ -92,7 +100,7 @@ Tutor : Dr. Gregorio Robles
 
 \vspace{1cm}
 \large
-Aplicación de Big Data a Proyectos de Ingeniería en  GitHub
+Aplicación de Big Data a Proyectos de Ingeniería en GitHub
 
 \vspace{1cm}
 
@@ -125,7 +133,7 @@ y habiendo obtenido la siguiente calificación:
 
 \vspace{1cm}
 \begin{flushright}
-Fuenlabrada, a \qquad$\;\,$ de \qquad\qquad\qquad\qquad de 2020
+Fuenlabrada, a \qquad$\;\,$ de diciembre de 2020
 \end{flushright}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -159,13 +167,13 @@ Gracias también a mis amigos porque sin ellos, nada sería lo mismo. Su apoyo e i
 %\addcontentsline{toc}{chapter}{Resumen} % si queremos que aparezca en el índice
 \markboth{RESUMEN}{RESUMEN} % encabezado
 
-El objetivo de este Trabajo Fin de Grado es hacer un estudio sobre las tecnologías Big Data y su aplicación al estudio de proyectos de ingeniería en grandes repositorios como el GitHub.\\
+El objetivo de este Trabajo Fin de Grado es hacer un estudio sobre las tecnologías Big Data y su aplicación al estudio de proyectos de ingeniería en grandes repositorios como el GitHub.
 
-Github  es un sitio que guarda una carpeta de documentos al que te conectas a través de un terminal de comando (o CMD, en Windows) o por medio de una aplicación de escritorio.\\
+GitHub  es un sitio que guarda una carpeta de documentos al que te conectas a través de un terminal de comando (o CMD, en Windows) o por medio de una aplicación de escritorio.
 
-En el mundo actual centrado en el software, repositorios de software a gran escala, p. ej. SourceForge (más de 350.000 proyectos), GitHub (más de 250.000 proyectos) y Google Code (más de 250.000 proyectos) son la nueva biblioteca de Alejandría. Contienen una enorme cantidad de software e información sobre el software. Tanto los científicos como los ingenieros están interesados en analizar esta gran cantidad de información tanto por curiosidad como por probar sus hipótesis. Sin embargo, la extracción sistemática de datos relevantes de estos repositorios y el análisis de dichos datos para probar hipótesis es difícil.\\
+En el mundo actual centrado en el software, repositorios de software a gran escala, p. ej. SourceForge (más de 350.000 proyectos), GitHub (más de 250.000 proyectos) \grex{¿GitHub más de 250.000 proyectos?} y Google Code (más de 250.000 proyectos) son la nueva biblioteca de Alejandría. Contienen una enorme cantidad de software e información sobre el software. Tanto los científicos como los ingenieros están interesados en analizar esta gran cantidad de información tanto por curiosidad como por probar sus hipótesis. Sin embargo, la extracción sistemática de datos relevantes de estos repositorios y el análisis de dichos datos para probar hipótesis es difícil.
 
-En este trabajo se pretende analizar los repositorios de GitHub para seleccionar los proyectos de software de ingeniería e identificarlos.
+En este trabajo se pretende analizar los repositorios de GitHub para seleccionar los proyectos de software de ingeniería e identificarlos. \grex{Detallar más. Has hablado mucho de lo que hay, pero poco o nada de lo que has hecho tú en este TFG}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Resumen en inglés
@@ -174,11 +182,11 @@ En este trabajo se pretende analizar los repositorios de GitHub para seleccionar
 %\addcontentsline{toc}{chapter}{Summary} % si queremos que aparezca en el índice
 \markboth{SUMMARY}{SUMMARY} % encabezado
 
-The objective of this project is to study Big Data technologies and their application to the study of engineering projects in large repositories such as GitHub.\\
+The objective of this project is to study Big Data technologies and their application to the study of engineering projects in large repositories such as GitHub.
 
-Github is a site that stores a folder of documents that you connect to through a command terminal (or CMD, in Windows) or through a desktop application.\\
+GitHub is a site that stores a folder of documents that you connect to through a command terminal (or CMD, in Windows) or through a desktop application.
 
-In today's software-centric world, large-scale software repositories, e.g. ex. SourceForge (more than 350,000 projects), GitHub (more than 250,000 projects) and Google Code (more than 250,000 projects) are the new library of Alexandria. They contain a huge amount of software and information about the software. Scientists and engineers are interested in analyzing this vast amount of information both out of curiosity and to test their hypotheses. However, the systematic extraction of relevant data from these repositories and analysis of such data to test hypotheses is difficult.\\
+In today's software-centric world, large-scale software repositories, e.g. ex. SourceForge (more than 350,000 projects), GitHub (more than 250,000 projects) and Google Code (more than 250,000 projects) are the new library of Alexandria. They contain a huge amount of software and information about the software. Scientists and engineers are interested in analyzing this vast amount of information both out of curiosity and to test their hypotheses. However, the systematic extraction of relevant data from these repositories and analysis of such data to test hypotheses is difficult.
 
 This work aims to analyze the GitHub repositories to select engineering software projects and identify them.
 
@@ -215,31 +223,31 @@ This work aims to analyze the GitHub repositories to select engineering software
 \label{sec:intro} % etiqueta para poder referenciar luego en el texto con ~\ref{sec:intro}
 \pagenumbering{arabic} % para empezar la numeración de página con números
 
-Big Data se ha convertido en la actualidad en un término muy usado y asociado a la gran avalancha de datos que se generan cada día, bien localmente en las empresas o disponibles en Internet ~\cite{sirera:_2015estudio}. \\
+El \emph{Big Data} se ha convertido en la actualidad en un término muy usado y asociado a la gran avalancha de datos que se generan cada día, bien localmente en las empresas o disponibles en Internet~\cite{sirera:_2015estudio}. 
 
-La captura y posterior tratamiento de datos correspondientes a empresas tecnológicas e investigación en ingeniería puede revelar información valiosa para la organización relacionada con sus productos, descubrimiento clientes potenciales y grandes avances en una tecnología determinada. \\
+La captura y posterior tratamiento de datos correspondientes a empresas tecnológicas e investigación en ingeniería puede revelar información valiosa para la organización relacionada con sus productos, descubrimiento clientes potenciales y grandes avances en una tecnología determinada. 
 
-Debido a la gran cantidad de datos que hay que almacenar y tratar, las tecnologías Big Data han estado aparentemente monopolizadas por grandes corporaciones, pero cada vez se avanza más en su aplicación en Universidades e instituciones con una gran I+D implantada, así como en los departamentos I+D de empresas tecnológicas (Pérez, 2017). \\
+Debido a la gran cantidad de datos que hay que almacenar y tratar, las tecnologías Big Data han estado aparentemente monopolizadas por grandes corporaciones, pero cada vez se avanza más en su aplicación en Universidades e instituciones con una gran I+D implantada, así como en los departamentos I+D de empresas tecnológicas (Pérez, 2017) \grex{Esto debería ser una referencia \LaTeX}. 
 
-Debido al desarrollo tecnológico que se ha vivido en la última época con el nacimiento de las redes sociales, dispositivos móviles, sensores, añadir internet a un amplio abanico de cosas y sobre todo la llegada de la tecnología a los ciudadanos, se ha generado un gran volumen de datos (Big Data), así nace la necesidad de poder analizar dichos datos para transformarlos en información (Minelli et al., 2013). Ahora el problema reside en cómo analizar eficazmente los datos.\\
+Debido al desarrollo tecnológico que se ha vivido en la última época con el nacimiento de las redes sociales, dispositivos móviles, sensores, añadir internet a un amplio abanico de cosas y sobre todo la llegada de la tecnología a los ciudadanos, se ha generado un gran volumen de datos (Big Data), así nace la necesidad de poder analizar dichos datos para transformarlos en información (Minelli et al., 2013). Ahora el problema reside en cómo analizar eficazmente los datos.
 
-En el mundo actual centrado en el software, repositorios de software a gran escala, p. ej. SourceForge (más de 350.000 proyectos), GitHub (más de 250.000 proyectos) y Google Code (más de 250.000 proyectos) son la nueva biblioteca de Alejandría. Contienen una enorme cantidad de software e información sobre el software. Tanto los científicos como los ingenieros están interesados en analizar esta gran cantidad de información tanto por curiosidad como por probar sus hipótesis. Sin embargo, la extracción sistemática de datos relevantes de estos repositorios y el análisis de dichos datos para probar hipótesis es difícil.
+En el mundo actual centrado en el software, repositorios de software a gran escala, p. ej. SourceForge (más de 350.000 proyectos), GitHub (más de 250.000 proyectos) \grex{GitHub tiene millones de proyectos} y Google Code (más de 250.000 proyectos) son la nueva biblioteca de Alejandría. Contienen una enorme cantidad de software e información sobre el software. Tanto los científicos como los ingenieros están interesados en analizar esta gran cantidad de información tanto por curiosidad como por probar sus hipótesis. Sin embargo, la extracción sistemática de datos relevantes de estos repositorios y el análisis de dichos datos para probar hipótesis es difícil.
 
 \section{Retos del Big Data}
 \label{sec:retos}
 
-El concepto Big Data abarca diversas propiedades que es necesario tener claras. Debido a la gran cantidad de datos que se va a manejar, es necesario tener las herramientas necesarias para conseguir dar sentido a todos ellos y poder analizarlos, puesto que un gran porcentaje de esos datos (cerca del 85\%) no van a estar estructurados (Pérez, 2017).\\
+El concepto Big Data abarca diversas propiedades que es necesario tener claras. Debido a la gran cantidad de datos que se va a manejar, es necesario tener las herramientas necesarias para conseguir dar sentido a todos ellos y poder analizarlos, puesto que un gran porcentaje de esos datos (cerca del 85\%) no van a estar estructurados (Pérez, 2017) \grex{Esto debería ser una referencia \LaTeX}.
 
-Además, parte de esta enorme generación de datos se da en tiempo real, con lo que no se puede analizar con efectividad con las técnicas normales de procesamiento de datos.\\
+Además, parte de esta enorme generación de datos se da en tiempo real, con lo que no se puede analizar con efectividad con las técnicas normales de procesamiento de datos.
 
-Por otro lado, tenemos la problemática de quien puede realizar el tratamiento de los datos relacionamos con Big Data. Para solucionar este problema se deben formar profesionales especialistas en el análisis de los datos para que creen o usen herramientas de gestión de la información derivada del procesamiento de los datos. En este entorno es donde las tecnologías de la información deben dar el salto (C. N. \&. Batista, 2013). A modo de resumen podemos concluir que la tecnología asociada a Big Data y los objetivos de negocios deben coordinarse para ser capaces de obtener información de calidad.
+Por otro lado, tenemos la problemática de quien puede realizar el tratamiento de los datos relacionamos con Big Data. Para solucionar este problema se deben formar profesionales especialistas en el análisis de los datos para que creen o usen herramientas de gestión de la información derivada del procesamiento de los datos. En este entorno es donde las tecnologías de la información deben dar el salto (C. N. \&. Batista, 2013) \grex{Esto debería ser una referencia \LaTeX}. A modo de resumen podemos concluir que la tecnología asociada a Big Data y los objetivos de negocios deben coordinarse para ser capaces de obtener información de calidad.
 
 \subsection{Análisis de los datos}
 \label{subsec:analisis}
 
-Los datos deben superar un análisis exhaustivo, para revelar la información que contienen y generar conocimiento. El valor potencial de los datos no solo radica en disponer de ellos sino en saber organizarlos y refinarlos para convertirlos en información relevante; el valor que se le da a los datos después del análisis es para incrementar la capacidad de innovar y obtener ventaja sobre los competidores (C. N. \&. Batista, 2013).\\
+Los datos deben superar un análisis exhaustivo, para revelar la información que contienen y generar conocimiento. El valor potencial de los datos no solo radica en disponer de ellos sino en saber organizarlos y refinarlos para convertirlos en información relevante; el valor que se le da a los datos después del análisis es para incrementar la capacidad de innovar y obtener ventaja sobre los competidores (C. N. \&. Batista, 2013) \grex{Esto debería ser una referencia \LaTeX}.
 
-Gestionar correctamente los datos debe generar jurisprudencia en las empresas, la ciudanía y sobre todo en las administraciones ya sean públicas o privadas puesto que analizar correctamente los datos se debe convertir en un activo para la sociedad (C. N. \&. Batista, 2013). En este último trabajo (C. N. \&. Batista, 2013), se proponen las fases del análisis (figura \ref{figura:fases}).
+Gestionar correctamente los datos debe generar jurisprudencia en las empresas, la ciudadanía y sobre todo en las administraciones ya sean públicas o privadas puesto que analizar correctamente los datos se debe convertir en un activo para la sociedad (C. N. \&. Batista, 2013)\grex{Esto debería ser una referencia \LaTeX}. En este último trabajo (C. N. \&. Batista, 2013) \grex{Esto debería ser una referencia \LaTeX}, se proponen las fases del análisis (figura~\ref{figura:fases}).
  \begin{figure}[ht]
     \centering
     \includegraphics[width=12cm, keepaspectratio]{img/Fases.jpg}
@@ -253,9 +261,9 @@ Gestionar correctamente los datos debe generar jurisprudencia en las empresas, l
 \label{sec:estructura}
 \begin{itemize}
 
-\item En el capítulo 1 se hace una introducción al proyecto y a la importancia del manejo de Big Data.
+\item En el capítulo 1 \grex{Esto debería ser una referencia \LaTeX} se hace una introducción al proyecto y a la importancia del manejo de Big Data.
 
-\item  En el capítulo 2 se describen los objetivos : comenzamos presentando la noción de un proyecto de software de ingeniería en el capítulo 2. Luego, proponemos un marco de evaluación en la Sección 2.1 que tiene como objetivo poner en práctica la definición de un proyecto de software de ingeniería a lo largo de un conjunto de dimensiones. 
+\item  En el capítulo 2 \grex{Esto debería ser una referencia \LaTeX} se describen los objetivos : comenzamos presentando la noción de un proyecto de software de ingeniería en el capítulo 2 \grex{Esto debería ser una referencia \LaTeX}. Luego, proponemos un marco de evaluación en la Sección 2.1 que tiene como objetivo poner en práctica la definición de un proyecto de software de ingeniería a lo largo de un conjunto de dimensiones. 
 
 \item Describimos las diversas fuentes de datos utilizadas en nuestro estudio en el capítulo 3.
 
@@ -263,9 +271,9 @@ Gestionar correctamente los datos debe generar jurisprudencia en las empresas, l
 
 \item  En el capítulo 5, proponemos dos variaciones a la definición de un proyecto de software de ingeniería, recopilamos un conjunto de repositorios que se ajustan a las definiciones y presentamos enfoques para construir clasificadores capaces de identificar otros repositorios que se ajusten a la definición de un proyecto de software de ingeniería.
 
-\item  Los resultados de la validación de los clasificadores y su uso para identificar repositorios que se ajustan a una definición particular de un proyecto de software diseñado a partir de una muestra de 1,857,423 repositorios GitHub se presentan en el capítulo 6.
+\item  Los resultados de la validación de los clasificadores y su uso para identificar repositorios que se ajustan a una definición particular de un proyecto de software diseñado a partir de una muestra de 1.857.423 repositorios GitHub se presentan en el capítulo 6.
 
-\item  Comparamos nuestro estudio con la literatura previa en el capítulo 7, discutimos los escenarios de investigación en los que el conjunto de datos y el clasificador podrían usarse en el capítulo 8, y se discuten los matices de ciertos repositorios y las amenazas a la validez en el capítulo 10 y concluimos el documento con el capítulo 11.
+\item  Comparamos nuestro estudio con la literatura previa en el capítulo 7, discutimos los escenarios de investigación en los que el conjunto de datos y el clasificador podrían usarse en el capítulo 8, y se discuten los matices de ciertos repositorios y las amenazas a la validez en el capítulo 10 y concluimos el documento con el capítulo 11. \grex{Cada capítulo tenía un punto antes... y ahora de repente tenemos el resto de capítulos en uno.}
 \end{itemize}
 
 
@@ -285,30 +293,28 @@ Gestionar correctamente los datos debe generar jurisprudencia en las empresas, l
 Mi trabajo fin de grado consiste en identificar los proyectos de software de ingeniería de los repositorios de software libre alojados en la plataforma GitHub.
 
 
-
 \section{Objetivos específicos}
 \label{sec:objetivos-especificos}
 
 Para conseguir el objetivo principal ha sido necesario realizar los siguientes logros:
 \begin{itemize}
-	\item Conseguir y analizar la base de datos de GHTorrent.
-\item	Seleccionar un número determinado de datos para identificar los campos de la base de datos.
-\item	Poner las cabeceras correspondientes a cada fichero como se indica en el esquema de la página GHTorrent.
-\item	Calcular los parámetros correspondientes a cada dimensión.
-\item	Seleccionar los proyectos que se consideran ingeniería en función de las dimensiones elaboradas.
-\item	Comprobar que los proyectos seleccionados son los correctos.
-
+  \item Conseguir y analizar la base de datos de GHTorrent.
+  \item	Seleccionar un número determinado de datos para identificar los campos de la base de datos.
+  \item	Poner las cabeceras correspondientes a cada fichero como se indica en el esquema de la página GHTorrent.
+  \item	Calcular los parámetros correspondientes a cada dimensión.
+  \item	Seleccionar los proyectos que se consideran ingeniería en función de las dimensiones elaboradas.
+  \item	Comprobar que los proyectos seleccionados son los correctos.
 \end{itemize}
 
 \section{Planificación temporal}
 \label{sec:planificacion-temporal}
 
-A continuación, detallo en la figura \ref{figura:tempo} la temporalidad de las diferentes fases de mi trabajo que empezó en enero de 2020.
+A continuación, detallo en la figura \ref{figura:tempo} la temporalidad de las diferentes fases de mi trabajo que empezó en enero de 2020. \grex{Deberías explicar lo que se ve en la figura en el texto.}
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=12cm, keepaspectratio]{img/tempor.pdf}
-    \caption{Planificación temporal del Trabajo Fin de Grado}
+    \caption{Planificación temporal del Trabajo Fin de Grado.}
     \label{figura:tempo}
  \end{figure}
 
@@ -322,19 +328,19 @@ A continuación, detallo en la figura \ref{figura:tempo} la temporalidad de las d
 \chapter{Estado del arte - Tecnologías relacionadas}
 \label{chap:estado}
 
-Los repositorios de software contienen una gran cantidad de información sobre el código, las personas y los procesos que intervienen en el desarrollo de un producto de software. Suponiendo solo una exigua línea de 1K de código por proyecto, los repositorios SourceForge, GitHub y Google Code supondrían al menos 8,61 mil millones de líneas de código. El análisis retrospectivo de estos repositorios de software puede proporcionar información valiosa sobre la evolución y el crecimiento de los productos de software que contiene. Podemos rastrear ese análisis hasta la década de 1970, cuando Belady y Lehman (1976) propusieron las Leyes de evolución del software de Lehman. Hoy en día hay una fuerte inversión económica para el desarrollo de estos análisis, como el proyecto Boa (Dryer et al,~\cite{dyer2013boa}) que recibió más de 1.4 millones de dólares. 
+Los repositorios de software contienen una gran cantidad de información sobre el código, las personas y los procesos que intervienen en el desarrollo de un producto de software. Suponiendo solo una exigua línea de 1K de código por proyecto, los repositorios SourceForge, GitHub y Google Code supondrían al menos 8,61 mil millones de líneas de código. El análisis retrospectivo de estos repositorios de software puede proporcionar información valiosa sobre la evolución y el crecimiento de los productos de software que contiene. Podemos rastrear ese análisis hasta la década de 1970, cuando Belady y Lehman (1976) \grex{Esto debería ser una referencia \LaTeX} propusieron las Leyes de evolución del software de Lehman. Hoy en día hay una fuerte inversión económica para el desarrollo de estos análisis, como el proyecto Boa (Dryer et al,~\cite{dyer2013boa}) \grex{Esto debería ser una referencia \LaTeX} que recibió más de 1,4 millones de dólares. 
 
-En este último trabajo Dyer y colaboradores plantean que tanto los científicos como los ingenieros están interesados en analizar esta gran cantidad de información tanto por curiosidad como por probar hipótesis tan importantes como: ``¿cómo perciben y consideran las personas los posibles impactos de sus ediciones y las de los demás mientras escriben juntas? (Dourish and Bellotti,~\cite{dourish1992awareness})"; ``¿Cuál es la licencia de código abierto más utilizada? (Lerner and Tirole,,~\cite{lerner2002some})"; ``¿Cuántos proyectos continúan usando estándares de cifrado DES (considerados inseguros)? (Landau,~\cite{landau2000standing})~"; ``¿Cuántos proyectos de código abierto tienen una política de control de exportación restringida? (Goodman et al.,~\cite{goodman1995building})"; ``¿Cuántos proyectos en promedio comienzan con una base de código existente de otro proyecto en lugar de cero? (Raymond,~\cite{raymond1999cathedral}	)"; ``¿Con qué frecuencia los profesionales usan las características dinámicas de Javascript, p. Ej. eval? (Richards et al.,~\cite{richards2011eval})''; ``¿Cuál es el tiempo promedio para resolver un error reportado como crítico? (Weiss et al.,\cite{weiss2007long})".
+En este último trabajo Dyer y colaboradores plantean que tanto los científicos como los ingenieros están interesados en analizar esta gran cantidad de información tanto por curiosidad como por probar hipótesis tan importantes como: ``¿cómo perciben y consideran las personas los posibles impactos de sus ediciones y las de los demás mientras escriben juntas? (Dourish and Bellotti,~\cite{dourish1992awareness})"; ``¿Cuál es la licencia de código abierto más utilizada? (Lerner and Tirole,,~\cite{lerner2002some})"; ``¿Cuántos proyectos continúan usando estándares de cifrado DES (considerados inseguros)? (Landau,~\cite{landau2000standing})~"; ``¿Cuántos proyectos de código abierto tienen una política de control de exportación restringida? (Goodman et al.,~\cite{goodman1995building})"; ``¿Cuántos proyectos en promedio comienzan con una base de código existente de otro proyecto en lugar de cero? (Raymond,~\cite{raymond1999cathedral}	)"; ``¿Con qué frecuencia los profesionales usan las características dinámicas de JavaScript, p. Ej. eval? (Richards et al.,~\cite{richards2011eval})''; ``¿Cuál es el tiempo promedio para resolver un error reportado como crítico? (Weiss et al.,\cite{weiss2007long})".
 
 Sin embargo, la barrera de entrada actual podría ser prohibitiva. Por ejemplo, para responder a las preguntas anteriores, un equipo de investigación necesitaría (a) desarrollar experiencia en el acceso programático a los sistemas de control de versiones, (b) establecer una infraestructura para descargar y almacenar los datos de los repositorios de software en poco tiempo, (c) programe una infraestructura en un lenguaje de programación completo como C ++, Java, C o Python para acceder a estos datos locales y responder a la hipótesis, y (d) mejorar la escalabilidad de la infraestructura de análisis para ser capaz de procesar datos a gran escala en un tiempo razonable.
-Estos cuatro requisitos aumentan sustancialmente el costo de la investigación científica. Hay cuatro problemas adicionales. Primero, los experimentos son a menudo irreproducibles porque replicar una configuración experimental requiere un esfuerzo enorme. En segundo lugar, la reutilización de la infraestructura experimental es típicamente baja porque la infraestructura de análisis no está diseñada de manera reutilizable. Después de todo, el foco del investigador original está en el resultado del análisis y no en la reutilización de la infraestructura de análisis. Por lo tanto, los investigadores tienen que replicar los esfuerzos de los demás. Tercero, los datos asociados y producidos por tales experimentos a menudo se pierden y se vuelven inaccesibles y obsoletos, porque no existe una depuración sistemática. Por último, pero no menos importante, construir una infraestructura de análisis para procesar datos a gran escala de manera eficiente puede ser muy difícil (Dean and Ghemawat,~\cite{dean2004mapreduce}; Pike et al.,~\cite{pike2005interpreting}; Chambers et al., ~\cite{chambers2010flumejava}).
+Estos cuatro requisitos aumentan sustancialmente el costo de la investigación científica. Hay cuatro problemas adicionales. Primero, los experimentos son a menudo irreproducibles porque replicar una configuración experimental requiere un esfuerzo enorme. En segundo lugar, la reutilización de la infraestructura experimental es típicamente baja porque la infraestructura de análisis no está diseñada de manera reutilizable. Después de todo, el foco del investigador original está en el resultado del análisis y no en la reutilización de la infraestructura de análisis. Por lo tanto, los investigadores tienen que replicar los esfuerzos de los demás. Tercero, los datos asociados y producidos por tales experimentos a menudo se pierden y se vuelven inaccesibles y obsoletos, porque no existe una depuración sistemática. Por último, pero no menos importante, construir una infraestructura de análisis para procesar datos a gran escala de manera eficiente puede ser muy difícil (Dean and Ghemawat,~\cite{dean2004mapreduce}; Pike et al.,~\cite{pike2005interpreting}; Chambers et al.,~\cite{chambers2010flumejava}).
 
 Por otro lado, los conocimientos adquiridos a través del análisis de los repositorios pueden afectar al proceso de toma de decisiones en un proyecto y mejorar la calidad del software que se está desarrollando. Un ejemplo de esto se puede ver en las recomendaciones hechas por Bird y colaboradores (Bird et al., 2011) en su estudio sobre los efectos de la propiedad del código en la calidad de los sistemas de software. Los autores sugieren que los esfuerzos de aseguramiento de la calidad deberían centrarse en aquellos componentes con muchos desarrolladores del código.
 
-La riqueza de los datos y las posibles ideas que representa fueron los factores habilitantes en el inicio de todo un campo de investigación: los repositorios de software de minería (MSR). En los primeros días de repositorios de software de la minería, los investigadores tenían acceso limitado a los repositorios de software, que estaban alojados principalmente dentro de las organizaciones. Sin embargo, con la proliferación de repositorios de software de acceso abierto como GitHub, Bitbucket, SourceForge y CodePlex para el código fuente y Bugzilla, Mantis y Trac para los errores, los investigadores ahora tienen una gran cantidad de datos para extraer y sacar conclusiones interesantes.
+La riqueza de los datos y las posibles ideas que representa fueron los factores habilitantes en el inicio de todo un campo de investigación: los repositorios de software de minería (MSR). En los primeros días de repositorios de software de la minería, los investigadores tenían acceso limitado a los repositorios de software, que estaban alojados principalmente dentro de las organizaciones. Sin embargo, con la proliferación de repositorios de software de acceso abierto como GitHub, BitBucket, SourceForge y CodePlex para el código fuente y BugZilla, Mantis y Trac para los errores, los investigadores ahora tienen una gran cantidad de datos para extraer y sacar conclusiones interesantes.
 Cada confirmación de código fuente contiene una gran cantidad de información que se puede utilizar para comprender el arte del desarrollo de software. Por ejemplo, Eick~\cite{eick2001does} se zambulló en el rico historial de compromisos (más de 15 años) de un gran sistema de conmutación telefónica para explorar la idea de la descomposición del código. Los repositorios de código fuente modernos ofrecen características que hacen que la gestión de un proyecto de software sea lo más fluida posible. Si bien la integración de características proporciona una mejor trazabilidad para los desarrolladores y gerentes de proyectos, también brinda a los investigadores una fuente de información única, autónoma, organizada y, lo que es más importante, de acceso público desde la cual extraer. Sin embargo, cualquiera puede crear un repositorio para cualquier propósito sin costo alguno. Por lo tanto, la calidad de la información contenida en las falsificaciones puede estar disminuyendo con la adición de muchos repositorios ruidosos, p. repositorios que contienen tareas de trabajo a domicilio, archivos de texto, imágenes o, lo que es peor, la copia de seguridad de una computadora de escritorio.
 
-Kalliamvakou y col. (2014) identificaron este ruido como uno de los nueve peligros a tener en cuenta al extraer datos de GitHub para la investigación de ingeniería de software. La situación se agrava por el gran volumen de repositorios contenidos en estas falsificaciones. A partir de junio de 2016, solo GitHub alojó más de 38 millones de repositorios2 y este número está aumentando rápidamente.
+Kalliamvakou y col. (2014)\grex{Esto debería ser una referencia \LaTeX} identificaron este ruido como uno de los nueve peligros a tener en cuenta al extraer datos de GitHub para la investigación de ingeniería de software. La situación se agrava por el gran volumen de repositorios contenidos en estas falsificaciones. A partir de junio de 2016, solo GitHub alojó más de 38 millones de repositorios2 y este número está aumentando rápidamente. \grex{No deberías coger texto en inglés, pasárselo a Google Translate y hacerlo pasar como tuyo. Si no saltan hoy las herramienas antiplagio, lo harán en el futuro}
 Los investigadores han utilizado varios criterios para dividir las falsificaciones de software gigantescas en conjuntos de datos manejables para sus estudios. Por ejemplo, los investigadores han aprovechado filtros simples como la popularidad para eliminar repositorios ruidosos. Los filtros como la popularidad (medidos como el número de observadores o observadores de estrellas en GitHub, por ejemplo) son simplemente representantes y no pueden ser de propósito general ni representativos de un proyecto de software diseñado. La intuición al usar la popularidad como filtro es que se puede suponer que la popularidad está correlacionada con la calidad. Sin embargo, como Sajnani et al. (2014) han demostrado que la popularidad no está correlacionada con la calidad, cuestionando la utilidad del uso de filtros basados en la popularidad. Creemos que los investigadores que extraen repositorios de software no deberían tener que reinventar filtros para eliminar repositorios no deseados. Hay algunos ejemplos de investigación que adoptan el enfoque de desarrollar sus propios filtros para obtener un conjunto de datos para analizar:
 
 \begin{itemize}
@@ -374,11 +380,11 @@ Además, cuando se quieran marcar los cambios se realizará lo que se conoce como 
 
 También, los sistemas de control de versiones, entre los que se encuentra Git, son la base en la actualidad para los proyectos de equipo ya que podemos trabajar a la vez múltiples programadores en un mismo proyecto, incluso en un mismo archivo de una manera fácil (Openwebinars, 2020).
 
-Por otro lado, con el portal Kinsta, el sistema de control de versiones permite a los desarrolladores administrar el código fuente de un programa y habilitarlo para que se hagan modificaciones a través de la bifurcación y la fusión. La bifurcación te permite crear una copia de una parte del código, para que los desarrolladores puedan modificarla de forma segura sin que los cambios afecten la versión original (Nextu, ~\cite{Nextu}). Esto evita que cualquier error afecte el software final. La fusión permite al desarrollador unir su versión de código al código fuente una vez que ha comprobado su buen funcionamiento, aunque posteriormente el sistema de control de versiones les permitirá a los administradores revertir cualquier cambio.
+Por otro lado, con el portal Kinsta, el sistema de control de versiones permite a los desarrolladores administrar el código fuente de un programa y habilitarlo para que se hagan modificaciones a través de la bifurcación y la fusión. La bifurcación te permite crear una copia de una parte del código, para que los desarrolladores puedan modificarla de forma segura sin que los cambios afecten la versión original (Nextu,~\cite{Nextu}). Esto evita que cualquier error afecte el software final. La fusión permite al desarrollador unir su versión de código al código fuente una vez que ha comprobado su buen funcionamiento, aunque posteriormente el sistema de control de versiones les permitirá a los administradores revertir cualquier cambio.
 
 \section{Funcionamiento de GitHub}
 
-GitHub es una plataforma que permite tener nuestros repositiorios de Git en la nube. Esto permite centralizar el contenido del repositorio y colaborar con otros desarrolladores.  Además, permite alojar programas o sistemas operativos para que la comunidad acceda a los códigos fuente y realice comentarios. Aunque el registro es opcional, es necesario crear una cuenta para iniciar proyectos y modificar copias de otros repositorios. 
+GitHub es una plataforma que permite tener nuestros repositorios de Git en la nube. Esto permite centralizar el contenido del repositorio y colaborar con otros desarrolladores.  Además, permite alojar programas o sistemas operativos para que la comunidad acceda a los códigos fuente y realice comentarios. Aunque el registro es opcional, es necesario crear una cuenta para iniciar proyectos y modificar copias de otros repositorios. 
 
 Dependiendo de las autorizaciones que otorgue el titular de la cuenta, los usuarios podrán realizar modificaciones que quedan registradas gracias al sistema de control de versiones Git. 
 
@@ -436,12 +442,12 @@ Por lo general, la rama principal en la que quedará alojado el código fuente ori
 
 \item Realizar cambios
 
-En GithHub cada cambio que se realiza es denominado ``Commits'' y queda asociado a un ``Commits message'' para explicar el historial de ajustes que se hicieron. Esto permitirá que otros colaboradores comprendan los cambios.
+En GitHub cada cambio que se realiza es denominado ``Commits'' y queda asociado a un ``Commits message'' para explicar el historial de ajustes que se hicieron. Esto permitirá que otros colaboradores comprendan los cambios.
 
 
 \begin{enumerate}
 	\item Haz clic en el archivo README.
-\item	Haz clic en el ícono de lápiz ubicado en la esquina superior derecha del archivo para editar.
+\item	Haz clic en el icono de lápiz ubicado en la esquina superior derecha del archivo para editar.
 \item	En el editor, escribe un poco sobre tu perfil y lo que desees que otros usuarios conozcan de ti.
 \item	Escribe un mensaje que explique los cambios que has realizado ara que los colaboradores comprendan los ajustes en el código.  
 \item	Haz clic en el botón Commit change (Figura \ref{figura:guides3}).
@@ -498,7 +504,7 @@ El marco de evaluación, en su forma más simple, es una función de valor booleano
 
 
 \begin{equation}
-f(r) = \left \{ \begin{array}{l} {\rm verdadero\:  si\: el\: repositorio}\: r \: \rm{contiene\: un\: proyecto\: de\: ingeniería} \\ \rm falso     \:        en \:cualquier \: otro \: caso \end{array} \right.
+f(r) = \left \{ \begin{array}{l} {\rm verdadero\:  si\: el\: repositorio}\: r \: \rm{contiene\: un\: proyecto\: de\: ingenieria} \\ \rm falso     \:        en \:cualquier \: otro \: caso \end{array} \right.
 \label{eq:repos}
 \end{equation}
 
@@ -581,7 +587,7 @@ Además de las siete dimensiones enumeradas anteriormente, es necesario tener en 
 \item El lenguaje principal del repositorio debe ser Ruby, Python, PHP, Java, C ++, C o C \#.
 \end{itemize}
 
- Se han elegido estos lenguajes porque son los más utilizados en GitHub (Zapponi, ~\cite{zapponi2016githut}).
+ Se han elegido estos lenguajes porque son los más utilizados en GitHub (Zapponi,~\cite{zapponi2016githut}).
 
 Dos de las características principales de Reaper son su flexibilidad y extensibilidad, ya que es muy fácil agregar la posibilidad de poder analizar repositorios con un código fuente en otro lenguaje (por ejemplo, JavaScript).
 
@@ -626,7 +632,7 @@ El uso de un servicio de integración continua se determina buscando un archivo d
 
 Un documento de software puede describirse como cualquier documento destinado a comunicar información sobre el software (Forward and Lethbridge,~\cite{forward2002relevance}). Según Ambler~\cite{Ambler}, la documentación del software responde a tres necesidades: (i) contractual; (ii) respaldar un proyecto de desarrollo de software al permitir que los miembros del equipo conciban gradualmente la solución a implementar, y (iii) permitir que un equipo de desarrollo del software comunique los detalles de la implementación a lo largo del tiempo al equipo de mantenimiento.
 
-La documentación generalmente sufre los siguientes problemas: inexistente o de baja calidad (Pressman,~\cite{pressman2005software}; anticuado (Thomas and Tilley~\cite{thomas2001documentation}; Tilley~\cite{tilley1993documenting}; Tilley et al.~\cite{tilley1992documenting}; Forward and Lethbridge~\cite{forward2002relevance}); sobre abundante y sin un objetivo definido (Forward and Lethbridge~\cite{forward2002relevance}; Lindvall et al.~\cite{lindvall2002empirical}); difícil de acceder (por ejemplo, cuando los documentos están dispersos en varias computadoras o en diferentes formatos: texto, diagramas) (Tilley~\cite{tilley1993documenting}); falta de interés de los programadores (Pigoski,~\cite{pigoski1996practical}; HCI \footnote{What to put in software maintenance documentation. Available on the Internet at: http://www.hci.com.au/hcisite2/journal/ What to put in software maintenance documentation. htm, 2001–2002. Last accessed on May 27}; Tilley and Muller~\cite{tilley1991info}); y, difícil de estandarizar, debido, por ejemplo, a las especificidades del proyecto (Phoha~\cite{phoha1997standard}).
+La documentación generalmente sufre los siguientes problemas: inexistente o de baja calidad (Pressman,~\cite{pressman2005software}; anticuado (Thomas and Tilley~\cite{thomas2001documentation}; Tilley~\cite{tilley1993documenting}; Tilley et al.~\cite{tilley1992documenting}; Forward and Lethbridge~\cite{forward2002relevance}); sobre abundante y sin un objetivo definido (Forward and Lethbridge~\cite{forward2002relevance}; Lindvall et al.~\cite{lindvall2002empirical}); difícil de acceder (por ejemplo, cuando los documentos están dispersos en varias computadoras o en diferentes formatos: texto, diagramas) (Tilley~\cite{tilley1993documenting}); falta de interés de los programadores (Pigoski,~\cite{pigoski1996practical}; HCI\footnote{What to put in software maintenance documentation. http://www.hci.com.au/hcisite2/journal/ What to put in software maintenance documentation.htm, 2001-2002. Last accessed on May 27}; Tilley and Muller~\cite{tilley1991info}); y, difícil de estandarizar, debido, por ejemplo, a las especificidades del proyecto (Phoha~\cite{phoha1997standard}).
 
 Recientemente, otros métodos proponen un enfoque para el desarrollo del software que eliminan la necesidad de la documentación como una ayuda para el desarrollo del software. Proponen una comunicación informal entre desarrolladores y usuario. Sin embargo, estos métodos no eliminan la necesidad de documentación como herramienta de comunicación a lo largo del tiempo, lo que permite a los desarrolladores comunicar información importante sobre un sistema a futuros mantenedores.
 
@@ -720,7 +726,7 @@ Un inconveniente de este enfoque es que no permite descubrir otras herramientas 
 
 	\subsection{Licencia}
  
-La posibilidad que tenga un usuario de usar, modificar y / o redistribuir una parte de un software viene determinado por el tipo de licencia que acompaña al software. Las licencias son especialmente importantes en el contexto de los proyectos de código abierto como lo analiza un artículodel Software Freedom Law Center\footnote{Managing copyright information within a free software project – software freedom law center. http://softwarefreedom.org/ resources/2012/managingcopyrightinformation. Html. Acceso: 11-02-2020}, donde se destaca la necesidad de las licencias de software de código abierto y las mejores prácticas de las mismas.
+La posibilidad que tenga un usuario de usar, modificar y / o redistribuir una parte de un software viene determinado por el tipo de licencia que acompaña al software. Las licencias son especialmente importantes en el contexto de los proyectos de código abierto como lo analiza un artículodel Software Freedom Law Center\footnote{Managing copyright information within a free software project - software freedom law center. http://softwarefreedom.org/ resources/2012/managingcopyrightinformation. Html. Acceso: 11-02-2020}, donde se destaca la necesidad de las licencias de software de código abierto y las mejores prácticas de las mismas.
 
 Un software que no venga con licencia está protegido por defecto por las leyes de copyright, que establecen que el autor retiene todos los derechos sobre el código fuente (GitHub, 2016c). Sin embargo, aunque no existe obligación de incluir una licencia en un repositorio de código fuente, se considera una práctica recomendada. Además, los permisos de uso de GitHub pueden permitir que otros usuarios puedan copiar repositorios de acceso público. Por lo tanto, incluir una licencia en el repositorio dicta explícitamente los derechos del usuario para copias del repositorio, pero aunque dicha licencia no es suficiente para indicar que un repositorio contiene un proyecto de ingeniería del software de acuerdo con nuestra definición de la dimensión.
  
@@ -765,7 +771,7 @@ dónde,
 
 Para calcular el $slotc$, primero debemos identificar los archivos de prueba. Logramos esto buscando patrones específicos del lenguaje y del marco de pruebas en el repositorio. Por ejemplo, los archivos de prueba en un proyecto de Python que utilizan el marco de las pruebas unitarias pueden identificarse mediante la búsqueda de patrones de \emph{import unittest} o de \emph{import TestCase}.
 
-Utilizamos \emph{grep} para buscar y obtener una lista de archivos que contienen patrones específicos como el anterior. Luego usamos la herramienta $cloc$ para calcular sloc de todos los archivos fuente en el repositorio y $slotc$ de los archivos de prueba identificados. Ocasionalmente, un proyecto de software puede usar marcos de prueba de unidades múltiples, como por ejemplo un proyecto de aplicación web de Django puede usar el programa unittest de Python y la extensión de \emph{unittest – django.test} de Django. Para tener en cuenta este escenario, acumulamos los archivos de prueba identificados usando patrones para marcos de prueba de unidades específicas de múltiples idiomas antes de calcular $slotc$.
+Utilizamos \emph{grep} para buscar y obtener una lista de archivos que contienen patrones específicos como el anterior. Luego usamos la herramienta $cloc$ para calcular sloc de todos los archivos fuente en el repositorio y $slotc$ de los archivos de prueba identificados. Ocasionalmente, un proyecto de software puede usar marcos de prueba de unidades múltiples, como por ejemplo un proyecto de aplicación web de Django puede usar el programa unittest de Python y la extensión de \emph{unittest - django.test} de Django. Para tener en cuenta este escenario, acumulamos los archivos de prueba identificados usando patrones para marcos de prueba de unidades específicas de múltiples idiomas antes de calcular $slotc$.
 
 La multitud de marcos de pruebas unitarias disponibles para cada uno de los lenguajes de programación considerados hace que el enfoque sea limitado en sus capacidades. Actualmente se admiten 20 marcos de prueba unitarios. Los marcos de prueba unitarios actualmente admitidos son: NUnit, Visual Studio Testing y xUnit para C \#; Boost, Catch, googletest y Stout gtest para C ++; PHPUnit para PHP; clar, GLib Testing y picotest para C; JUnit y TestNG para Java; django.test, nose y unittest para Python; y pruebas de unidad minitest, RSpec y Ruby para Ruby.
 En escenarios en los que no podemos identificar un marco de prueba de unidad, recurrimos a considerar todos los archivos en directorios llamados prueba, pruebas o especificaciones como archivos de prueba.
@@ -790,7 +796,7 @@ Dicho coeficiente $\rho$ viene dado por la ecuación:
 donde $N$ es el número de parejas de datos y $D$ es la diferencia entre los correspondientes estadísticos de orden de $x - y$.
 
 
-	\subsection{Test de mann–whitney–wilcoxon}
+	\subsection{Test de mann-whitney-wilcoxon}
 	
 
 Las pruebas no-paramétricas se necesitan cuando no se tienen información sobre la composición de los datos poblacionales, esto es no se tiene conocimiento sobre su distribución de probabilidad. Dentro de las pruebas no-paramétricas, una muy utilizada es la prueba \textbf{U de Mann-Whitney} (también llamada de Mann-Whitney-Wilcoxon, prueba de suma de rangos Wilcoxon, o prueba de Wilcoxon-Mann-Whitney), que es una prueba no paramétrica aplicada a dos muestras independientes. Es, de hecho, la versión no paramétrica de la habitual prueba $t$ de Student. 
@@ -857,24 +863,29 @@ La forma de operar con esta prueba es la siguiente:
 
 \subsection{Estadístico Delta de Cliff}
 
-El estadístico Delta de Cliff permite cuantificar la magnitud de la diferencia entre dos grupos de observaciones que resultan incompatibles con el presupuesto de normalidad. El análisis de esta cuantificación complementa la interpretación del p-valor asociado a la correspondiente prueba de hipótesis. La aplicación de medidas del tamaño del efecto ha sido promovida, durante  las últimas décadas, tanto por metodólogos, como por instituciones líderes en las ciencias del comportamiento. El propósito de la presente contribución es presentar un programa denominado Cliff’s Delta Calculator con capacidad para calcular y graficar el valor del tamaño del efecto no paramétrico para dos grupos de observaciones. Se ofrece una comparación de este programa con otras calculadoras comerciales y no comerciales actualmente disponibles. Se describe su funcionamiento, sus fundamentos matemáticos y se presentan y discuten dos ejemplos de aplicación en la investigación psicológica. Se concluye que este programa presenta algunas ventajas, en comparación con otras calculadoras comerciales disponibles. (Macbeth, G.; Razumiejczyk, E. & Ledesma, R.~\cite{macbeth2011cliff}).
+El estadístico Delta de Cliff permite cuantificar la magnitud de la diferencia entre dos grupos de observaciones que resultan incompatibles con el presupuesto de normalidad. El análisis de esta cuantificación complementa la interpretación del p-valor asociado a la correspondiente prueba de hipótesis. La aplicación de medidas del tamaño del efecto ha sido promovida, durante  las últimas décadas, tanto por metodólogos, como por instituciones líderes en las ciencias del comportamiento. El propósito de la presente contribución es presentar un programa denominado Cliff's Delta Calculator con capacidad para calcular y graficar el valor del tamaño del efecto no paramétrico para dos grupos de observaciones. Se ofrece una comparación de este programa con otras calculadoras comerciales y no comerciales actualmente disponibles. Se describe su funcionamiento, sus fundamentos matemáticos y se presentan y discuten dos ejemplos de aplicación en la investigación psicológica. Se concluye que este programa presenta algunas ventajas, en comparación con otras calculadoras comerciales disponibles. (Macbeth, G.; Razumiejczyk, E. \& Ledesma, R.~\cite{macbeth2011cliff}).
 
 
 \subsection{Clasificador basado en la puntuación}
 
-Clasificador basado en la puntuación es un enfoque personalizado para implementar el marco de evaluación que permite un control completo sobre la clasificación. En este enfoque, la función de valor booleano de (1) en la Sección 2.1 toma la forma mostrada en (14).
+Clasificador basado en la puntuación es un enfoque personalizado para implementar el marco de evaluación que permite un control completo sobre la clasificación. En este enfoque, la función de valor booleano de (1) en la Sección 2.1 toma la forma mostrada en (14) \grex{Poner reference de \LaTeX}.
 
 
 \begin{equation}
 f(r)=\left\{ \begin{array}{ll} true & if\:\: score(r)\geq score_{ref}\\
 false & Otherwise\end{array}
-\label{eq:}
+\label{eq:} 
 \end{equation}
+
+\grex{Falta poner la etiqueta}
+
 
 \begin{equation}
 score(r)=\sum_{d\in D} h_d(M_d,t_d)\times w_d
-\label{eq:}
+\label{eq:} 
 \end{equation}
+
+\grex{Falta poner la etiqueta}
 
 donde:
 
