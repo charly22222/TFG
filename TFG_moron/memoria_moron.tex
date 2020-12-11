@@ -56,7 +56,7 @@ GRADO EN INGENERÍA EN TECNOLOGÍA DE LA TELECOMUNICACIÓN
 \vspace{0.4cm}
 
 \large
-Curso Académico 2019/2020
+Curso Académico 2020/2021
 
 \vspace{0.8cm}
 
@@ -70,7 +70,7 @@ APLICACIÓN DE BIG DATA A PROYECTOS DE INGENIERÍA EN GitHub
 
 \large
 Autor : Carlos Morón Barrios\\
-Tutor : Dr. Gregorio Robles
+Tutor : Dr. Gregorio Robles Martínez
 \end{center}
 \end{titlepage}
 
@@ -92,7 +92,7 @@ Tutor : Dr. Gregorio Robles
 
 \vspace{1cm}
 \large
-Aplicación de Big Data a Proyectos de Ingeniería en  GitHub
+Aplicación de Big Data a Proyectos de Ingeniería en itHub
 
 \vspace{1cm}
 
@@ -161,11 +161,14 @@ Gracias también a mis amigos porque sin ellos, nada sería lo mismo. Su apoyo e i
 
 El objetivo de este Trabajo Fin de Grado es hacer un estudio sobre las tecnologías Big Data y su aplicación al estudio de proyectos de ingeniería en grandes repositorios como el GitHub.\\
 
-Github  es un sitio que guarda una carpeta de documentos al que te conectas a través de un terminal de comando (o CMD, en Windows) o por medio de una aplicación de escritorio.\\
+Github es una plataforma que se utiliza para alojar proyectos y código con control de versiones, dando la posibilidad de colaboración y de trabajo en grupo.\\
 
-En el mundo actual centrado en el software, repositorios de software a gran escala, p. ej. SourceForge (más de 350.000 proyectos), GitHub (más de 250.000 proyectos) y Google Code (más de 250.000 proyectos) son la nueva biblioteca de Alejandría. Contienen una enorme cantidad de software e información sobre el software. Tanto los científicos como los ingenieros están interesados en analizar esta gran cantidad de información tanto por curiosidad como por probar sus hipótesis. Sin embargo, la extracción sistemática de datos relevantes de estos repositorios y el análisis de dichos datos para probar hipótesis es difícil.\\
+En el mundo actual centrado en el software, repositorios de software a gran escala, p. ej. SourceForge (más de 324.000 proyectos) y GitHub (más de 69.000.000 proyectos) son la nueva biblioteca de Alejandría. Contienen una enorme cantidad de software e información sobre el software. Tanto los científicos como los ingenieros están interesados en analizar esta gran cantidad de información tanto por curiosidad como por probar sus hipótesis. Sin embargo, la extracción sistemática de datos relevantes de estos repositorios y el análisis de dichos datos para probar hipótesis es difícil.\\
 
-En este trabajo se pretende analizar los repositorios de GitHub para seleccionar los proyectos de software de ingeniería e identificarlos.
+En este trabajo se pretende analizar los repositorios de GitHub para seleccionar los proyectos de software de ingeniería e identificarlos. Para ello se han considerado diversos parámetros como son: Comunidad (evidencia de colaboración), Integración continua (evidencia de calidad), Documentación (evidencia de mantenibilidad), Historia (evidencia de evolución sostenida), Cuestiones (evidencia de la gestión del proyecto), Licencia (prueba de responsabilidad) y Pruebas unitarias y se han utilizado dos clasificadores distintos, el basado en la puntuación y en Random Forest.\\
+
+De esta forma se ha realizado un muestreo de 2.316.524 repositorios y vemos que en los repositorios de propósito general el clasificador basado en puntuación ha identificado un 71,02\% de proyectos de ingeniería, mientras que Random Forest ha identificado un 23,51\%, por lo que, aunque sobre el papel Random Forest es más preciso, ha dado peor resultado, quizá debido a que como existe una correlación entre las dimensiones se favorecen los grupos más pequeños sobre los más grandes. 
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Resumen en inglés
@@ -176,11 +179,14 @@ En este trabajo se pretende analizar los repositorios de GitHub para seleccionar
 
 The objective of this project is to study Big Data technologies and their application to the study of engineering projects in large repositories such as GitHub.\\
 
-Github is a site that stores a folder of documents that you connect to through a command terminal (or CMD, in Windows) or through a desktop application.\\
+Github is a platform that is used to host projects and code with version control, giving the possibility of collaboration and group work.\\
 
-In today's software-centric world, large-scale software repositories, e.g. ex. SourceForge (more than 350,000 projects), GitHub (more than 250,000 projects) and Google Code (more than 250,000 projects) are the new library of Alexandria. They contain a huge amount of software and information about the software. Scientists and engineers are interested in analyzing this vast amount of information both out of curiosity and to test their hypotheses. However, the systematic extraction of relevant data from these repositories and analysis of such data to test hypotheses is difficult.\\
+In today's software-centric world, large-scale software repositories, e.g. ex. SourceForge (more than 324.000 projects) and GitHub (more than 69.000.000 projects) are the new library of Alexandria. They contain a huge amount of software and information about the software. Scientists and engineers are interested in analyzing this vast amount of information both out of curiosity and to test their hypotheses. However, the systematic extraction of relevant data from these repositories and analysis of such data to test hypotheses is difficult.\\
 
-This work aims to analyze the GitHub repositories to select engineering software projects and identify them.
+This work aims to analyze the GitHub repositories to select engineering software projects and identify them. For this, various parameters have been considered such as: Community (evidence of collaboration), Continuous integration (evidence of quality), Documentation (evidence of maintainability), History (evidence of sustained evolution), Questions (evidence of project management), License (Responsibility Test) and Unit Tests and two different classifiers have been used, the one based on the score and the Random Forest.\\
+
+In this way, 2.316.524 repositories have been sampled and we see that in the general purpose repositories, the score-based classifier has identified 71.02 \% of engineering projects, while Random Forest has identified 23.51 \%, so even though on the Random Forest paper it is more precise, it has given a worse result, perhaps because, as there is a correlation between the dimensions, the smaller groups are favored over the larger ones.
+
 
 
 
@@ -219,33 +225,45 @@ Big Data se ha convertido en la actualidad en un término muy usado y asociado a 
 
 La captura y posterior tratamiento de datos correspondientes a empresas tecnológicas e investigación en ingeniería puede revelar información valiosa para la organización relacionada con sus productos, descubrimiento clientes potenciales y grandes avances en una tecnología determinada. \\
 
-Debido a la gran cantidad de datos que hay que almacenar y tratar, las tecnologías Big Data han estado aparentemente monopolizadas por grandes corporaciones, pero cada vez se avanza más en su aplicación en Universidades e instituciones con una gran I+D implantada, así como en los departamentos I+D de empresas tecnológicas (Pérez, 2017). \\
+Debido a la gran cantidad de datos que hay que almacenar y tratar, las tecnologías Big Data han estado aparentemente monopolizadas por grandes corporaciones, pero cada vez se avanza más en su aplicación en Universidades e instituciones con una gran I+D implantada, así como en los departamentos I+D de empresas tecnológicas ~\cite{Yeray}\\
 
-Debido al desarrollo tecnológico que se ha vivido en la última época con el nacimiento de las redes sociales, dispositivos móviles, sensores, añadir internet a un amplio abanico de cosas y sobre todo la llegada de la tecnología a los ciudadanos, se ha generado un gran volumen de datos (Big Data), así nace la necesidad de poder analizar dichos datos para transformarlos en información (Minelli et al., 2013). Ahora el problema reside en cómo analizar eficazmente los datos.\\
+Por otro lado, la revolución surgida en la última década por las redes sociales, dispositivos móviles, sensores, el internet de las cosas, etc., ha dado como resultado la aparición de un gran volumen de datos (Big Data), y la necesidad de poder realizar su análisis y tratamiento ~\cite{Minelli}. Ahora el problema reside en cómo analizar eficazmente los datos.\\
 
-En el mundo actual centrado en el software, repositorios de software a gran escala, p. ej. SourceForge (más de 350.000 proyectos), GitHub (más de 250.000 proyectos) y Google Code (más de 250.000 proyectos) son la nueva biblioteca de Alejandría. Contienen una enorme cantidad de software e información sobre el software. Tanto los científicos como los ingenieros están interesados en analizar esta gran cantidad de información tanto por curiosidad como por probar sus hipótesis. Sin embargo, la extracción sistemática de datos relevantes de estos repositorios y el análisis de dichos datos para probar hipótesis es difícil.
+Además, aunque el análisis de esa gran cantidad de datos (existen muchos repositorios) no es sencillo, cada vez hay más científicos que se dedican a ello para sacar información del software y para probar sus hipótesis científicas. Ejemplos de esos repositorios son SourceForge (más de 324.000 proyectos) y GitHub (más de 69.000.000 proyectos).
+
+Hemos analizado estos repositorios porque son gratuitos y de libre acceso, y son los más utilizados actualmente, aunque han ido surgiendo otros como GitLab, que surgió a raíz de la compra de GitHub por Microsoft y ante el temor de los desarrolladores de software a que se limitara el acceso, llegando esta plataforma a alojar más de 546.000 proyectos a finales de 2017.
+
 
 \section{Retos del Big Data}
 \label{sec:retos}
 
-El concepto Big Data abarca diversas propiedades que es necesario tener claras. Debido a la gran cantidad de datos que se va a manejar, es necesario tener las herramientas necesarias para conseguir dar sentido a todos ellos y poder analizarlos, puesto que un gran porcentaje de esos datos (cerca del 85\%) no van a estar estructurados (Pérez, 2017).\\
+Como ya se ha comentado, el concepto de Big Data lleva aparejado el manejo de una gran cantidad de datos y para ello es necesario disponer de las herramientas conceptuales y matemáticas necesarias para poderlos analizar, ya que cerca del 85\% de esos datos no van a estar bien estructurados y sometidos a errores ~\cite{Yeray}.\\
 
 Además, parte de esta enorme generación de datos se da en tiempo real, con lo que no se puede analizar con efectividad con las técnicas normales de procesamiento de datos.\\
 
-Por otro lado, tenemos la problemática de quien puede realizar el tratamiento de los datos relacionamos con Big Data. Para solucionar este problema se deben formar profesionales especialistas en el análisis de los datos para que creen o usen herramientas de gestión de la información derivada del procesamiento de los datos. En este entorno es donde las tecnologías de la información deben dar el salto (C. N. \&. Batista, 2013). A modo de resumen podemos concluir que la tecnología asociada a Big Data y los objetivos de negocios deben coordinarse para ser capaces de obtener información de calidad.
+Por otro lado, tenemos el problema añadido de que no sirve cualquier persona para poder realizar el tratamiento de esos datos, sino que tienen que formarse buenos científicos para la gestión de la información derivada del procesamiento de esos datos ~\cite{Batista}. 
 
-\subsection{Análisis de los datos}
-\label{subsec:analisis}
+\section{Análisis de los datos}
+\label{sec:analisis}
 
-Los datos deben superar un análisis exhaustivo, para revelar la información que contienen y generar conocimiento. El valor potencial de los datos no solo radica en disponer de ellos sino en saber organizarlos y refinarlos para convertirlos en información relevante; el valor que se le da a los datos después del análisis es para incrementar la capacidad de innovar y obtener ventaja sobre los competidores (C. N. \&. Batista, 2013).\\
+Hay que tener en cuenta al poder analizar los datos procedentes de Big Data que estamos hablando de conjuntos de datos cuyo tamaño es del orden de TB, lo cual plantea nuevos retos en el desarrollo y la utilización de plataformas informáticas ~\cite{Dean}, ~\cite{Ghemawat} y ~\cite{Gobioff}.\\ 
 
-Gestionar correctamente los datos debe generar jurisprudencia en las empresas, la ciudanía y sobre todo en las administraciones ya sean públicas o privadas puesto que analizar correctamente los datos se debe convertir en un activo para la sociedad (C. N. \&. Batista, 2013). En este último trabajo (C. N. \&. Batista, 2013), se proponen las fases del análisis (figura \ref{figura:fases}).
+Además, para poder analizar dichos datos, es necesario organizarlos y depurarlos adecuadamente para poder sacar la información relevante buscada. Por esto las empresas y diversos organismos oficiales (Universidades, centros de investigación, ministerios...) invierten cada vez más recursos en la formación de profesionales y en investigación y desarrollo [50]. En este último trabajo ~\cite{Batista}, se proponen las fases del análisis que se especifican en la Figura~\ref{figura:fases}.
+
  \begin{figure}[ht]
     \centering
     \includegraphics[width=12cm, keepaspectratio]{img/Fases.jpg}
-    \caption{Fases de análisis}
+    \caption{Fases de análisis. Imagen obtenida del trabajo de Yeray ~\cite{Yeray}}
     \label{figura:fases}
  \end{figure}
+
+En este trabajo nos van a interesar únicamente los proyectos de ingeniería, para ponernos al día en los desarrollos tantos técnicos como de software que los distintos desarrolladores van creando y poder avanzar en una técnica o vía de investigación determinada. Para ello vamos a tener que analizar las bases de datos contenidas en los repositorios y saber discernir qué proyectos son de ingeniería y cuales no. Por eso es interesante saber primero, qué entendemos nosotros por proyecto de ingeniería.
+
+El concepto de proyecto es lo suficientemente amplio y ambiguo como abarcar muchos ámbitos de la vida cotidiana; proyecto de vida, proyecto político, proyecto de viaje, ... Sin embargo, en la RAE nos encontramos con dos acepciones importantes para nosotros porque son las que más se asemejan al concepto que en ingeniería se tiene por proyecto: Conjunto de escritos, cálculos y dibujos que se hacen para dar idea de cómo ha de ser y lo que ha de costar una obra de arquitectura o de ingeniería; primer esquema o plan de cualquier trabajo que se hace a veces como prueba antes de darle la forma definitiva.
+
+Sin embargo, aunque la mayoría de las veces un proyecto nace de la necesidad, la sucesión de las distintas actividades es lo que va a dar forma al proyecto. Entre dichas actividades tenemos la toma de decisiones, iteraciones, compensación de recursos, influencia del entorno, planificación, calidad, diseño... Y es aquí, en estas actividades u otras similares donde nos vamos a fijar nosotros para poder averiguar si un proyecto es de ingeniería o no.
+
+Este trabajo Fin de Grado está basado en el trabajo de Munaiah y colaboradores ~\cite{munaiah2017curating}, que utilizan una serie de parámetros para identificar los proyectos de ingeniería como son: Comunidad (evidencia de colaboración), Integración continua (evidencia de calidad), Documentación (evidencia de mantenibilidad), Historia (evidencia de evolución sostenida), Cuestiones (evidencia de la gestión del proyecto, Licencia (prueba de responsabilidad) y Pruebas unitarias (prueba de calidad).
 
 
 
@@ -282,35 +300,38 @@ Gestionar correctamente los datos debe generar jurisprudencia en las empresas, l
 \section{Objetivo general} % título de sección (se muestra)
 \label{sec:objetivo-general} % identificador de sección (no se muestra, es para poder referenciarla)
 
-Mi trabajo fin de grado consiste en identificar los proyectos de software de ingeniería de los repositorios de software libre alojados en la plataforma GitHub.
+Mi trabajo fin de grado consiste en identificar los proyectos de ingeniería de los repositorios de software libre alojados en la plataforma GitHub.
 
 
 
 \section{Objetivos específicos}
 \label{sec:objetivos-especificos}
 
-Para conseguir el objetivo principal ha sido necesario realizar los siguientes logros:
-\begin{itemize}
-	\item Conseguir y analizar la base de datos de GHTorrent.
-\item	Seleccionar un número determinado de datos para identificar los campos de la base de datos.
-\item	Poner las cabeceras correspondientes a cada fichero como se indica en el esquema de la página GHTorrent.
-\item	Calcular los parámetros correspondientes a cada dimensión.
-\item	Seleccionar los proyectos que se consideran ingeniería en función de las dimensiones elaboradas.
-\item	Comprobar que los proyectos seleccionados son los correctos.
+Para conseguir el objetivo principal, ha sido necesario realizar los siguientes pasos:
 
+\begin{itemize}
+  \item Conseguir y analizar la base de datos de GHTorrent.
+  \item	Seleccionar un número determinado de datos para identificar los campos de la base de datos.
+  \item	Poner las cabeceras correspondientes a cada fichero como se indica en el esquema de la página GHTorrent.
+  \item	Calcular los parámetros correspondientes a cada dimensión.
+  \item	Seleccionar los proyectos que se consideran ingeniería en función de las dimensiones elaboradas.
+  \item	Comprobar que los proyectos seleccionados son los correctos.
 \end{itemize}
+
 
 \section{Planificación temporal}
 \label{sec:planificacion-temporal}
 
-A continuación, detallo en la figura \ref{figura:tempo} la temporalidad de las diferentes fases de mi trabajo que empezó en enero de 2020.
+A continuación, detallo en la figura~\ref{figura:tempo} la temporalidad de las diferentes fases de mi trabajo que empezó en enero de 2020.
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=12cm, keepaspectratio]{img/tempor.pdf}
-    \caption{Planificación temporal del Trabajo Fin de Grado}
+    \caption{Planificación temporal del Trabajo Fin de Grado. Elaboración propia.}
     \label{figura:tempo}
  \end{figure}
+
+Como se puede ve en la figura~\ref{figura:tempo}, una vez que mi tutor me planteó el trabajo, durante los meses de enero y febrero me propuse estudiar sobre el tema y me dediqué a recopilar toda la información que pude. A continuación, cuando ya tenía toda la información me puse a estudiar y manejar la base de datos GHTorrent. Una vez que conseguí identificar los campos involucrados, pasé a calcular las dimensiones que he utilizado para poder seleccionar los proyectos de ingeniería de software. Hice una primera comprobación con un conjunto de repositorios seleccionados manualmente y que sabía que contenían proyectos de ingeniería y a posteriori lo apliqué al caso real de 2.316.524 repositorios.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -319,45 +340,24 @@ A continuación, detallo en la figura \ref{figura:tempo} la temporalidad de las d
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \cleardoublepage
-\chapter{Estado del arte - Tecnologías relacionadas}
+\chapter{Estado del arte}
 \label{chap:estado}
 
-Los repositorios de software contienen una gran cantidad de información sobre el código, las personas y los procesos que intervienen en el desarrollo de un producto de software. Suponiendo solo una exigua línea de 1K de código por proyecto, los repositorios SourceForge, GitHub y Google Code supondrían al menos 8,61 mil millones de líneas de código. El análisis retrospectivo de estos repositorios de software puede proporcionar información valiosa sobre la evolución y el crecimiento de los productos de software que contiene. Podemos rastrear ese análisis hasta la década de 1970, cuando Belady y Lehman (1976) propusieron las Leyes de evolución del software de Lehman. Hoy en día hay una fuerte inversión económica para el desarrollo de estos análisis, como el proyecto Boa (Dryer et al,~\cite{dyer2013boa}) que recibió más de 1.4 millones de dólares. 
+GitHub es un sitio de alojamiento de código colaborativo construido sobre el sistema de control de versiones de git. GitHub introdujo un modelo de en el que los desarrolladores crean su propia copia de un repositorio y envían una solicitud de extracción cuando quieren que el mantenedor del proyecto lleve sus cambios a la rama principal. Además del alojamiento de código, la revisión colaborativa del código y el seguimiento integrado de problemas, GitHub tiene funciones sociales integradas. Los usuarios pueden suscribirse a la información ``viendo'' los proyectos y ``siguiendo'' a usuarios, lo que da como resultado una fuente de información sobre esos proyectos y usuarios. Los usuarios también tienen perfiles que se pueden completar con información de identificación y además contienen su actividad reciente dentro del sitio. 
 
-En este último trabajo Dyer y colaboradores plantean que tanto los científicos como los ingenieros están interesados en analizar esta gran cantidad de información tanto por curiosidad como por probar hipótesis tan importantes como: ``¿cómo perciben y consideran las personas los posibles impactos de sus ediciones y las de los demás mientras escriben juntas? (Dourish and Bellotti,~\cite{dourish1992awareness})"; ``¿Cuál es la licencia de código abierto más utilizada? (Lerner and Tirole,,~\cite{lerner2002some})"; ``¿Cuántos proyectos continúan usando estándares de cifrado DES (considerados inseguros)? (Landau,~\cite{landau2000standing})~"; ``¿Cuántos proyectos de código abierto tienen una política de control de exportación restringida? (Goodman et al.,~\cite{goodman1995building})"; ``¿Cuántos proyectos en promedio comienzan con una base de código existente de otro proyecto en lugar de cero? (Raymond,~\cite{raymond1999cathedral}	)"; ``¿Con qué frecuencia los profesionales usan las características dinámicas de Javascript, p. Ej. eval? (Richards et al.,~\cite{richards2011eval})''; ``¿Cuál es el tiempo promedio para resolver un error reportado como crítico? (Weiss et al.,\cite{weiss2007long})".
+Se han realizado diversos estudios a lo largo de estos años en los que realizando distintas encuestas a usuarios de GitHub, se han analizado las mismas para entender cómo afectan las distintas características sociales de los usuarios ~\cite{dourish1992awareness}, ~\cite{dyer2013boa} y ~\cite{pike2005interpreting}. Esos estudios han concluido que los usuarios de GitHub se forman impresiones y sacan conclusiones sobre las actividades y el potencial de otros desarrolladores y proyectos, de forma que los usuarios interiorizan esas conclusiones para decidir a quién hacer un seguimiento, o dónde realizar una contribución. 
 
-Sin embargo, la barrera de entrada actual podría ser prohibitiva. Por ejemplo, para responder a las preguntas anteriores, un equipo de investigación necesitaría (a) desarrollar experiencia en el acceso programático a los sistemas de control de versiones, (b) establecer una infraestructura para descargar y almacenar los datos de los repositorios de software en poco tiempo, (c) programe una infraestructura en un lenguaje de programación completo como C ++, Java, C o Python para acceder a estos datos locales y responder a la hipótesis, y (d) mejorar la escalabilidad de la infraestructura de análisis para ser capaz de procesar datos a gran escala en un tiempo razonable.
-Estos cuatro requisitos aumentan sustancialmente el costo de la investigación científica. Hay cuatro problemas adicionales. Primero, los experimentos son a menudo irreproducibles porque replicar una configuración experimental requiere un esfuerzo enorme. En segundo lugar, la reutilización de la infraestructura experimental es típicamente baja porque la infraestructura de análisis no está diseñada de manera reutilizable. Después de todo, el foco del investigador original está en el resultado del análisis y no en la reutilización de la infraestructura de análisis. Por lo tanto, los investigadores tienen que replicar los esfuerzos de los demás. Tercero, los datos asociados y producidos por tales experimentos a menudo se pierden y se vuelven inaccesibles y obsoletos, porque no existe una depuración sistemática. Por último, pero no menos importante, construir una infraestructura de análisis para procesar datos a gran escala de manera eficiente puede ser muy difícil (Dean and Ghemawat,~\cite{dean2004mapreduce}; Pike et al.,~\cite{pike2005interpreting}; Chambers et al., ~\cite{chambers2010flumejava}).
+En el proceso de análisis de los repositorios, los investigadores van aprendiendo y mejorando sus técnicas, de manera que lo que desarrollan a posteriori se va a ver influenciado y muchas veces mejorado. Si esto lo aplicamos a desarrolladores de software, obtenemos que dicho análisis tiene una influencia sobre la calidad del código que desarrollan y el producto final ~\cite{Bird}.
 
-Por otro lado, los conocimientos adquiridos a través del análisis de los repositorios pueden afectar al proceso de toma de decisiones en un proyecto y mejorar la calidad del software que se está desarrollando. Un ejemplo de esto se puede ver en las recomendaciones hechas por Bird y colaboradores (Bird et al., 2011) en su estudio sobre los efectos de la propiedad del código en la calidad de los sistemas de software. Los autores sugieren que los esfuerzos de aseguramiento de la calidad deberían centrarse en aquellos componentes con muchos desarrolladores del código.
+Sin embargo, el mundo del software no es ajeno a repositorios que introducen mucha información intrascendente que poco tiene que ver con la ingeniería (tareas de trabajo a domicilio, archivos de texto, imágenes, copias de seguridad personales...) ~\cite{Kalliamvakou}, por esto los investigadores utilizan diversos filtros para identificarla. Uno de los más utilizados es el de la popularidad, ya que se cree que la popularidad está correlacionada con la calidad, aunque hay muchos detractores del mencionado filtro ~\cite{Sajnani}, ~\cite{Baishakhi}, ~\cite{Bissyande}, ~\cite{Miltiadis} y ~\cite{GHTorrent} que crean sus propios filtros.
 
-La riqueza de los datos y las posibles ideas que representa fueron los factores habilitantes en el inicio de todo un campo de investigación: los repositorios de software de minería (MSR). En los primeros días de repositorios de software de la minería, los investigadores tenían acceso limitado a los repositorios de software, que estaban alojados principalmente dentro de las organizaciones. Sin embargo, con la proliferación de repositorios de software de acceso abierto como GitHub, Bitbucket, SourceForge y CodePlex para el código fuente y Bugzilla, Mantis y Trac para los errores, los investigadores ahora tienen una gran cantidad de datos para extraer y sacar conclusiones interesantes.
-Cada confirmación de código fuente contiene una gran cantidad de información que se puede utilizar para comprender el arte del desarrollo de software. Por ejemplo, Eick~\cite{eick2001does} se zambulló en el rico historial de compromisos (más de 15 años) de un gran sistema de conmutación telefónica para explorar la idea de la descomposición del código. Los repositorios de código fuente modernos ofrecen características que hacen que la gestión de un proyecto de software sea lo más fluida posible. Si bien la integración de características proporciona una mejor trazabilidad para los desarrolladores y gerentes de proyectos, también brinda a los investigadores una fuente de información única, autónoma, organizada y, lo que es más importante, de acceso público desde la cual extraer. Sin embargo, cualquiera puede crear un repositorio para cualquier propósito sin costo alguno. Por lo tanto, la calidad de la información contenida en las falsificaciones puede estar disminuyendo con la adición de muchos repositorios ruidosos, p. repositorios que contienen tareas de trabajo a domicilio, archivos de texto, imágenes o, lo que es peor, la copia de seguridad de una computadora de escritorio.
-
-Kalliamvakou y col. (2014) identificaron este ruido como uno de los nueve peligros a tener en cuenta al extraer datos de GitHub para la investigación de ingeniería de software. La situación se agrava por el gran volumen de repositorios contenidos en estas falsificaciones. A partir de junio de 2016, solo GitHub alojó más de 38 millones de repositorios2 y este número está aumentando rápidamente.
-Los investigadores han utilizado varios criterios para dividir las falsificaciones de software gigantescas en conjuntos de datos manejables para sus estudios. Por ejemplo, los investigadores han aprovechado filtros simples como la popularidad para eliminar repositorios ruidosos. Los filtros como la popularidad (medidos como el número de observadores o observadores de estrellas en GitHub, por ejemplo) son simplemente representantes y no pueden ser de propósito general ni representativos de un proyecto de software diseñado. La intuición al usar la popularidad como filtro es que se puede suponer que la popularidad está correlacionada con la calidad. Sin embargo, como Sajnani et al. (2014) han demostrado que la popularidad no está correlacionada con la calidad, cuestionando la utilidad del uso de filtros basados en la popularidad. Creemos que los investigadores que extraen repositorios de software no deberían tener que reinventar filtros para eliminar repositorios no deseados. Hay algunos ejemplos de investigación que adoptan el enfoque de desarrollar sus propios filtros para obtener un conjunto de datos para analizar:
-
-\begin{itemize}
-	\item En un estudio de la relación entre lenguajes de programación y calidad de código, Ray et al. (2014) seleccionaron los 50 repositorios más populares (medidos por el número de estrellas) en cada uno de los 19 idiomas más populares.
-\item Bissyand´e y col. (2013b) eligió los primeros 100,000 repositorios devueltos por la API de GitHub en su estudio de la popularidad, interoperabilidad e impacto de los lenguajes de programación.
-\item Allamanis y Sutton (2013) eligieron 14.807 repositorios de Java con al menos una bifurcación en su estudio de aplicar el modelado de lenguaje a la minería de repositorios de código fuente.
-\end{itemize}
-
-Los sitios web del proyecto para GHTorrent (2016a) y Boa (Iowa State University 2016) enumeran más artículos que emplean diferentes esquemas de filtrado.
-
-La suposición que se podría hacer es que los repositorios muestreados en estos estudios contienen proyectos de software diseñados. Sin embargo, las falsificaciones de código fuente están plagadas de repositorios que no contienen código fuente, y mucho menos un proyecto de software diseñado. Kalliamvakou et al. (2014) muestrearon manualmente 434 repositorios de GitHub y encontraron que solo el 63.4\% (275) de ellos eran para desarrollo de software; Los 159 repositorios restantes se utilizaron con fines experimentales, de almacenamiento o académicos, o estaban vacíos o ya no eran accesibles. La inclusión de repositorios que contengan dichos artefactos que no sean de software en los estudios dirigidos a proyectos de software podría llevar a conclusiones que pueden no ser aplicables a la ingeniería de software en general. Al mismo tiempo, no es posible seleccionar una muestra mediante investigación manual dado el gran volumen de repositorios alojados por estas falsificaciones de código fuente.
-
-\section{Contexto}
-
-Laplante (2007) define la ingeniería del software como ``un enfoque sistemático para el análisis, diseño, evaluación, implementación, prueba, mantenimiento y reingeniería de software". Un proyecto de software puede considerarse como ''ingeniería" si hay evidencia perceptible de la aplicación de principios de ingeniería de software como diseño, prueba, mantenimiento, etc. En líneas similares, se puede definir un proyecto de software como un proyecto que aprovecha las buenas prácticas de ingeniería del software en una o más de sus dimensiones, como la documentación, las pruebas y la gestión de proyectos (Munaiah et al.,~\cite{Munaiah}).
-
-Esa definición es lo suficientemente abstracta como para que se pueda adaptar a muchos casos. Por ejemplo, un estudio relacionado con las pruebas en proyectos de software podría definir un proyecto de software que aprovecha las prácticas de prueba del software. Más específicamente se puede definir un proyecto de ingeniería del software de dos maneras: (a) cuando es similar a los proyectos contenidos en repositorios propiedad de organizaciones populares de ingeniería de software como Microsoft, Apache, Amazon y Mozilla y (b) cuando es similar a los proyectos que tienen una utilidad de propósito general para usuarios que no sean los propios desarrolladores.
+Por ejemplo, Kalliamvakou y colaboradores ~\cite{Kalliamvakou} muestrearon manualmente 434 repositorios de GitHub y encontraron que solo el 63.4\% (275) de ellos contenían proyectos de software, mientras que los 159 repositorios restantes se utilizaron con fines experimentales, de almacenamiento o académicos, estaban vacíos o ya no eran accesibles. Sin embargo, el método de seleccionar manualmente una muestra no es factible dado el gran volumen de repositorios alojados en GitHub.
 
 \section{Definición de Git}
 
-Git es un software de control específico de versión de código abierto creado por el ingeniero Linus Torvalds en 2005, conocido por ser el creador del kernel de Linux. Esto quiere decir que si activamos el control sobre la carpeta donde está nuestro código el sistema se encargará de controlar los cambios en los archivos, con lo que tanto la base del código entero como su historial se encuentran disponibles en los ordenadores de todos los desarrolladores, lo cual permite un fácil acceso a las bifurcaciones y fusiones (Kinsta, 2020).
+Git es un software de control específico de versión de código abierto creado por el ingeniero Linus Torvalds en 2005, conocido por ser el creador del kernel de Linux. Esto quiere decir que si activamos el control sobre la carpeta donde está nuestro código el sistema se encargará de controlar los cambios en los archivos, con lo que tanto la base del código entero como su historial se encuentran disponibles en los ordenadores de todos los desarrolladores, lo cual permite un fácil acceso a las bifurcaciones y fusiones ~\cite{Kinsta}.
 
-El principal objetivo de Git es llevar un estricto control de los cambios que varias personas realizan al tiempo sobre un archivo de computadora (Nextu, 2020). 
+El principal objetivo de Git es llevar un estricto control de los cambios que varias personas realizan al tiempo sobre un archivo de computadora ~\cite{Nextu}. 
 
 Sus principales características son: 
 
@@ -372,19 +372,11 @@ Sus principales características son:
 
 Además, cuando se quieran marcar los cambios se realizará lo que se conoce como commit, que consiste en describir los cambios realizados, apuntándolos en este registro. De esta forma, podremos movernos entre los diferentes commits, por ejemplo, para volver a una versión anterior de nuestro proyecto. 
 
-También, los sistemas de control de versiones, entre los que se encuentra Git, son la base en la actualidad para los proyectos de equipo ya que podemos trabajar a la vez múltiples programadores en un mismo proyecto, incluso en un mismo archivo de una manera fácil (Openwebinars, 2020).
+También, los sistemas de control de versiones, entre los que se encuentra Git, son la base en la actualidad para los proyectos de equipo ya que podemos trabajar a la vez múltiples programadores en un mismo proyecto, incluso en un mismo archivo de una manera fácil ~\cite{Open}.
 
 Por otro lado, con el portal Kinsta, el sistema de control de versiones permite a los desarrolladores administrar el código fuente de un programa y habilitarlo para que se hagan modificaciones a través de la bifurcación y la fusión. La bifurcación te permite crear una copia de una parte del código, para que los desarrolladores puedan modificarla de forma segura sin que los cambios afecten la versión original (Nextu, ~\cite{Nextu}). Esto evita que cualquier error afecte el software final. La fusión permite al desarrollador unir su versión de código al código fuente una vez que ha comprobado su buen funcionamiento, aunque posteriormente el sistema de control de versiones les permitirá a los administradores revertir cualquier cambio.
 
 \section{Funcionamiento de GitHub}
-
-GitHub es una plataforma que permite tener nuestros repositiorios de Git en la nube. Esto permite centralizar el contenido del repositorio y colaborar con otros desarrolladores.  Además, permite alojar programas o sistemas operativos para que la comunidad acceda a los códigos fuente y realice comentarios. Aunque el registro es opcional, es necesario crear una cuenta para iniciar proyectos y modificar copias de otros repositorios. 
-
-Dependiendo de las autorizaciones que otorgue el titular de la cuenta, los usuarios podrán realizar modificaciones que quedan registradas gracias al sistema de control de versiones Git. 
-
-GitHub es la plataforma de código abierto más utilizada del mundo, con más de 28 millones de desarrolladores según cifras de la compañía. El uso de GitHub es totalmente gratuito para los proyectos públicos y permite que varios colaboradores puedan trabajar en la modificación de un proyecto. Además, los usuarios también han aprovechado la plataforma para compartir canciones, recetas, tipografías, guías colaborativas o, incluso, escribir libros.
-
-En junio de 2019 Microsoft anunció la compra de GitHub 7.500 millones de dólares y el pasado 26 de octubre se confirmó la autorización del parlamento europeo a dicha transacción.
 
 Para manejar GitHub hay que seguir los siguientes pasos (Nextu, 2020): 
 
@@ -404,7 +396,7 @@ Para manejar GitHub hay que seguir los siguientes pasos (Nextu, 2020):
 \begin{figure}[ht]
     \centering
     \includegraphics[width=12cm, keepaspectratio]{img/guides.jpg}
-    \caption{Imagen extraída de guides.github.com}
+    \caption{Imagen extraída de guides.github.com ~\cite{Guides}}
     \label{figura:guides}
  \end{figure}
 
@@ -430,7 +422,7 @@ Por lo general, la rama principal en la que quedará alojado el código fuente ori
 \begin{figure}[ht]
 	\centering
 		\includegraphics[width=7cm,clip]{img/guides2.jpg}
-		\caption{Imagen extraída de guides.github.com}
+		\caption{Imagen extraída de guides.github.com ~\cite{Guides}}
 		\label{figure:guides2}
 \end{figure}
 
@@ -453,7 +445,7 @@ En GithHub cada cambio que se realiza es denominado ``Commits'' y queda asociado
 \begin{figure}[ht]
     \centering
     \includegraphics[width=12cm, keepaspectratio]{img/guides3.jpg}
-    \caption{Imagen extraída de guides.github.com}
+    \caption{Imagen extraída de guides.github.com ~\cite{Guides}}
     \label{figura:guides3}
  \end{figure}
 
@@ -483,208 +475,59 @@ Una vez que se han terminado las modificaciones en un proyecto y se ha comprobad
 \begin{figure}[ht]
     \centering
     \includegraphics[width=12cm, keepaspectratio]{img/guides4.pdf}
-    \caption{Imagen extraída de guides.github.com}
+    \caption{Imagen extraída de guides.github.com ~\cite{Guides}}
     \label{figure:guides4}
  \end{figure}
 
 \end{enumerate}
 
-\section{Marco de evaluación}
 
-Para poner identificar los proyectos de ingeniería del software se necesita (a) identificar las prácticas esenciales de ingeniería del software que se emplean en el desarrollo y mantenimiento de un proyecto de software típico y (b) proponer medios para cuantificar la evidencia de su uso en un proyecto de software dado. El marco de evaluación es nuestro intento de lograr este objetivo.
-
-El marco de evaluación, en su forma más simple, es una función de valor booleano definida como una función por partes como se muestra en la ecuación \ref{eq:repos}.
+\chapter{Diseño e implementación}
 
 
 
-\begin{equation}
-f(r) = \left \{ \begin{array}{l} {\rm verdadero\:  si\: el\: repositorio}\: r \: \rm{contiene\: un\: proyecto\: de\: ingeniería} \\ \rm falso     \:        en \:cualquier \: otro \: caso \end{array} \right.
-\label{eq:repos}
-\end{equation}
+En este trabajo vamos a analizar las dos fuentes principales de datos que hemos utilizado: los repositorios de acceso público disponibles en GitHub y sus subsecciones. Los metadatos de GitHub contienen una gran cantidad de información con la que se podrían describir varias características que se identifican en el código fuente. Por ejemplo, algunas de las características importantes de los metadatos son el lenguaje principal de implementación en un repositorio y los compromisos realizados por los desarrolladores en un repositorio. Además de los metadatos sobre un repositorio, el código que contiene es una fuente importante de información sobre el proyecto. Los desarrolladores suelen interactuar con sus repositorios utilizando el cliente git o la interfaz web GitHub. Los desarrolladores también pueden usar la REST API de GitHub para interactuar mediante programación con GitHub.
 
+\section{Métricas de un repositorio}
 
-
-El marco de evaluación no asume la implementación de la función de valor booleano, $f(r)$. En nuestra implementación del marco de evaluación, hemos elegido realizar $f (r)$ de dos maneras: (a) $f (r)$ como un clasificador basado en la puntuación y (b) $f (r)$ como un clasificador Random Forest. En ambos casos, la implementación de la función, $f (r)$, se logra al expresar el repositorio, $r$, usando un conjunto de atributos cuantificables (llamados dimensiones) que creemos que son esenciales para razonar que un repositorio contiene un proyecto de ingeniería de software.
-
-\section{Fuentes de datos}
-
-En nuestro trabajo vamos a analizar las dos fuentes principales de datos que hemos utilizado: los repositorios de acceso público disponibles en GitHub y sus subsecciones.
-
-	\subsection{Metadatos}
-
-Los metadatos de GitHub contienen una gran cantidad de información con la que se podrían describir varias características que se identifican en el código fuente. Por ejemplo, algunas de las piezas importantes de los metadatos son el lenguaje principal de implementación en un repositorio y los compromisos realizados por los desarrolladores en un repositorio.
-GitHub proporciona una REST API (GitHub Inc, 2016a) con la que se pueden obtener metadatos de GitHub a través de Internet. Existen varios servicios que capturan y publican estos metadatos de forma masiva, evitando los retardos de la API oficial. El proyecto GitHub Archive (GitHub Inc, 2016b) fue creado para este propósito y almacena los eventos públicos en el cronograma de GitHub y los publica a través de Google BigQuery. Google BigQuery es un motor de consultas que admite construcciones similares a SQL para consultar grandes conjuntos de datos. Sin embargo, acceder al conjunto de datos de GitHub Archive a través de BigQuery conlleva un costo por terabyte de datos procesados.
-Afortunadamente, Gousios~\cite{gousios2013ghtorent} tiene una solución de uso libre a través de su Proyecto GHTorrent. El proyecto GHTorrent proporciona un espejo fuera de línea escalable y consultable de todos los metadatos de Git y GitHub disponibles a través de la REST API de GitHub. Durante los últimos años, GitHub se ha convertido en el sitio de alojamiento de repositorios elegido para muchos proyectos de software de código abierto (OSS). Curiosamente, GitHub proporciona una REST API para su conjunto de datos completo, por lo que es un objetivo de investigación atractivo. El proyecto GHTorrent utiliza la API de GitHub para recopilar datos sin procesar y poder extraer, archivar y compartir metadatos. Los conjuntos de datos creados ya han sido utilizados en otros trabajos: análisis del modelo de desarrollo de extracción, análisis de compromisos de conducción y análisis de incentivos de prueba en sitios sociales (Gousios et al.,\cite{gousios2013exploration}) y son de libre acceso para los investigadores.
-GHTorrent fue diseñado para usar el almacenamiento en caché en exceso (para evitar solicitudes duplicadas) y también para ser distribuido (para permitir que múltiples usuarios recuperen datos en paralelo). 
-
-La API de GitHub admite dos tipos de consultas:
-
-	
-	\begin{itemize}
-		\item Las consultas de recursos recuperan una instancia específica de un recurso. Según los mandatos de la arquitectura REST, la URL que identifica un recurso estático permanece constante después de que el recurso se ha inicializado.
-		
-	\item Las consultas de rango recuperan una lista de recursos, generalmente relacionados con un recurso dado. Por ejemplo, la cadena /{user}/ followers recupera los seguidores de un usuario, mientras que la cadena /{user}/followers/commits recupera la asignación para un repositorio. La paginación se usa para limitar la cantidad de datos por respuesta. Las consultas de rango no necesariamente devuelven la instancia de entidad completa para cada elemento, pero generalmente incluyen una URL donde se puede recuperar el elemento. Como resultado, una consulta de rango podría resultar en varias consultas de recursos.
-	
-\end{itemize}
-
-Los resultados de la consulta de recursos se pueden almacenar en la memoria caché de manera muy eficiente, ya que, por definición, nunca cambian. Las consultas de rango son más difíciles de almacenar en caché, ya que su resultado puede cambiar a medida que el proyecto evoluciona (nuevos compromisos, nuevos seguidores, etc.); afortunadamente, por defecto, GitHub proporciona primero los resultados más nuevos, por lo que es suficiente pasar por las primeras páginas de resultados solo para recuperar los datos actualizados. Para almacenar en caché los resultados por entidad, GHTorrent utiliza una base de datos MongoDB, que ofrece el beneficio adicional de habilitar la consulta en los datos sin procesar. El almacenamiento en caché también se utiliza en la capa de solicitud HTTP; GHTorrent serializa automáticamente las respuestas HTTP en el disco. Esto evita la recuperación de páginas antiguas.
-
-El algoritmo de duplicación se basa en un proceso de resolución de dependencia recursiva. Para cada elemento recuperable, especificamos un conjunto de dependencias, ya que lógicamente fluyen desde el esquema de datos. Por ejemplo, para recuperar un proyecto, es necesario recuperar primero el usuario propietario; del mismo modo, para recuperar una solicitud de extracción, el proyecto debe recuperarse primero. Si falla cualquier paso de la resolución de dependencia, todo el elemento se marca como no recuperado. El proceso fue diseñado desde el principio para ser idempotente: cada paso de la resolución de dependencia puede fallar, pero una vez que tiene éxito, siempre devolverá el mismo resultado. Esta elección de diseño es muy importante ya que hace que se agreguen los datos y los resultados de cada paso y, por lo tanto, que sean almacenables en caché.
-
-
-El proyecto GHTorrent es similar al proyecto GitHub Archive (Grigorik, 2020), ya que ambos comienzan con el marco temporal de los eventos públicos de GitHub. Mientras que el proyecto GitHub Archive simplemente registra los detalles de un evento GitHub, el proyecto GHTorrent recupera exhaustivamente los contenidos del evento y los almacena en una base de datos. Además, los conjuntos de datos GHTorrent están disponibles para descargar, ya sea como volcados incrementales de MongoDB o como un único volcado de MySQL, lo que permite el acceso sin conexión a los metadatos. Se ha optado por utilizar el volcado de MySQL que se descargó y restauró en un servidor local. En el resto del documento, cada vez que se usa el término base de datos nos referimos a la base de datos GHTorrent.
-
-El volcado de la base de datos utilizado en este estudio se lanzó el 1 de abril de 2015. El volcado de la base de datos contenía metadatos para 16,331,225 repositorios de GitHub. En este estudio, nos restringimos a los repositorios en los que el lenguaje principal es Java, Python, PHP, Ruby, C ++, C o C \#. Además, no consideramos los repositorios que se han marcado como eliminados y los que están contenidos en otros repositorios. Los repositorios eliminados restringen la cantidad de datos disponibles para el análisis, mientras que los repositorios bifurcados pueden inflar artificialmente los resultados al introducir duplicados en la muestra. Con estas restricciones aplicadas, el tamaño de nuestra muestra se reduce a 2,247,526 repositorios.
-
-
-Una limitación inherente de la base de datos es la obsolescencia de los datos. Puede haber repositorios en la base de datos que ya no existan en GitHub, ya que pueden haber sido eliminados, renombrados, privados o bloqueados por GitHub. Como resultado, solo consideramos los repositorios que estaban activos en el momento en que se ejecutó nuestro análisis.
-
-\subsection{Código fuente}
-
-Además de los metadatos sobre un repositorio, el código que contiene es una fuente importante de información sobre el proyecto. Los desarrolladores suelen interactuar con sus repositorios utilizando el cliente git o la interfaz web GitHub. Los desarrolladores también pueden usar la REST API de GitHub para interactuar mediante programación con GitHub.
-
-Se va a utilizar GitHub con el fin de obtener una copia del código fuente para cada repositorio. No se puede utilizar la REST API de GitHub para recuperaciones instantáneas del repositorio, ya que la API utiliza internamente el comando git archive para crear esas instantáneas. Como resultado, las instantáneas pueden no incluir archivos que los desarrolladores hayan marcado como irrelevantes para un usuario final (como los archivos de prueba unitaria). Como se quieren examinar todos los archivos de desarrollo en nuestro análisis, utilizamos el comando git clone para asegurarnos de que todos los archivos se descargan.
-
-Como ya se ha mencionado, los metadatos utilizados en este estudio están actualizados a partir del 1 de abril de 2015. Para sincronizar el repositorio con los metadatos, hay que restablecer el estado del repositorio a una fecha pasada (Munaiah et al.~\cite{munaiah2017curating}), de forma que para cada repositorio evaluado en la base de datos, recuperamos la fecha de la confirmación más reciente en el repositorio. Posteriormente se identifica el \emph{SHA} de la última confirmación realizada en el repositorio antes del final del día, identificado por fechas y usando el comando \emph{git log -1 --before = ``{date} 11:59:59''}. Para los repositorios sin confirmaciones registradas en la base de datos, utilizamos la fecha en la que se lanzó el volcado de metadatos GHTorrent, es decir, 01-04-2015.Con el \emph{SHA} de confirmación apropiado identificado, el estado del repositorio clonado se restable utilizando el comando \emph{git reset  -- duro \{SHA\}}.
-
-\section{Dimensiones}
-
-En este apartado se van a analizar las distintas dimensiones utilizadas para representar un repositorio en relación con lo descrito en los anteriores apartados. De esta forma, se va a representar un positorio mediante las siguientes siete dimensiones:
-
-
-\begin{enumerate}
-	\item  Comunidad, como evidencia de colaboración.
-\item  Integración continua, como evidencia de calidad.
-\item  Documentación, como evidencia de mantenibilidad.
-\item  Historia, como evidencia de evolución sostenida.
-\item  Cuestiones, como evidencia de la gestión del proyecto.
-\item  Licencia, como prueba de responsabilidad.
-\item  Pruebas unitarias, como prueba de calidad.
-\end{enumerate}
-
-A la hora de seleccionar las dimensiones, además de tener en cuenta y como prioritario todo lo relacionado con la ingeniería del software era primordial, hay que considerar también otros aspectos como son la precisión en la medida y la simplicidad. Además, el algoritmo que se debe utilizar para medir esas dimensiones tiene que ser lo suficientemente genérico como para incluir los distintos lenguajes de programación utilizados en los proyectos de software y lo suficientemente específico como para producir resultados significativos. Hay que tener en cuenta que, aunque la lista no es exhaustiva ni objetiva, en la evaluación no se tienen en cuenta ni las diferentes dimensiones ni la forma en que se utilizan las dimensiones para determinar si un repositorio contiene un proyecto de ingeniería del software.
+Además de las siete dimensiones enumeradas anteriormente, es necesario tener en cuenta el tamaño del repositorio, utilizando la métrica de las líneas de código fuente (SLOC), ya que hay que tener en cuenta como dicho tamaño influye en las otras dimensiones. En este trabajo se ha utilizado la utilidad Perl ~\cite{Danial} para recopilar la métrica SLOC de un repositorio (Figura 4.1 \grex{referencia a figura}).
 
 \begin{figure}[ht]
 	\centering
 		\includegraphics[width=14cm,clip]{img/metrica}
-	\caption{Métrica SLOC de un repositorio}
+	\caption{Métrica SLOC de un repositorio. \grex{fuente}}
 	\label{fig:metrica}
 \end{figure}
 
-En las próximas subsecciones, se van a describir las dimensiones con mayor detalle y se profundizará en el atributo de un proyecto de software que representa la dimensión, en la métrica para cuantificar la dimensión y en la metodología para recopilar la métrica de un repositorio de código fuente. El proceso de recopilación de la métrica de una dimensión puede necesitar una o ambas fuentes de datos.
-Además de las siete dimensiones enumeradas anteriormente, es necesario tener en cuenta el tamaño del repositorio, utilizando la métrica de las líneas de código fuente (SLOC), ya que hay que tener en cuenta como dicho tamaño influye en las otras dimensiones. En este trabajo se ha utilizado la utilidad Perl (Danial,~\cite{danial2009cloc}) para recopilar la métrica SLOC de un repositorio (Figura \ref{fig:metrica}).
-
- Se ha utilizado una herramienta de código abierto llamada Reaper, que es capaz de recopilar la métrica para cada una de las dimensiones de un repositorio de código fuente dado. El código fuente de Reaper está disponible en GitHub en https://github.com/RepoReapers/reaper. En su versión actual sus capacidades tienen las siguientes restricciones:
 
 \begin{itemize}
-	\item El repositorio debe ser de acceso público en GitHub.
-\item El lenguaje principal del repositorio debe ser Ruby, Python, PHP, Java, C ++, C o C \#.
-\end{itemize}
-
- Se han elegido estos lenguajes porque son los más utilizados en GitHub (Zapponi, ~\cite{zapponi2016githut}).
-
-Dos de las características principales de Reaper son su flexibilidad y extensibilidad, ya que es muy fácil agregar la posibilidad de poder analizar repositorios con un código fuente en otro lenguaje (por ejemplo, JavaScript).
-
-
-\subsection{Comunidad}
-
-El desarrollo e implantación masiva de internet ha contribuido, de una forma colaborativa y descentralizada, al desarrollo de una disciplina como la ingeniería del software y a la proliferación de sofware libre y desarrolladores de código abierto que colaboran en multitud de proyectos.
-
-
-La presencia de un conjunto grande de desarrolladores de software de código abierto indica que hay alguna forma de colaboración y cooperación involucrada en el desarrollo del software y nos da cierta idea de que un repositorio puede contener un proyecto de ingeniería del software. En este sentido, Whitehead y col.~\cite{whitehead2010collaborative} han planteado la hipótesis de que el desarrollo de un software que involucra a más de un desarrollador puede considerarse en primera instancia como ingeniería de software colaborativa. Además, en este sentido proponen una métrica para cuantificar la comunidad que ha contribuido en el código fuente de un repositorio.
-En este sentido, se plantea que la colaboración es una actividad central en la ingeniería de software, ya que todos los proyectos, excepto los más triviales, involucran a varios ingenieros que trabajan juntos. Por lo tanto, comprender la colaboración en ingeniería de software es importante tanto para ingenieros como para investigadores. Este capítulo presenta un marco para comprender la colaboración de ingeniería de software, centrado en tres ideas clave: (1) los modelos en abierto; (2) la gestión de proyectos de software; y (3) formas de distancia espacial, temporal y sociocultural en las vías de colaboración existentes. El análisis de las tendencias futuras resalta varias formas en que los ingenieros podrán mejorar la colaboración del proyecto, específicamente, los entornos de desarrollo de software cambiarán a estar totalmente basados en la Web, lo que abrirá el potencial para la integración, una mayor participación de los usuarios finales en el desarrollo del proyecto, y mayor facilidad en la ingeniería del software global.
-
-Además, se va a considerar como contribuyentes principales en un repositorio al conjunto más pequeño de contribuyentes cuya aportación al código fuente de un repositorio representa el 80\% o más de las contribuciones totales.
-
-La noción de contribuyentes principales es fundamental en el software de código abierto, donde un conjunto de contribuyentes conduce un proyecto hacia un objetivo común. Mockus y col.~\cite{mockus2000case} han aplicado este concepto en su estudio de las prácticas de desarrollo del software de código abierto. La definición de contribuyentes principales es la misma que la de los desarrolladores principales tal como la definen Syer et al.~\cite{syer2013revisiting}.
-
-Se va a calcular las contribuciones totales contando el número de confirmaciones realizadas en un repositorio cuando se registra en la base de datos. Luego agrupamos las confirmaciones por autor y seleccionamos los primeros n autores para los cuales el número acumulado de confirmaciones representaba el 80\% de las contribuciones totales. El valor de n representa la métrica de los contribuyentes principales.
-Hay un problema en la implementación de esta métrica en Reaper. Utilizamos los datos de GHTorrent (GHTorrent, 2016a) para encontrar contribuyentes únicos de un repositorio. Sin embargo, GHTorrent tiene la noción de "usuarios falsos" que no tienen cuentas de GitHub (GHTorrent 2016b) pero publican sus contribuciones con la ayuda de usuarios reales de GitHub. Por ejemplo, un "usuario falso" introduce un código commit en un repositorio local de Git, luego un "usuario real" introduce esos códigos commit en el GitHub usando su cuenta. A veces, los usuarios reales y falsos pueden ser los mismos. Este es el caso cuando un desarrollador con una cuenta de GitHub se conecta con una dirección de correo electrónico secundaria. Esto tiende a inflar la métrica de contribuyentes principales para repositorios pequeños con un solo contribuyente real, y podría mejorarse en el futuro mediante la detección de las direcciones de correo electrónico similares.
-
-	\subsection{Integración continua}
-
-La integración continua (CI) es una práctica de ingeniería del software en la que los desarrolladores regularmente crean, ejecutan y prueban su código combinado con el código de otros desarrolladores. La integración continua se realiza para garantizar que la estabilidad del sistema en su conjunto no se vea afectada por los cambios. Normalmente implica implementar y compilar el software, ejecutar pruebas unitarias automatizadas y analizar la calidad del sistema. 
-
-Con millones de desarrolladores que contribuyen a miles de repositorios de código fuente, la práctica de integrar continuamente los cambios asegura que el software contenido en estos repositorios de código fuente está en constante evolución y que es estable para el desarrollo y/o lanzamiento. El uso de la integración continua es una prueba más de que el proyecto de software podría considerarse un proyecto de ingeniería del software.
-
-La métrica para la integración continua se puede definir como una función por partes como se muestra a continuación:
+	\item Comunidad: La presencia de un conjunto grande de desarrolladores de software de código abierto indica que hay alguna forma de colaboración y cooperación involucrada en el desarrollo del software y nos da cierta idea de que un repositorio puede contener un proyecto de ingeniería del software. Se van a calcular las contribuciones totales contando el número de confirmaciones realizadas en un repositorio cuando se registra en la base de datos. Luego agrupamos las confirmaciones por autor y seleccionamos los primeros n autores para los cuales el número acumulado de confirmaciones representaba el 80% de las contribuciones totales. El valor de n representa la métrica de los contribuyentes principales.
+   \item Integración continua: La métrica para la integración continua se puede definir como una función por partes como se muestra a continuación:
 
 \begin{equation}
-M_{ci}(r)=\left\{ \begin{array} {ll}
+M_{ci}(r)=\left\{ \begin{array} {l}
 1 &      \mbox{si el repositorio}\: r\: \mbox{usa un servicio de la integración continua}\\
 0   &    \mbox{en cualquier otro caso}
 \end{array}\right. 
 \label{eq:}
 \end{equation}
 
-                                                                                       
-El uso de un servicio de integración continua se determina buscando un archivo de configuración (requerido por ciertos servicios de CI) en el repositorio de código fuente. Una limitación inherente de este enfoque es que solo admite la identificación de servicios de CI sin estado. La integración con servicios con estado como Jenkins, Atlassian Bamboo y Cloudship no se puede identificar, ya que puede que no haya rastros de la integración en el repositorio. Los servicios de integración continua actualmente soportados son: Appveyor, Hound, Travis CI, Shippable, MagnumCI, CircleCI, Solano y Wercker.
+\item Documentación: Nos limitamos a la documentación en forma de comentarios de código fuente. Se propone una relación métrica de comentarios para cuantificar la extensión de la documentación del código fuente de un repositorio, que es la relación entre el número de líneas de código de comentarios (CLOC) y el número de líneas de código fuente (SLOC) que no están en blanco en un repositorio r.
 
-
-
-	\subsection{Documentación}
-
-Un documento de software puede describirse como cualquier documento destinado a comunicar información sobre el software (Forward and Lethbridge,~\cite{forward2002relevance}). Según Ambler~\cite{Ambler}, la documentación del software responde a tres necesidades: (i) contractual; (ii) respaldar un proyecto de desarrollo de software al permitir que los miembros del equipo conciban gradualmente la solución a implementar, y (iii) permitir que un equipo de desarrollo del software comunique los detalles de la implementación a lo largo del tiempo al equipo de mantenimiento.
-
-La documentación generalmente sufre los siguientes problemas: inexistente o de baja calidad (Pressman,~\cite{pressman2005software}; anticuado (Thomas and Tilley~\cite{thomas2001documentation}; Tilley~\cite{tilley1993documenting}; Tilley et al.~\cite{tilley1992documenting}; Forward and Lethbridge~\cite{forward2002relevance}); sobre abundante y sin un objetivo definido (Forward and Lethbridge~\cite{forward2002relevance}; Lindvall et al.~\cite{lindvall2002empirical}); difícil de acceder (por ejemplo, cuando los documentos están dispersos en varias computadoras o en diferentes formatos: texto, diagramas) (Tilley~\cite{tilley1993documenting}); falta de interés de los programadores (Pigoski,~\cite{pigoski1996practical}; HCI \footnote{What to put in software maintenance documentation. Available on the Internet at: http://www.hci.com.au/hcisite2/journal/ What to put in software maintenance documentation. htm, 2001–2002. Last accessed on May 27}; Tilley and Muller~\cite{tilley1991info}); y, difícil de estandarizar, debido, por ejemplo, a las especificidades del proyecto (Phoha~\cite{phoha1997standard}).
-
-Recientemente, otros métodos proponen un enfoque para el desarrollo del software que eliminan la necesidad de la documentación como una ayuda para el desarrollo del software. Proponen una comunicación informal entre desarrolladores y usuario. Sin embargo, estos métodos no eliminan la necesidad de documentación como herramienta de comunicación a lo largo del tiempo, lo que permite a los desarrolladores comunicar información importante sobre un sistema a futuros mantenedores.
-
-Una mejor definición de los documentos que necesitan los encargados del mantenimiento del software ya se ha considerado en otros estudios.
-
-
-\begin{itemize}
-\item Tilley en \cite{tilley1992documenting} y \cite{tilley1993documenting} enfatiza la importancia de un documento que describa la arquitectura jerárquica del sistema.
-
-\item  Cioch y col.~\cite{cioch1996documentation}  diferencian cuatro etapas (desde el recién llegado, el primer día de trabajo; a experto, después de algunos años de trabajo en un sistema). Para cada etapa, proponen diferentes documentos: los recién llegados necesitan una visión general breve del sistema; los aprendices necesitan la arquitectura del sistema; después necesitan documentos orientados a tareas tales como descripción de requisitos, descripción de procesos, ejemplos, instrucciones paso a paso; Finalmente, los expertos necesitan documentación de bajo nivel, así como la descripción de requisitos y las especificaciones de diseño.
-
-
-	\item  Rajlich~\cite{rajlich2000incremental} propone una herramienta que permite recopilar notas sobre el dominio de la aplicación.
-\item Ambler~\cite{Ambler} recomienda documentar las decisiones y una visión general del diseño: requisitos, reglas comerciales, arquitectura, etc.
-
-\item  En un taller organizado por Thomas y Tilley en SIGDoc 2001~\cite{thomas2001documentation}, afirman que ``nadie sabe realmente qué tipo de documentación es realmente útil para los ingenieros de software para ayudar a la comprensión del sistema''.
-
-\item Forward y Lethbridge~\cite{forward2002relevance}  en su encuesta a los desarrolladores, encontraron que los documentos de especificación son los más consultados, mientras que los documentos de calidad y bajo nivel son los menos consultados.
-
-\item  Grubb y Takang~\cite{grubb2003software}, identifican algunas necesidades de información de las personas que se dedican al mantenimiento de acuerdo con sus actividades. Los gerentes necesitan información de soporte de decisiones, como el tamaño del sistema y el costo de la modificación. Los analistas deben comprender el dominio de la aplicación, los requisitos y tener una visión global del sistema. Los diseñadores necesitan comprensión arquitectónica (componentes funcionales y cómo interactúan) e información detallada del diseño (algoritmos, estructuras de datos). Finalmente, los programadores necesitan una comprensión detallada del código fuente, así como una vista de nivel superior (similar a la vista arquitectónica).
-
-\item  Anquetil y col.~\cite{anquetil2005tool} presenta una herramienta de re-documentación para automatizar parcialmente un proceso de re-documentación que se centra en la siguiente información: vista de alto nivel (con descripción de los requisitos), modelo de datos, referencias cruzadas entre funcionalidades, funciones y datos, reglas de negocio, descripción e interacción de subsistemas y comentarios.
-
-\item  Finalmente, de acuerdo con Teles\cite{teles2004extreme}, los documentos que deben generarse al final de un proyecto XP son: historiales, pruebas, modelo de datos, modelo de clase, descripción del proceso comercial, manual del usuario y minutos del proyecto.
-Una conclusión que podemos extraer de esta breve revisión es que la arquitectura del sistema es un documento importante para el mantenimiento del software.
-\end{itemize}
-
-El mantenimiento se define tradicionalmente como cualquier modificación realizada en un sistema después de su entrega. Los estudios muestran que el mantenimiento del software es, con mucho, la actividad predominante en la ingeniería del software (90\% del costo total de un software típico (Pigoski,~\cite{pigoski1996practical}; Seacord et al.,~\cite{seacord2003modernizing}). Es necesario para mantener los sistemas de software actualizados y útiles: cualquier sistema de software refleja el mundo en el que opera, cuando este mundo cambia, el software debe cambiar en consecuencia. La primera ley de Lehman de la evolución del software (ley del cambio continuo) (Lehman,~\cite{lehman1980programs}) es que "un programa que se utiliza sufre cambios continuos o se vuelve cada vez menos útil". El mantenimiento es obligatorio, uno simplemente no puede ignorar las nuevas leyes o la nueva funcionalidad introducida por un concurrente. Los programas también deben adaptarse a nuevas computadoras (con mejores rendimientos) o nuevos sistemas operativos (Souza et al.,~\cite{de2005study}).
-
-Uno de los principales problemas que afectan el mantenimiento del software es la falta de documentación actualizada. Debido a esto, los mantenedores a menudo deben trabajar desde el código fuente hasta la exclusión de cualquier otra fuente de información. Por ejemplo, un estudio (ver Pfleeger~\cite{pfleeger1998software}; Pigoski~\cite{pigoski1996practical}) informa que del 40\% al 60\% de la actividad de mantenimiento se empleaa en estudiar el software para comprenderlo y cómo la modificación planeada puede ser implementada.
-
-Los desarrolladores de software crean y mantienen diversas formas de documentación. Algunos forman parte de los archivos fuente, como los comentarios de código, y otros son parte de fuentes externas, como wikis, requisitos y documentos de diseño. Una función de la documentación es ayudar a la comprensión del software para fines de mantenimiento. Entre las muchas formas de documentación, se ha encontrado que los comentarios sobre el código fuente eran tan importantes, que solo los superaban el código fuente en sí (Souza et al.~\cite{de2005study}). La presencia de documentación, en cantidad suficiente, indica que el autor pensó en el mantenimiento; esto sirve como evidencia parcial para determinar que es ingeniería del software.
-
-En este estudio, nos limitamos a la documentación en forma de comentarios de código fuente. Proponemos una relación métrica de comentarios para cuantificar la extensión de la documentación del código fuente de un repositorio.
-
-La relación de comentarios es la relación entre el número de líneas de código de comentarios (cloc) y el número de líneas de código fuente (sloc) que no están en blanco en un repositorio $r$.
-
-\begin{equation}
+\begin{equation} {2}
 M_d(r)=\frac{cloc}{sloc+cloc}
 \label{eq:}
 \end{equation}
-                                                            
-Utilizamos un cloc de la utilidad Perl (Danial~\cite{danial2009cloc}) para calcular las líneas de código fuente y las líneas de código de comentarios. Cloc devuelve líneas de código en blanco, comentarios y líneas de código fuente agrupadas por los diferentes lenguajes de programación en el repositorio. Se agregan entonces los valores devueltos por cloc al calcular la relación de comentarios.
-Se puede observar que la proporción de comentarios solo cuantifica la extensión del código fuente en la documentación contenida en un repositorio. No se considerará la calidad, la antigüedad o la relevancia de la documentación. Además, solo se va a considerar una única fuente de documentación (comentarios de código fuente) al cuantificar esta dimensión, No se considerarán otras fuentes de documentación (externas) como wikis, documentos de diseño y cualquier archivo README asociado porque identificar y cuantificar estas fuentes externas puede no ser tan sencillo. Es posible que tengamos que aprovechar las técnicas de procesamiento del lenguaje natural para analizar estas fuentes de documentación externa.
 
-	\subsection{Historia}
+Se puede observar que la proporción de comentarios solo cuantifica la extensión del código fuente en la documentación contenida en un repositorio. No se considerará la calidad, la antigüedad o la relevancia de la documentación.
 
-Eick y col. (2001) han demostrado que el código fuente debe sufrir cambios continuos para impedir su obsolescencia y seguir siendo comercializable. Un cambio podría ser la corrección de errores, adición de características, mantenimiento preventivo, resolución de vulnerabilidades, etc. La presencia de un cambio sostenido indica que software se está modificando para garantizar su viabilidad. 
-
-En el contexto de un repositorio de código fuente, un commit es la unidad por la cual se puede cuantificar el cambio. Se propone por tanto que la frecuencia del commit sea una métrica de los cambios que sufre un repositorio. Con todo esto tendremos que la frecuencia del commit va a ser el número promedio de commit por mes.
+\item Historia: La presencia de un cambio sostenido indica que software se está modificando para garantizar su viabilidad. Así, un commit es la unidad por la cual se puede cuantificar el cambio del código fuente de un repositorio. Se propone por tanto que la frecuencia del commit sea una métrica de los cambios que sufre un repositorio. Con todo esto tendremos que la frecuencia del commit va a ser el número promedio de commit por mes.
 
 \begin{equation}
 M_h(r) = \frac{1}{m} \sum_{i=1}^m c_i
 \label{eq:}
 \end{equation}
-
-
-
+(3)
 donde:
 
 \begin{itemize}
@@ -694,11 +537,8 @@ donde:
 
 Cada $c_i$ se calculará contando el número de commit registrados en la base de datos para el mes $i$. Sin embargo, $m$ se calculó como la diferencia, en meses, entre la fecha del primer commit y la fecha del último commit del repositorio. Si $m$ da como resultado 0, el valor de la métrica debe ser 0 también.
 
-	\subsection{Problemas}
 
-Con los años se han desarrollado gran cantidad de herramientas que sirven para simplificar la gestión de grandes proyectos de software. Estas herramientas se utilizan en algunas de las principales propiedades de la ingeniería de software, como la administración de requisitos, cronogramas, tareas, defectos y versiones. Se supone que un proyecto de software que emplea herramientas de gestión de proyectos es representativo de un proyecto de ingeniería del software. Por lo tanto, la evidencia del uso de herramientas de gestión de proyectos en un repositorio de código fuente puede indicar la presencia de un proyecto de ingeniería del software.
-
-Aunque hay varias herramientas comerciales disponibles, no existe una forma unificada en la que estas herramientas se integren en un repositorio de código fuente. Los repositorios de código fuente alojados en GitHub pueden aprovechar una característica engañosamente nombrada de GitHub (problemas de GitHub) para administrar potencialmente todo el ciclo de vida de un proyecto de software. Decimos que se llama engañosamente porque un "problema" en GitHub puede estar asociado con una variedad de etiquetas personalizables que podrían alterar la interpretación del problema. Por ejemplo, los desarrolladores podrían crear historias de usuario como problemas de GitHub y etiquetarlas como User Story. La riqueza y flexibilidad de la función GitHub Issues ha impulsado el desarrollo de varios servicios de terceros como Codetree (Codetree Studios, 2016), HuBoard (HuBoard Inc, 2016), waffle.io (CA Technologies, 2016) y ZenHub (Zenhub, 2016). Estos servicios utilizan problemas de GitHub para respaldar la gestión del ciclo de vida de los proyectos.
+\item Problemas: Un ``problema'' en GitHub puede estar asociado con una variedad de etiquetas personalizables que podrían alterar la interpretación del repositorio. Con el tiempo se han venido utilizando muchas herramientas que simplifican la gestión de grandes proyectos, por lo que un proyecto de software que emplea herramientas de gestión de proyectos es representativo de un proyecto de ingeniería. Se puede tener en cuenta entonces que el uso de herramientas de gestión de proyectos en un repositorio es un indicativo de un proyecto de ingeniería. Sin embargo, no hay una única forma de integrar esas herramientas en un repositorio y puede haber otros repositorios que utilicen esa herramienta para otros fines y que den como resultado una identificación falsa (problema) como proyecto de ingeniería. 
 
 En este proyecto se asume que el uso sostenido de la función GitHub Issues indica la gestión en un repositorio de código fuente. Por eso se propone como métrica la frecuencia del problema para cuantificar el uso sostenido de GitHub Issues en un repositorio. Así, la frecuencia del problema va a ser la media del número de problemas ocurridos por mes.
 
@@ -706,7 +546,7 @@ En este proyecto se asume que el uso sostenido de la función GitHub Issues indic
 M_i (r)=   \frac{1}{m} \sum_{i=1}^m s_i
 \label{eq:}
 \end{equation}
-                                                                       (5)
+                                                                       (4)
 donde:
 
 \begin{itemize}
@@ -716,65 +556,89 @@ donde:
 
 Cada $s_i$ se calculará contando el número de problemas registrados en la base de datos para el mes $i$. Sin embargo, $m$ se calculará como la diferencia, en meses, entre la fecha del primer commit y la fecha del último commit del repositorio. Si $m$ es 0, el valor de la métrica debe ser 0 también.
 
-Un inconveniente de este enfoque es que no permite descubrir otras herramientas de gestión de proyectos ya que los enlaces estructurados a estas herramientas pueden no existir en el código fuente del repositorio.
+\item Licencia: La presencia de una licencia en un repositorio de código fuente se evalúa utilizando la licencia API de GitHub. Así, se identifica la información de la licencia buscando en los archivos del repositorio las 12 licencias de código abierto más populares en GitHub.
 
-	\subsection{Licencia}
- 
-La posibilidad que tenga un usuario de usar, modificar y / o redistribuir una parte de un software viene determinado por el tipo de licencia que acompaña al software. Las licencias son especialmente importantes en el contexto de los proyectos de código abierto como lo analiza un artículodel Software Freedom Law Center\footnote{Managing copyright information within a free software project – software freedom law center. http://softwarefreedom.org/ resources/2012/managingcopyrightinformation. Html. Acceso: 11-02-2020}, donde se destaca la necesidad de las licencias de software de código abierto y las mejores prácticas de las mismas.
+\item Pruebas unitarias: La evidencia de las pruebas implica que los desarrolladores han dedicado tiempo y esfuerzo para garantizar que el producto tenga el comportamiento previsto. Sin embargo, la presencia de pruebas no es una medida suficiente para concluir que el software funciona correctamente, ya que influye la idoneidad de esas pruebas. La adecuación de las pruebas contenidas en un proyecto de software puede medirse de varias maneras ~\ref{Zhu}. 
 
-Un software que no venga con licencia está protegido por defecto por las leyes de copyright, que establecen que el autor retiene todos los derechos sobre el código fuente (GitHub, 2016c). Sin embargo, aunque no existe obligación de incluir una licencia en un repositorio de código fuente, se considera una práctica recomendada. Además, los permisos de uso de GitHub pueden permitir que otros usuarios puedan copiar repositorios de acceso público. Por lo tanto, incluir una licencia en el repositorio dicta explícitamente los derechos del usuario para copias del repositorio, pero aunque dicha licencia no es suficiente para indicar que un repositorio contiene un proyecto de ingeniería del software de acuerdo con nuestra definición de la dimensión.
- 
-Podemos definir la métrica para la dimensión de licencia como una función por partes como se indica a continuación:
-
-\begin{equation}
-M_{l}(r)=\left\{ \begin{array} {ll}
-1 &      \mbox{si el repositorio}\: r\: \mbox{tiene una licencia}\\
-0   &    \mbox{en cualquier otro caso}
-\end{array}\right. 
-\label{eq:}
-\end{equation}
-
-La presencia de una licencia en un repositorio de código fuente se evalúa utilizando la licencia API de GitHub. La licencia API identifica la presencia de licencias de código abierto populares mediante el análisis de archivos como LICENCIA y COPIA en la raíz del repositorio de código fuente.
-
-La licencia API de GitHub es limitada, ya que no tiene en cuenta la licencia contenida en README.md o en los archivos de código fuente. Además, la API todavía está en situación de "vista previa del desarrollador", por lo que no es fiable. 
-
-Por otro lado, aunque cualquier mejora en las capacidades de la API se tendría en cuenta, se han superado algunas de las limitaciones analizando la licencia contenida en los archivos del repositorio de código fuente. Identificamos la información de la licencia buscando en los archivos del repositorio las 12 licencias de código abierto más populares en GitHub, como por ejemplo la "The MIT License (MIT)". Las 12 licencias elegidas fueron enumeradas por la licencia API de GitHub (https://api.Github.com/licenses). Hay que hacer notar que esta solución provisional puede tener algún problema en repositorios sin licencia propia que incluyan archivos de código fuente de bibliotecas externa, ya que si alguno de los archivos de código fuente de la biblioteca externa contiene extractos de la licencia, la dimensión de la licencia puede indicar falsamente que el repositorio contiene una licencia.
-
-	\subsection{Pruebas unitarias (Unit testing)}
-
-Un producto de ingeniería tiene una vida útil determinada y está sujeto a una serie de pruebas rigurosas para que funcione correctamente durante ese tiempo. Un producto de ingeniería del software no es diferente, ya que está sujeta también a pruebas rigurosas que respaldan la garantía del producto. La evidencia de las pruebas en este último caso implica que los desarrolladores han dedicado tiempo y esfuerzo para garantizar que el producto tenga el comportamiento previsto. Sin embargo, la presencia de pruebas no es una medida suficiente para concluir que el software funciona correctamente, ya que influye la idoneidad de esas pruebas. La adecuación de las pruebas contenidas en un proyecto de software puede medirse de varias maneras (Zhu et al.~\cite{zhu1997software}). 
-
-Esencialmente, para obtener la métrica de estas pruebas se requiere la ejecución de las pruebas unitarias, que pueden requieren satisfacer todas las dependencias que el programa bajo prueba puede tener. Afortunadamente, existen medios para aproximar la adecuación de las pruebas en un proyecto de software mediante el análisis estático. Nagappan et al.~\cite{nagappan2005providing} han utilizado el número de casos de prueba por línea de código fuente y número de afirmaciones por línea fuente de código en la evaluación de la cantidad de prueba en proyectos Java. Además, Zaidman et al.~\cite{zaidman2008mining} han demostrado que la cobertura de la prueba está correlacionada con el porcentaje de código de prueba en el sistema. 
-
-Proponemos una relación métrica, el análisis del cociente, para cuantificar la extensión de la prueba unitaria. Así, ese análisis el cociente será la razón entre el número de líneas fuente de código en los archivos de prueba y el número de líneas de código fuente en todos los archivos fuente.
+Esencialmente, para obtener la métrica de estas pruebas se requiere la ejecución de las pruebas unitarias y como métrica vamos a usar la razón entre el número de líneas fuente de código en los archivos de prueba y el número de líneas de código fuente en todos los archivos fuente.
 
 \begin{equation}
 M_u(r)=\frac{slotc}{sloc}
 \label{eq:}
 \end{equation}
 
-
+(5)
                                                                 
-dónde,
+donde,
 
 \begin{itemize}
 	\item $slotc$ es el número de líneas de código fuente en los archivos de prueba en el repositorio $r$.
 \item  $sloc$ es el número de líneas de código fuente en todos los archivos fuente en el repositorio 
 \end{itemize}
 
+Para calcular el $slotc$, primero debemos identificar los archivos de prueba. Logramos esto buscando patrones específicos del lenguaje y del marco de pruebas en el repositorio. 
 
-Para calcular el $slotc$, primero debemos identificar los archivos de prueba. Logramos esto buscando patrones específicos del lenguaje y del marco de pruebas en el repositorio. Por ejemplo, los archivos de prueba en un proyecto de Python que utilizan el marco de las pruebas unitarias pueden identificarse mediante la búsqueda de patrones de \emph{import unittest} o de \emph{import TestCase}.
+\end{itemize}
 
-Utilizamos \emph{grep} para buscar y obtener una lista de archivos que contienen patrones específicos como el anterior. Luego usamos la herramienta $cloc$ para calcular sloc de todos los archivos fuente en el repositorio y $slotc$ de los archivos de prueba identificados. Ocasionalmente, un proyecto de software puede usar marcos de prueba de unidades múltiples, como por ejemplo un proyecto de aplicación web de Django puede usar el programa unittest de Python y la extensión de \emph{unittest – django.test} de Django. Para tener en cuenta este escenario, acumulamos los archivos de prueba identificados usando patrones para marcos de prueba de unidades específicas de múltiples idiomas antes de calcular $slotc$.
+\section{Metodología}
 
-La multitud de marcos de pruebas unitarias disponibles para cada uno de los lenguajes de programación considerados hace que el enfoque sea limitado en sus capacidades. Actualmente se admiten 20 marcos de prueba unitarios. Los marcos de prueba unitarios actualmente admitidos son: NUnit, Visual Studio Testing y xUnit para C \#; Boost, Catch, googletest y Stout gtest para C ++; PHPUnit para PHP; clar, GLib Testing y picotest para C; JUnit y TestNG para Java; django.test, nose y unittest para Python; y pruebas de unidad minitest, RSpec y Ruby para Ruby.
-En escenarios en los que no podemos identificar un marco de prueba de unidad, recurrimos a considerar todos los archivos en directorios llamados prueba, pruebas o especificaciones como archivos de prueba.
+Para saber si la elección de esos parámetros y pesos son adecuados, se ha escogido un conjunto de repositorios manualmente y que se ha comprobado que contienen proyectos de ingeniería de software. Además, se van a distinguir entre los repositorios que provienen de una organización (que llamaremos Organización) y los que tienen un propósito general para todos los usuarios (que llamaremos Utilidad).
 
-\section{Herramientas estadísticas empleadas}
+Organización: se han examinado manualmente repositorios de organizaciones conocidas como Amazon, Apache, Facebook, Google y Microsoft y se han elegido manualmente un conjunto de 1.000 repositorios que cumplen alguna de estas características (se pueden ver en el apéndice de la memoria): tiene licencia de código abierto, usa comentarios para documentar el código, usa integración continua y contiene pruebas unitarias. En la figura 4.2 \grex{referencia} se muestra el número de repositorios de cada tipo (``engineered'' y ``non-engineered'') agrupados por lenguaje de programación en la organización y conjuntos de datos de utilidad, donde no proyecto significa en este caso que no son repositorios de organizaciones.
 
-En este apartado se resumen las herramientas estadísticas que se han utilizado en el desarrollo de este trabajo.
 
-	\subsection{Coeficiente de correlación de Spearman}
+\begin{figure}[ht]
+	\centering
+		\includegraphics[width=14cm,clip]{img/norepost.jpg}
+	\caption{Número de repositorios en la organización agrupados por lenguajes de programación.}
+	\label{fig:norepost}
+\end{figure}
+
+Utilidad: estos repositorios se escogieron manualmente de una muestra aleatoria de 2.316.524 repositorios. Se eligieron siguiendo estos criterios: 
+
+\begin{itemize}
+\item El archivo contiene documentación suficiente para que el proyecto contenido en él pueda utilizarse en un contexto de fines generales.
+
+\item El repositorio contiene una aplicación o servicio que es utilizado o tiene el potencial de ser utilizado por personas distintas de los desarrolladores.
+
+\item El repositorio no contiene indicaciones que indiquen que el código fuente contenido puede ser una asignación.
+\end{itemize}
+
+
+\begin{figure}[ht]
+	\centering
+		\includegraphics[width=14cm,clip]{img/noreposut.jpg}
+	\caption{Número de repositorios en la utilidad del conjunto de datos agrupados por lenguajes de progamación.}
+	\label{fig:noreposut}
+\end{figure}
+
+En la figura 4.3 se muestra el número de repositorios de cada tipo (``proyecto'' y ``no proyecto'') agrupados por lenguaje de programación en el conjunto de datos de utilidad.
+
+\begin{figure}[ht]
+	\centering
+		\includegraphics[width=14cm,clip]{img/Dist_repos.pdf}
+	\caption{Distribución del número de puntuación de los repositorios; (a) en la organización y (b) utilidad del conjunto de datos}
+\end{figure}
+
+Por otro lado, en la figura 4.4 se puede ver la distribución del número de repositorios de cada tipo (``proyecto'' y ``no proyecto'') pertenecientes a organización y utilidad.
+
+\begin{figure}[ht]
+	\centering
+		\includegraphics[width=12cm,clip]{img/dist_dim.pdf}
+	\caption{Distribución de las dimensiones de repositorios en el conjunto de datos de la organización.}
+	\label{fig:dist_dim}
+\end{figure}
+
+En las figuras 4.5 y 4.6 se muestran las distribuciones de las siete dimensiones obtenidas de los repositorios en la organización y los conjuntos de datos de utilidad, respectivamente.
+
+\begin{figure}[ht]
+	\centering
+		\includegraphics[width=14cm,clip]{img/dist_dim2.pdf}
+	\caption{Distribución de las dimensiones obtenidas de los repositorios en el conjunto de datos de utilidad.}
+	\label{fig:dist_dim2}
+\end{figure}
+
+Una vez que ya sabemos calcular las dimensiones de los repositorios, nos surge la duda de qué relación puede haber entre las distintas dimensiones y si que una sea mayor que otra tiene alguna influencia en el resultado final de catalogar a ese repositorio como ingeniería de software o no. Para saber esto hemos recurrido a métodos estadísticos como la correlación de Spearman Rank Co-efficient ($\rho$) para evaluar la correlación entre las diferentes dimensiones.
 
 El coeficiente de correlación de Spearman ($\rho$) es una medida no paramétrica de la correlación de rango (dependencia estadística del ranking entre dos variables). Se utiliza principalmente para el análisis de datos, así como para medir la fuerza y la dirección de la asociación entre dos variables clasificadas (Question Pro, 2020).
 
@@ -787,87 +651,42 @@ Dicho coeficiente $\rho$ viene dado por la ecuación:
 \label{eq:}
 \end{equation}
 
-donde $N$ es el número de parejas de datos y $D$ es la diferencia entre los correspondientes estadísticos de orden de $x - y$.
+donde $N$ es el número de parejas de datos y $D$ es la diferencia entre los correspondientes estadísticos de orden de $x - y$. 
+
+En la figura 4.7 se muestran los valores de la $\rho$ de Spearman, cuando es estadísticamente significativa en el p-valor $<$ 0.05, entre pares de dimensiones en los conjuntos de datos de organización y utilidad. También se pueden observar en dicha figura las correlaciones que no son estadísticamente significativas y se han representado con un guión. 
+
+Como se ve en la figura 4.6, hay una correlación de moderada a fuerte entre las diversas dimensiones en el conjunto de datos de la organización. Como se ve en dicha figura, a excepción de la dimensión de integración continua en el conjunto de datos de utilidad, el tamaño del repositorio es estadísticamente significativo (p-valor $<$ 0.05) asociado con las dimensiones de valor binario con tamaño de efecto medio. Los resultados de la asociación indican que es más probable que un repositorio más grande tenga una integración y/o licencia.
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics{img/spearman.pdf}
+	\caption{$\rho$  de Spearman entre pares de dimensiones en la organización (a) y conjuntos de datos de utilidad (b) con - (guión) representando las correlaciones estadísticamente insignificantes.}
+	\label{fig:spearman}
+\end{figure}
+
+\newpage
 
 
-	\subsection{Test de mann–whitney–wilcoxon}
-	
+\section{Clasificadores}
 
-Las pruebas no-paramétricas se necesitan cuando no se tienen información sobre la composición de los datos poblacionales, esto es no se tiene conocimiento sobre su distribución de probabilidad. Dentro de las pruebas no-paramétricas, una muy utilizada es la prueba \textbf{U de Mann-Whitney} (también llamada de Mann-Whitney-Wilcoxon, prueba de suma de rangos Wilcoxon, o prueba de Wilcoxon-Mann-Whitney), que es una prueba no paramétrica aplicada a dos muestras independientes. Es, de hecho, la versión no paramétrica de la habitual prueba $t$ de Student. 
+Ahora que ya sabemos calcular los distintos parámetros (dimensiones) y sabemos correlacionarlos, siempre con un conjunto de repositorios elegidos manualmente y que estamos seguros pertenecen a los dos tipos de repositorios Organización y Utilidad, tenemos que seguir algún criterio para poder elegir si examinando los datos de un repositorio aleatorio es de una clase u otra. 
 
-Esta prueba fue propuesta inicialmente en 1945 por Frank Wilcoxon para muestras de igual tamaños y extendido a muestras de tamaño arbitrario como en otros sentidos por Henry B. Mann y D. R. Whitney en 1947.
+El machine learning se puede definir como la automatización mediante algoritmos de la identificación de patrones en un conjunto de datos, por lo que resulta crucial elegir bien el algoritmo adecuado para conseguir el objetivo propuesto. El machine learning ha aumentado su importancia con los años debido a su aplicación en la robótica, vehículos autónomos, la toma de decisiones inteligentes y la inteligencia artificial. De hecho es una rama de la inteligencia artificial que empezó a despuntar en la década de los años 80.
 
-La prueba de Mann-Whitney se usa para comprobar la heterogeneidad de dos muestras ordinales. El planteamiento de partida es el siguiente:
+El objetivo principal del machine learning es la creación de un modelo que permita conseguir el objetivo y, después del entrenamiento del modelo con una gran cantidad de datos, consiga aprender y termine siendo capaz de hacer predicciones.
+Según la tarea que se quiera realizar, será más adecuado trabajar con un algoritmo u otro. En nuestro caso, estamos ante un problema de clasificación de repositorios para detectar los que tienen proyectos de ingeniería.
 
-	
-	\begin{itemize}
-		\item Las observaciones de ambos grupos son independientes
-		\item Las observaciones son variables ordinales o continuas.
-	\item Bajo la hipótesis nula, la distribución de partida de ambos grupos es la misma $y$,
-	\item Bajo la hipótesis alternativa, los valores de una de las muestras tienden a exceder a los de la otra: $P(X > Y) + 0.05 P(X = Y) > 0.05.$
-\end{itemize}
+De entre los diferentes tipos de implementación de machine learning que existen, nosotros estamos ante un aprendizaje supervisado, ya que los algoritmos van a trabajar con datos etiquetados. 
 
-De esta forma, para calcular el estadístico $U$ se asigna a cada uno de los valores de las dos muestras su rango para construir
-
-\begin{equation}
-U_1= n_1 n_2+\frac{n_1 (n_1+1)}{2}-R_1
-\label{eq:}
-\end{equation}
-
-\begin{equation}
-U_2= n_1 n_2+\frac{n_2 (n_2+1)}{2}-R_2
-\label{eq:}
-\end{equation}              
-                                                               
-donde $n_1$ y $n_2$ son los tamaños respectivos de cada muestra; $R_1$ y $R_2$ es la suma de los rangos de las observaciones de las muestras 1 y 2 respectivamente, definiéndose el estadístico $U$  como el mínimo de $U_1$ y $U_2$. Además, los cálculos tienen que tener en cuenta la presencia de observaciones idénticas a la hora de ordenarlas. No obstante, si su número es pequeño, se puede ignorar esa circunstancia.
-
-Esta prueba calcula el llamado estadístico $U$, cuya distribución para muestras con más de 20 observaciones se aproxima bastante bien a la distribución normal. Así, la aproximación a la normal, $z$, cuando tenemos muestras lo suficientemente grandes viene dada por la expresión:
-
-\begin{equation}
-z=\frac{(U-m_U)}{\theta_U}
-\label{eq:}
-\end{equation}
-
-donde $m_U$ y $\theta_U$ son la media y la desviación estándar de $U$ si la hipótesis nula es cierta, y vienen dadas por las siguientes fórmulas:
-
-\begin{equation}
-m_U=\frac{n_1 n_2}{2} 
-\label{eq:}
-\end{equation}
-
-\begin{equation}
-\theta_U=\sqrt{\frac{n_1 n_2 (n_1+n_2+1)}{12}}
-\label{eq:}
-\end{equation}                                                                                   
-                                                                    
-Esta prueba estadística es útil cuando las mediciones se pueden ordenar en escala ordinal (es decir, cuando los valores tienden a una variable continua, pero no tienen una distribución normal) y resulta aplicable cuando las muestras son independientes (Farfán, 2013; Farfán, 2014).
-
-
-La forma de operar con esta prueba es la siguiente:
-
-	
-	\begin{itemize}
-		\item 	Determinar el tamaño de las muestras ($n_1$ y $n_2$). Si $n_1$ y $n_2$ son menores que 20, se consideran muestras pequeñas, pero si son mayores que 20, se consideran muestras grandes.
-	\item	Arreglar los datos en rangos del menor al mayor valor. En caso de que existan ligas o empates de rangos iguales, se deberán detectar para un ajuste posterior.
-\item	Calcular los valores de $U_1$ y $U_2$, de modo que se elija el más pequeño para comparar con los críticos de U Mann-Whitney de la tabla de probabilidades asociadas con valores pequeños como los de U en la prueba de Mann-Whitney.
-\item En caso de muestras grandes, calcular el valor Z, pues en estas condiciones se distribuye normalmente.
-\item Decidir si se acepta o rechaza la hipótesis.
-
-\end{itemize}
-
-\subsection{Estadístico Delta de Cliff}
-
-El estadístico Delta de Cliff permite cuantificar la magnitud de la diferencia entre dos grupos de observaciones que resultan incompatibles con el presupuesto de normalidad. El análisis de esta cuantificación complementa la interpretación del p-valor asociado a la correspondiente prueba de hipótesis. La aplicación de medidas del tamaño del efecto ha sido promovida, durante  las últimas décadas, tanto por metodólogos, como por instituciones líderes en las ciencias del comportamiento. El propósito de la presente contribución es presentar un programa denominado Cliff’s Delta Calculator con capacidad para calcular y graficar el valor del tamaño del efecto no paramétrico para dos grupos de observaciones. Se ofrece una comparación de este programa con otras calculadoras comerciales y no comerciales actualmente disponibles. Se describe su funcionamiento, sus fundamentos matemáticos y se presentan y discuten dos ejemplos de aplicación en la investigación psicológica. Se concluye que este programa presenta algunas ventajas, en comparación con otras calculadoras comerciales disponibles. (Macbeth, G.; Razumiejczyk, E. & Ledesma, R.~\cite{macbeth2011cliff}).
-
+Por ello se van a utilizar dos clasificadores que son los más utilizados por la mayoría de los investigadores en este campo. Dichos clasificadores son el basado en puntuación y el aleatorio.
 
 \subsection{Clasificador basado en la puntuación}
 
-Clasificador basado en la puntuación es un enfoque personalizado para implementar el marco de evaluación que permite un control completo sobre la clasificación. En este enfoque, la función de valor booleano de (1) en la Sección 2.1 toma la forma mostrada en (14).
-
+Está basado en la función
 
 \begin{equation}
-f(r)=\left\{ \begin{array}{ll} true & if\:\: score(r)\geq score_{ref}\\
-false & Otherwise\end{array}
+f(r)=\left\{ \begin{array}{ll} verdadero & si\:\: score(r)\geq score_{ref}\\
+falso & cualquier otro caso\end{array}
 \label{eq:}
 \end{equation}
 
@@ -890,127 +709,78 @@ el umbral correspondiente, $t_d$ , 0 en caso contrario.
 
 \end{itemize}
 
+El valor umbral y los pesos relativos correspondiente a cada una de las siete dimensiones que hemos utilizado se basa en los utilizados por otros investigadores y se pueden ver en el cuadro 4.1. Dichos pesos se pueden cambiar para tener un control más fino sobre la clasificación y seleccionar repositorios que se adapten a otros estudios.
+
+\begin{table}[]
+\center
+\begin{tabular}{llllll}
+\rowcolor[HTML]{4BACC6} 
+DIMENSIÓN                   & PESO(wd) & Umbral(td) & Umbral(td) \\
+					&		& Organización & Utilidad \\
+\rowcolor[HTML]{B6DDE8} 
+\cellcolor[HTML]{4BACC6}Comunidad & 20 \% & 2 \% & 2 \\
+\rowcolor[HTML]{DAEEF3} 
+\cellcolor[HTML]{4BACC6}Integración continua & 5 \% & 1 \% & 1 \\
+\rowcolor[HTML]{B6DDE8} 
+\cellcolor[HTML]{4BACC6}Documentación & 10 \% & 0.0929 \%  & 0.0583 \\
+\rowcolor[HTML]{DAEEF3} 
+\cellcolor[HTML]{4BACC6}Historia & 20 \% & 2.0895 \%  & 0.1500 \\   
+\rowcolor[HTML]{B6DDE8} 
+\cellcolor[HTML]{4BACC6}Tamaño del repositorio & 10 \% & 190 \% & 160 \\
+\rowcolor[HTML]{B6DDE3} 
+\cellcolor[HTML]{4BACC6}Cuestiones & 5 \% & 0.3111 \%  & 0.1611 \\
+\rowcolor[HTML]{B6DDE8} 
+\cellcolor[HTML]{4BACC6}Licencia & 20 \% & 1 \%  & 1 \\
+\rowcolor[HTML]{DAEEF3} 
+\cellcolor[HTML]{4BACC6}Prueba unitaria & 10 \% & 0.0506 \%  & 0.0260 \\
 
 
-\subsection{	Random Forest}
+\end{tabular}
+\caption{ Pesos y umbrales de las dimensiones utilizadas.}
+\end{table}
 
-Random Forest es un método versátil de aprendizaje automático capaz de realizar tanto tareas de regresión como de clasificación. También lleva a cabo métodos de reducción dimensional, trata valores perdidos, valores atípicos y otros pasos esenciales de exploración de datos. Es un tipo de método de aprendizaje por conjuntos, donde un grupo de modelos débiles se combinan para formar un modelo poderoso.\footnote{AprendeIA (2020). https://aprendeia.com/aprendizaje-supervisado-random-forest-classification/. Acceso: 13-02-2020.}
+\subsection{Random Forest}
 
-En Random Forest se ejecutan varios algoritmos de árbol de decisiones en lugar de uno solo. Para clasificar un nuevo objeto basado en atributos, cada árbol de decisión da una clasificación y finalmente la decisión con mayor ``votos'' es la predicción del algoritmo.
-Las ventajas que tiene este algoritmo son las siguientes:
+Random Forest es una técnica de agregación desarrollada por Leo Breiman (breiman, 2001), que mejora la precisión en la clasificación mediante la incorporación de aleatoriedad en la construcción de cada clasificador individual. Esta aleatoriedad puede introducirse en la partición del espacio (construcción del árbol), así como en la muestra de entrenamiento.
+
+En este tipo de clasificador hay que tener en cuenta que, si los datos contienen atributos correlacionados de relevancia similar para el rendimiento, entonces los grupos más pequeños están favorecidos sobre los grupos más grandes.
+
+Para el análisis de los repositorios se ha utilizado el programa que se encuentra alojado en https://github.com/RepoReapers/reaper.
+Para ejecutar dicho programa ha sido necesario instalar phyton3. Este programa usa el fichero batch_score.py que se tiene que ejecutar de la siguiente manera: 
+batch_score.py -c <config> -r <repos_path> -m <manifest> -s <sample_file>
+
+donde 
 
 \begin{itemize}
-	\item 	Puede resolver ambos tipos de problemas, es decir, clasificación y regresión, y realiza una estimación decente en ambos casos.
-\item	Unos de los beneficios que más llama la atención es el poder de manejar grandes cantidades de datos con mayor dimensionalidad. Puede manejar miles de variables de entrada e identificar las variables más significativas, por lo que se considera uno de los métodos de reducción de dimensionalidad. Además, el modelo muestra la importancia de la variable, que puede ser una característica muy útil.
-\item	Tiene un método efectivo para estimar datos faltantes y mantiene la precisión cuando falta una gran proporción de los datos.
+\item <config>: es una parte de config.json.
 
-A su vez la desventaja que tiene este algoritmo es que en ocasiones se puede parecer este algoritmo a una caja negra, ya que se tiene muy poco control sobre lo que hace el modelo. En este caso, en el mejor de los casos, se pueden probar diferentes parámetros y datos aleatorios.
+\item <repos_path>: es la dirección de un directorio donde el programa puede comprobar los ficheros fuente de un proyecto.
 
+\item <manifest>: es una parte de manifest.json que contiene información sobre qué atributos deben ejecutarse. 
+
+\item <sample_file>: es una lista de los identificadores de los proyectos de GHTorrent que se van a analizar.
 \end{itemize}
 
-\chapter{Diseño e implementación}
-
-
-
-En este trabajo se han utilizado dos formas distintas de implementar la función de valor booleano que se han aplicado y que representan el marco de evaluación dado por la ecuación 3.1. En ambos enfoques, el clasificador basado en la puntuación y el Training Data Sets, un repositorio está representado por las siete dimensiones (cuantificables) que se introdujeron en el capítulo anterior. Como en la sección 3.7.4 ya se ha descrito el clasificador basado en la puntuación, en este capítulo se va a detallar el Training Data Sets. 
-
-\section{Training Data Sets}
-
-La función de valor booleano que representa el marco de evaluación es esencialmente un clasificador capaz de decidir si un repositorio contiene un proyecto de ingeniería del software o no. El clasificador se entrena utilizando un conjunto de repositorios (llamado training data set) que se han clasificado manualmente como que contienen proyectos de ingeniería del software de acuerdo con alguna definición específica de un proyecto de ingeniería del software. 
-
-En el contexto de nuestro estudio, se van a utilizar las dos definiciones siguientes de proyecto de ingeniería del software para demostrar la capacitación del clasificador:
+A continuación el fichero config.json contiene las siguientes claves y valores:
 
 \begin{itemize}
-	\item Organización: se dice que un repositorio contiene un proyecto de ingeniería del software si es similar a los repositorios propiedad de organizaciones populares de ingeniería de software.
-	
-\item Utilidad: se dice que un repositorio contiene un proyecto de ingeniería del software si es similar a los repositorios que tienen una utilidad de propósito general para los usuarios. Por ejemplo, un repositorio que contiene un plug-in de Chrome se considera que tiene una utilidad de propósito general, sin embargo, un repositorio que contiene una aplicación móvil desarrollado por un estudiante como un proyecto de curso no puede considerarse que tenga una utilidad de propósito general.
+\item Thershold (define el umbral por el cual el sistema considera que un repositorio contiene un proyecto de software): es un número positivo.
+
+\item persistResult (decide si los resultados obtenidos deben guardarse en la fuente de datos especificada): true or false.
+
+\item Datasource (Configuración para conectarse a la base de datos de GHTorrent): object.
+
+\item github_tokens (es una lista de los identificadores de los autores): list.
 \end{itemize}
 
-En las subsecciones que siguen, describimos el enfoque utilizado para identificar manualmente repositorios que se ajustan a cada una de las definiciones de un proyecto de ingeniería del software expuestas anteriormente. Estos repositorios componen los respectivos training data sets. 
-
-El training data sets se utiliza en el clasificador basado en la puntuación para determinar umbrales, $t_d$, y calcular la puntuación de referencia, $score_{ref}$. Para todos los repositorios en cada uno de los dos conjuntos de datos de entrenamiento (más los repositorios del conjunto de datos de instancias negativas), recopilamos los siete valores métricos. Los valores atípicos fueron eliminados usando el criterio de Peirce. Para las métricas de valor booleano, 1 (i.e. True) es el umbral. Para todas las demás métricas, se eligió el valor métrico mínimo distinto de cero como umbral correspondiente. El valor umbral correspondiente a cada una de las siete dimensiones, establecidos a partir de los repositorios de cada uno de los dos conjuntos de datos de formación, se muestran en el cuadro 2. En el cuadro 2 también figuran los pesos relativos que se ha utilizado en nuestro clasificador basado en la puntuación. Dichos pesos se pueden cambiar ya que el clasificador es personalizar. Los investigadores pueden alterar los pesos para ejercer un control más fino sobre la clasificación y seleccionar repositorios que se adapten a sus estudios individuales. Además, al decidir los pesos consideramos las limitaciones en la recolección del valor de la métrica asociada de un repositorio de código fuente. Por ejemplo, el enfoque para evaluar un repositorio de código fuente a lo largo de la dimensión comunitaria es más robusto y, por lo tanto, su peso es superior al de la dimensión de ensayo unitario, donde existen limitaciones inherentes debido a nuestro conjunto no exhaustivo de firmas marco. Los pesos y los umbrales del cuadro 2 se utilizaron para calcular las puntuaciones de todos los repositorios de la organización y los conjuntos de datos sobre servicios públicos. La distribución de las puntuaciones se muestra en la Fig. 6. Se determinó que la puntuación de referencia en la organización y utilidad del conjunto de datos sea de 70 y 30, respectivamente. El enfoque del clasificador basado en la puntuación es flexible y permite un control más fino sobre la clasificación. Los pesos permiten al ejecutor definir explícitamente la importancia de cada dimensión. La expresión (14) puede adaptarse para implementar una variedad de clasificadores diferentes utilizando diferentes conjuntos de dimensiones, D, y métricas correspondientes, umbrales y pesos. Por ejemplo, si hay una necesidad de construir un clasificador que considere el sesgo de género en la aceptación de contribuciones en la comunidad de código abierto (como en el trabajo de Kofink 2015), uno podría introducir una nueva dimensión, digamos sesgo, definir una métrica para cuantificar el sesgo de género en un repositorio, identificar un umbral apropiado, y ponderar la dimensión en relación con otras dimensiones que puedan ser pertinentes para el estudio.
-
-\subsection{Organización del conjunto de datos}
-
-El proceso de identificación de los repositorios que componen el conjunto de datos es sencillo. El paso preliminar consiste en examinar manualmente los repositorios de organizaciones como Amazon, Apache, Facebook, Google y Microsoft e identificar un conjunto de 1.000 repositorios. El procedimiento para la identificación manual de repositorios ha sido comprobar que el repositorio: (a) tiene licencia de código abierto, (b) usa comentarios para documentar el código, (c) usa integración continua y (d) contiene pruebas unitarias. 
-Algunos ejemplos de repositorios que contienen proyectos de ingeniería del software son los siguientes: scrapy / scrapy, phalcon / incubator, JetBrains / FSharper y owncloud / calendar. 
-
-El conjunto de datos de la organización está disponible para su descarga como un archivo CSV (organization.csv) desde GitHub Gist~\footnote{Accesible en https://gist.github.com/nuthanmunaiah/ 23dba27be17bbd0abc40079411dbf066}.
-
-
-
-\subsection{Utilidad del conjunto de datos}
-
-A diferencia del proceso de identificación de los repositorios que componen el conjunto de datos de la organización, el proceso de identificación de los repositorios que componen el conjunto de datos de utilidad no fue trivial. Los repositorios que componían el conjunto de datos de utilidad fueron identificados mediante la evaluación manual de una muestra aleatoria de los 2.493.701 repositorios que fueron analizados por reaper. De manera similar al proceso de composición del conjunto de datos de la organización, utilizamos un conjunto de pautas para decidir si un repositorio debe ser incluido o no. Las directrices dictaban los diversos aspectos que debían tenerse en cuenta al decidir si un repositorio tenía una utilidad general. Las directrices utilizadas aquí fueron más subjetivas que las utilizadas en el proceso de composición del conjunto de datos de la organización. Algunas de las directrices utilizadas fueron: a) el archivo contiene documentación suficiente para que el proyecto contenido en él pueda utilizarse en un contexto de fines generales; b) repositorio contiene una aplicación o servicio que es utilizado por o tiene el potencial de ser utilizado por personas distintas de los desarrolladores, (c) repositorio no contiene indicaciones que indiquen que el código fuente contenido en puede ser una asignación. El potencial de sesgo fue mitigado por dos autores que evaluaron independientemente la misma muestra aleatoria de repositorios. Los primeros 1.000 repositorios que se han incluido en este trabajo forman el conjunto de datos de la utilidad \emph{set. veg/hyphy, seblin/launchit, smcameron/opencscad, y apanzerj/zit} donde aparecen por ejemplo repositorios incluidos en el conjunto de datos de utilidad que se sabe contienen proyectos de ingeniería del software.
-
-\begin{figure}[ht]
-	\centering
-		\includegraphics[width=14cm,clip]{img/norepost.jpg}
-	\caption{Número de repositorios en la organización agrupados por lenguajes de programación.}
-	\label{fig:norepost}
-\end{figure}
-
-\begin{figure}[ht]
-	\centering
-		\includegraphics[width=14cm,clip]{img/noreposut.jpg}
-	\caption{Número de repositorios en la utilidad del conjunto de datos agrupados por lenguajes de progamación.}
-	\label{fig:noreposut}
-\end{figure}
-
-\begin{figure}[ht]
-	\centering
-		\includegraphics[width=14cm,clip]{img/Dist_repos.pdf}
-	\caption{Distribución del número de puntuación de los repositorios; (a) en la organización y (b) utilidad del conjunto de datos}
-\end{figure}
-
-
-
-\begin{figure}[ht]
-	\centering
-		\includegraphics[width=12cm,clip]{img/dist_dim.pdf}
-	\caption{Distribución de las dimensiones de repositorios en el conjunto de datos de la organización.}
-	\label{fig:dist_dim}
-\end{figure}
-
-\subsection{Datos de instancias negativas}
-
-El conjunto de datos de instancias negativas es esencialmente una colección de repositorios que no se ajustan a ninguna de las dos definiciones (p.e. organización y utilidad) de un proyecto de software de ingeniería. Los repositorios que componen el conjunto de datos de instancias negativas se identificaron durante el proceso de composición del conjunto de datos de utilidad.
-
-\begin{figure}[ht]
-	\centering
-		\includegraphics[width=14cm,clip]{img/dist_dim2.pdf}
-	\caption{Distribución de las dimensiones obtenidas de los repositorios en el conjunto de datos de utilidad.}
-	\label{fig:dist_dim2}
-\end{figure}
-
-
-\subsection{Resumen de los conjuntos de datos}
-
-En esta sección, resumimos los datos de entrenamiento (training data sets) mediante diversas visualizaciones. Los repositorios que componen la organización y los conjuntos de datos de utilidad se etiquetan como ``proyecto'' y los repositorios que componen el conjunto de datos de instancias negativas se etiquetan como``no proyecto''. En las figuras \ref{fig:norepost} y \ref{fig:noreposut} se muestra el número de repositorios de cada tipo (``proyecto'' y ``no proyecto'') agrupados por lenguaje de programación en la organización y conjuntos de datos de utilidad.
-
-La distribución del número de repositorios de cada tipo (``proyecto'' y ``no proyecto'') en conjuntos de datos de organización y utilidad se muestran en la figura 4.3.
-
-En las figuras 4.4 y 4.5 se muestran las distribuciones de las siete dimensiones obtenidas de los repositorios en la organización y los conjuntos de datos de utilidad, respectivamente.
-
-He utilizado la correlación de Spearman Rank Co-efficient ($\rho$) para evaluar la correlación entre las diferentes dimensiones de valor continuo, aunque también sirve para valores discretos. En la figura \ref{fig:spearman} se muestran los valores de la $\rho$ de Spearman, cuando es estadísticamente significativa en el valor p 0.05, entre pares de dimensiones en los conjuntos de datos de organización y utilidad. También se pueden observar en dicha figura las correlaciones que no son estadísticamente significativas y se han representado con un guión.
-Como se ve en la figura 4.6, hay una correlación de moderada a fuerte entre las diversas dimensiones en el conjunto de datos de la organización. El tamaño del repositorio, en particular, está al menos moderadamente correlacionado con dos de las tres dimensiones de valor continuo. Para evaluar la relación entre el tamaño del repositorio y las dimensiones de valor binario (integración continua y licencia) se ha utilizado la prueba no paramétrica de Mann-Whitney-Wilcoxon (MWW) y el tamaño del efecto ? de Cliff. En la figura 4.6 también se muestran los resultados del análisis de asociación en los conjuntos de datos de organización y utilidad. Como se ve en dicha figura, a excepción de la dimensión de integración continua en el conjunto de datos de utilidad, el tamaño del repositorio es estadísticamente significativo (p-valor ? 0.05) asociado con las dimensiones de valor binario con tamaño de efecto medio. Los resultados de la asociación indican que es más probable que un repositorio más grande tenga una integración y/o licencia continuas. Sin embargo, creemos que dicha relación puede crear algo de confusión, ya que algunas organizaciones pueden tener una licencia en todos los repositorios. Además, como señala Rosenberg (1997), la utilidad de SLOC como métrica es como covariable de otras métricas.
-
-\begin{figure}[htbp]
-	\centering
-		\includegraphics{img/spearman.pdf}
-	\caption{$\rho$  de Spearman entre pares de dimensiones en la organización (a) y conjuntos de datos de utilidad (b) con - (guión) representando las correlaciones estadísticamente insignificantes.}
-	\label{fig:spearman}
-\end{figure}
-
-\newpage
-También se ha tenido en cuenta la correlación entre el tamaño del repositorio y las diversas dimensiones propuestas en nuestro estudio al incluir el tamaño del repositorio como una característica tanto en los clasificadores basados en puntajes como en Random Forest.
+Después de realizar dichos cambios, el programa que tenía el nombre de config.json.skel se guardará con el nombre de config.json. Si en persistResult se ha puesto True, debe existir una tabla de base de datos en la que el programa pueda escribir los resultados. Esta tabla debe llamarse reaper_results y debe contener al menos una columna con el nombre de Project_id que debe tener los identificadores del proyecto, y otra columna llamada score para almacenar la puntuación de un repositorio. Además, debe haber una columna para cada atributo que se desee almacenar.
 
 
 \cleardoublepage
 \chapter{Resultados}
 
 
-En este capítulo se presentan los resultados de la validación de los clasificadores y los resultados de la aplicación de los clasificadores para identificar (o predecir) proyectos de software de ingeniería en una muestra de 2.316.524 de los 2.634.807 repositorios de GitHub que estaban activos en el momento en que se realizó el análisis. Como se han utilizado dos clasificadores (basado en la puntuación y Random Forest) y dos conjuntos de datos diferentes (organización y utilidad), el análisis de validación y predicción se ha repetido cuatro veces.
+En este capítulo se presentan los resultados de la validación de los clasificadores para identificar proyectos de software de ingeniería en una muestra de 2.316.524 de los 2.634.807 repositorios de GitHub que estaban activos en el momento en que se realizó el análisis. Como ya se ha comentado, se han utilizado dos clasificadores (basado en la puntuación y Random Forest) y dos conjuntos de datos diferentes (organización y utilidad).
 
 \section{Validación}
 
@@ -1034,8 +804,9 @@ En la figura 5.1 se muestra la distribución de las siete dimensiones recogidas d
 
 \subsection{Validación interna}
 
-En este tipo de validación, se evalúa el trabajo de los clasificadores basados en la puntuación y de Random Forest que han sido entrenados mediante la utilización de los conjuntos de datos de organización y utilidad en el contexto del conjunto de validación.
-Conjunto de datos de organización. En este estudio se muestra el trabajo de los clasificadores basados en la puntuación y Random Forest entrenados con un conjunto de datos de organización.
+En este tipo de validación, se evalúan los clasificadores basados en la puntuación y de Random Forest que han sido entrenados mediante la utilización de los conjuntos de datos de organización y utilidad. 
+
+\underline{Conjunto de datos de organización}. En el cuadro 5.1 se puede apreciar que el clasificador basado en la puntuación tiene mejores resultados que el clasificador Random Forest en términos de medida F. Si se desea una tasa de falsos positivos más baja, el clasificador Random Forest puede ser más adecuado ya que tiene una tasa de falsos positivos considerablemente más baja que el clasificador basado en la puntuación.
 
 \begin{table}[]
 \begin{tabular}{llllll}
@@ -1049,17 +820,8 @@ CLASIFICADOR                                 & FPR   & FNR   & PRECISIÓN & LLAMA
 \caption{Resultados de los clasificadores Basado en Puntuación y Random Forest testeados con los datos de organización}
 \end{table}
 
-Claramente, en el cuadro 5.1 se puede apreciar que el clasificador basado en la puntuación tiene mejores resultados que el clasificador Random Forest en términos de medida F. Si se desea una tasa de falsos positivos más baja, el clasificador Random Forest puede ser más adecuado ya que tiene una tasa de falsos positivos considerablemente más baja que el clasificador basado en la puntuación. Ahora se muestran algunos ejemplos de repositorios del conjunto de datos de la organización que fueron clasificados erróneamente por clasificadores basados en puntajes y Random Forest.
+\underline{Conjunto de datos de utilidad}. Claramente, el modelo de Random Forest funciona mejor que el modelo basado en la puntuación. Como se puede observar en el cuadro 5.2 hay una gran tasa de falsos positivos del clasificador basado en la puntuación. La gran tasa de falsos positivos indica que el clasificador puede haber clasificado casi todos los repositorios como que contienen un proyecto de software de ingeniería.
 
-\begin{enumerate}
-	\item 	Falsos positivos: se pueden dar casos en los que aparentemente el repositorio evaluado supere el umbral de casi todas las dimensiones, pero que realmente no sea ingeniería del software. Munaiah y colaboradores (2017) ponen un ejemplo muy ilustrativo: software-engineering-amsterdam/sea-of-ql. Comprobaron que, aunque el repositorio recibió una puntuación de 95 (cerca de una puntuación perfecta de 100), no tenía una licencia real, sino que se había identificado una licencia en archivos de biblioteca que pueden haber sido incluidos en el repositorio de código fuente y que consistía en un espacio de colaboración donde todos los estudiantes matriculados en un curso en particular desarrollan sus proyectos de software individuales.
-
-\item	Falsos negativos: se pueden producir cuando un desarrollador construye un repositorio sin utilizar varias de las dimensiones requeridas en nuestro análisis. Así, puede no conseguir el umbral mínimo (70) para considerarse ingeniería por no haber utilizado todas las dimensiones.
-
-
-\end{enumerate}
-
-\underline{Conjunto de datos de utilidad}. En este estudio se muestra el rendimiento de los clasificadores basados en la puntuación y Random Forest entrenados con un conjunto de datos de utilidad.
 
 \begin{table}[ht]
 \begin{tabular}{llllll}
@@ -1073,13 +835,10 @@ CLASIFICADOR                                 & FPR   & FNR   & PRECISIÓN & LLAMA
 \caption{Resultados de los clasificadores Basado en Puntuación y Random Forest testeados con los datos de utilidad.}
 \end{table}
 
-Claramente, el modelo de Random Forest funciona mejor que el modelo basado en la puntuación. Como se puede observar en el cuadro 5.2 hay una gran tasa de falsos positivos del clasificador basado en la puntuación. La gran tasa de falsos positivos indica que el clasificador puede haber clasificado casi todos los repositorios como que contienen un proyecto de software de ingeniería. Igual que vimos anteriormente, en el conjunto de datos de utilidad también se pueden dar falsos positivos y negativos (Munaiah et al., 2017).
 
 \subsection{Validación externa}
 
-En esta perspectiva de validación, el rendimiento de los clasificadores basados en la puntuación y Random Forest se compara con el de los clasificadores basados en citas utilizados en la literatura anterior (Ray et al. 2014). Anteriormente señalamos que la popularidad de un repositorio es un criterio potencial para identificar un conjunto de datos para estudios de investigación. La intuición es que los repositorios populares contendrán software real que a la gente le gusta y usa (Jarczyk et al. 2014). Por ejemplo, los artículos de Ray et al. (2014) sobre lenguajes de programación y calidad de código, y Guzmán et al. (2014) sobre el análisis de sentimiento de comentarios de compromiso, utilizan el número de citas como forma de seleccionar proyectos para sus estudios. Estos documentos utilizan los proyectos con estrellas en varios idiomas, que están destinados a ser extremadamente populares. El repositorio mongodb/mongo utilizado en el conjunto de datos por Ray et al. (2014), por ejemplo, tiene más de 8.927 estrellas.
-
-En este estudio se muestra el resultado de clasificadores basados en la puntuación y Random Forest usando conjuntos de datos de organización y utilidad, respectivamente. Ahora usamos el clasificador basado en estrellas para clasificar los repositorios del conjunto de validación. Al usar un clasificador basado en estrellas, Ray et al. (2014) ordenaron y seleccionaron los 50 repositorios principales en cada uno de los 19 idiomas populares. Se ha aplicado el mismo esquema de filtrado a una muestra de 2.316.524 repositorios GitHub y se ha establecido el número mínimo de popularidad en 1.000. En otras palabras, un repositorio se clasifica como que contiene un proyecto de software de ingeniería (basado en la popularidad) si tiene 1.000 o más estrellas. También se evaluaron otros umbrales (500, 50 y 10) para la popularidad. En los casos en que el clasificador no produjo clasificaciones positivas (p.ej. tanto verdadero positivo como falso positivo son ceros), la precisión y la F-medida no pueden calcularse.
+En este tipo de validación, el rendimiento de los clasificadores basados en la puntuación y Random Forest se compara con el de los clasificadores basados en citas utilizados por otros investigadores (Ray et al. 2014). Anteriormente señalamos que la popularidad de un repositorio es un criterio potencial para identificar un conjunto de datos para estudios de investigación. La intuición es que los repositorios populares contendrán software real que a la gente le gusta y usa (Jarczyk et al. 2014). Por ejemplo, los artículos de Ray et al. (2014) sobre lenguajes de programación y calidad de código, y Guzmán et al. (2014) sobre el análisis de sentimiento de comentarios de compromiso, utilizan el número de citas como forma de seleccionar proyectos para sus estudios. Estos documentos utilizan los proyectos con estrellas en varios idiomas, que están destinados a ser extremadamente populares. El repositorio mongodb/mongo utilizado en el conjunto de datos por Ray et al. (2014), por ejemplo, tiene más de 8.927 estrellas.
 
 \begin{table}[]
 \begin{tabular}{llllll}
@@ -1097,8 +856,12 @@ UMBRAL                        & FPR  & FNR    & PRECISIÓN & LLAMADA & F-MEDIDA \
 \caption{Rendimiento del clasificador basado en la popularidad (puntuación de estrellas) en función del umbral mínimo exigido. }
 \end{table}
 
+En este estudio se muestra el resultado de clasificadores basados en la puntuación y Random Forest usando conjuntos de datos de organización y utilidad, respectivamente. Ahora usamos el clasificador basado en estrellas para clasificar los repositorios del conjunto de validación. Al usar un clasificador basado en estrellas, Ray et al. (2014) ordenaron y seleccionaron los 50 repositorios principales en cada uno de los 19 idiomas populares. Se ha aplicado el mismo esquema de filtrado a una muestra de 2.316.524 repositorios GitHub y se ha establecido el número mínimo de popularidad en 1.000. En otras palabras, un repositorio se clasifica como que contiene un proyecto de software de ingeniería (basado en la popularidad) si tiene 1.000 o más estrellas. También se evaluaron otros umbrales (500, 50 y 10) para la popularidad. En los casos en que el clasificador no produjo clasificaciones positivas (p.ej. tanto verdadero positivo como falso positivo son ceros), la precisión y la F-medida no pueden calcularse.
+
 Como se observa en el cuadro 5.3, con un umbral elevado (1.000 y 500) el clasificador basado en popularidad clasifica erróneamente todos los repositorios que contienen proyectos informáticos de ingeniería. A medida que bajamos el umbral, el rendimiento mejora. La limitación más llamativa del clasificador basado en popularidad son los bajos porcentajes de memoria. Mientras que un repositorio con un gran número de estrellas es probable que contenga un proyecto de software diseñado, lo contrario no siempre es cierto.
+
 Los resultados de la validación indican que, al utilizar el clasificador basado en popularidad, se pueden estar excluyendo un gran conjunto de repositorios que contienen proyectos de software de ingeniería pero que pueden no ser populares. Por el contrario, los clasificadores basados en la puntuación y Random Forest que están orientados a la organización y utilidad de los datos, funcionan mucho mejor en términos de memoria y logran un nivel aceptable de precisión.
+
 
 \begin{table}[]
 \begin{tabular}{llll}
@@ -1116,7 +879,7 @@ DATOS                                                  & CLASIFICADOR           
 \caption{Número de repositorios que contienen un proyecto de software de ingeniería en función de los clasificadores utilizados con los datos pertenecientes a organización y utilidad.}
 \end{table}
 
-\section{Predicción}
+\section{Resultados}
 
 En esta sección, se presentan los resultados de la aplicación de los clasificadores basados en la puntuación y Random Forest para identificar proyectos de software de ingeniería en una muestra de 2.316.524 repositorios GitHub. En el cuadro 5.4 se pueden observar el número de repositorios tanto de los datos de Organización como de Utilidad que tienen un proyecto de software de ingeniería cuando se usan los clasificadores Random Forest y el Basado en Puntuación. En dicha tabla se puede observar que el número de repositorios que tienen una utilidad de propósito general obtenido por el clasificador basado en la puntuación es considerablemente alto, lo cual podría deberse al número bajo de proyectos analizados del conjunto de datos utilizados (Munaiah et al., 2017). Una agrupación de resultados más detallada se puede observar en las figuras 5.2 y 5.3, donde se pueden ver el número de repositorios por lenguaje de programación para los dos conjuntos de datos (organización y utilidad).
 
@@ -1138,7 +901,19 @@ En esta sección, se presentan los resultados de la aplicación de los clasificado
 \section{Discusión}
 
 
-En este estudio, se ha intentado identificar los repositorios que contienen proyectos de software de ingeniería de acuerdo con dos definiciones diferentes del término. La aplicación de una de las definiciones incluía la capacitación de dos clasificadores que utilizaban repositorios en el conjunto de datos de la organización. Se podría suponer que el resultado de la aplicación de estos clasificadores puede ser igualado porque todos los repositorios de cualquier organización en GitHub contienen un proyecto de software de ingeniería. Sin embargo, esto no siempre es así. 
+En este estudio, se han identificado los repositorios que contienen proyectos de software de ingeniería de acuerdo con dos definiciones diferentes del término. La aplicación de una de las definiciones incluía la capacitación de dos clasificadores que utilizaban repositorios en el conjunto de datos de la organización. Se podría suponer que el resultado de la aplicación de estos clasificadores puede ser igualado porque todos los repositorios de cualquier organización en GitHub contienen un proyecto de software de ingeniería. Sin embargo, esto no siempre es así.
+
+El conjunto de validación contiene 300 repositorios de los cuales 90 pertenecen a organizaciones. Se eligieron 150 que contienen proyectos de software de ingeniería y los 150 restantes no contienen proyectos de software de ingeniería.
+
+En la figura 5.4 se muestra una comparación entre la distribución de las siete dimensiones recogidas de repositorios propiedad de organizaciones, pero con diferentes etiquetas de clasificación manual. Como se puede ver en esta figura, la diferencia en la distribución de las dimensiones proporciona pruebas cualitativas que respaldan la idea de que no todos los repositorios de propiedad de las organizaciones son similares entre sí. En líneas similares, comparamos la distribución de las siete dimensiones recogidas de repositorios conocidos por contener proyectos de software de ingeniería, pero con el subgrupo de organizaciones y usuarios.
+
+La comparación se muestra en la figura 5.5, donde las medianas de la mayoría de las dimensiones son comparables entre los repositorios de propiedad de los usuarios y los de propiedad de las organizaciones. En este estudio se puede observar, un número considerable de repositorios clasificados como que contienen proyectos de software de ingeniería que son propiedad de usuarios individuales. Por otra parte, un número considerable de repositorios clasificados como que no contenían un proyecto de software de ingeniería eran propiedad de organizaciones. El filtrado de repositorios basado únicamente en que el propietario es una organización puede dar lugar a la exclusión de repositorios potencialmente pertinentes, de propiedad de los usuarios, o a la inclusión de repositorios que pueden no contener proyectos informáticos de ingeniería o ambos. 
+
+
+\section{Puntos débiles del estudio}
+
+Las dimensiones utilizadas para representar repositorios de código fuente en el modelo de clasificación son subjetivas. Además de las dimensiones, los umbrales y pesos utilizados en el clasificador basado en la puntuación también son subjetivos. Aunque creemos que las ponderaciones y las dimensiones que se han utilizado son aceptables en el contexto de este estudio, sin embargo, se pueden utilizar esquemas de ponderación alternativos para mitigar parte de la subjetividad empleada. Algunos de estos enfoques alternativos se pueden orientar en el uso de algoritmos de aprendizaje automáticos para evaluar la importancia de las dimensiones utilizando repositorios en un conjunto de datos de entrenamiento, una ponderación uniforme entre dimensiones, o un esquema de ponderación basado en la popularidad. 
+
 
 \begin{figure}[htbp]
 	\centering
@@ -1147,15 +922,8 @@ En este estudio, se ha intentado identificar los repositorios que contienen proy
 	\label{fig:fig5-4}
 \end{figure}
 
-El conjunto de validación contiene 300 repositorios de los cuales 90 pertenecen a organizaciones. Como ya se vió, se eligieron 150 que contienen proyectos de software de ingeniería y los 150 restantes no contienen proyectos de software de ingeniería. 
 
-En la figura 5.4 se muestra una comparación entre la distribución de las siete dimensiones recogidas de repositorios propiedad de organizaciones, pero con diferentes etiquetas de clasificación manual. Como se puede ver en esta figura, la diferencia en la distribución de las dimensiones proporciona pruebas cualitativas que respaldan la idea de que no todos los repositorios de propiedad de las organizaciones son similares entre sí. En líneas similares, comparamos la distribución de las siete dimensiones recogidas de repositorios conocidos por contener proyectos de software de ingeniería, pero con el subgrupo de organizaciones y usuarios.
 
-La comparación se muestra en la figura 5.5, donde las medianas de la mayoría de las dimensiones son comparables entre los repositorios de propiedad de los usuarios y los de propiedad de las organizaciones. En este estudio se puede observar, un número considerable de repositorios clasificados como que contienen proyectos de software de ingeniería que son propiedad de usuarios individuales. Por otra parte, un número considerable de repositorios clasificados como que no contenían un proyecto de software de ingeniería eran propiedad de organizaciones. El filtrado de repositorios basado únicamente en que el propietario es una organización puede dar lugar a la exclusión de repositorios potencialmente pertinentes, de propiedad de los usuarios, o a la inclusión de repositorios que pueden no contener proyectos informáticos de ingeniería o ambos.
-
-\section{Puntos débiles del estudio}
-
-Las dimensiones utilizadas para representar repositorios de código fuente en el modelo de clasificación son subjetivas. Además de las dimensiones, los umbrales y pesos utilizados en el clasificador basado en la puntuación también son subjetivos. Aunque creemos que las ponderaciones  y  las  dimensiones  que  se  han utilizado son aceptables en el contexto de este estudio, sin embargo, se pueden utilizar esquemas de ponderación alternativos para mitigar parte de la subjetividad empleada. Algunos de estos enfoques alternativos se pueden orientar en el uso de algoritmos de aprendizaje automáticos para evaluar la importancia de las dimensiones utilizando repositorios en un conjunto de datos de entrenamiento, una ponderación uniforme entre dimensiones, o un esquema de ponderación basado en la popularidad.
 
 \begin{figure}[htbp]
 	\centering
@@ -1164,7 +932,7 @@ Las dimensiones utilizadas para representar repositorios de código fuente en el 
 	\label{fig:fig5-5}
 \end{figure}
 
-Al describir las dimensiones medidas por Reaper en la Sección 3.6, se describen las limitaciones en dicho estudio para recopilar la métrica de dimensiones de un repositorio. Estas limitaciones pueden llevar a la inducción de sesgos en los repositorios seleccionados.
+Al describir las dimensiones medidas por Reaper \grex{Primera vez que hablas de Reaper en toda la memoria} en la Sección 3.6, se describen las limitaciones en dicho estudio para recopilar la métrica de dimensiones de un repositorio. Estas limitaciones pueden llevar a la inducción de sesgos en los repositorios seleccionados.
 
 
 \cleardoublepage
@@ -1174,7 +942,7 @@ Al describir las dimensiones medidas por Reaper en la Sección 3.6, se describen 
 
 El objetivo principal de este trabajo era entender los elementos que constituyen un proyecto de software de ingeniería para poder identificar en repositorios de GitHub dichos proyectos de los que no son de ingeniería. Se han propuesto siete elementos, llamados dimensiones: comunidad, integración continua, documentación, historia, cuestiones, licencias y pruebas unitarias, para poder identificar dichos proyectos y se han realizado dos conjuntos de repositorios, cada uno de los cuales correspondía a una definición diferente de un proyecto de software de ingeniería que estaba formado y entrenado por el clasificador basado en la puntuación y por el clasificador Random Forest.
 
-Aquí tengo que puntualizar que se han logrado tanto el objetivo principal, como los específicos planteados. Los clasificadores se utilizaron para identificar todos los repositorios de la muestra de 2.316.524 repositorios de GitHub que eran similares a los que se ajustan a las definiciones del proyecto de software de ingeniería. Nuestro modelo Random Forest ha dado el mejor resultado: predijo que el 23,51 \% de 2.316.524 repositorios GitHub contienen proyectos de software de ingeniería.
+Aquí tengo que puntualizar que se han logrado tanto el objetivo principal, como los específicos planteados. Los clasificadores se utilizaron para identificar todos los repositorios de la muestra de 2.316.524 repositorios de GitHub que eran similares a los que se ajustan a las definiciones del proyecto de software de ingeniería. Nuestro modelo Random Forest ha dado el mejor resultado: predijo que el 23,51 \% de 2.316.524 repositorios GitHub contienen proyectos de ingeniería de software.
 
 Aunque el final ha sido bueno, tengo que decir que el proceso ha sido complicado, ya que, dado el gran volumen de repositorios tratados, conseguir abrir el fichero de datos ha sido difícil, así como relacionar los distintos archivos disponibles entre sí, ya que venían todos sin la cabecera y ésta ha sido necesario construirla en base a un archivo pdf explicativo en forma de diagrama disponible para los usuarios.
 
@@ -1189,6 +957,1024 @@ En este trabajo he aprendido que Excel no permite abrir documentos con un número
 \section{Futuros trabajos}
 
 Como ya adelanté al final del capítulo anterior, tanto las dimensiones utilizadas para representar repositorios de código fuente en el modelo de clasificación, como los umbrales y pesos utilizados en el clasificador basado en la puntuación son subjetivos. Aunque el resultado es razonablemente bueno, en futuros trabajos se podrían utilizar esquemas de ponderación alternativos para mitigar parte de esa subjetividad. Además, sería bueno probar otros enfoques alternativos como el uso de algoritmos de aprendizaje automáticos para evaluar la importancia de las dimensiones utilizando repositorios en un conjunto de datos de entrenamiento, una ponderación uniforme entre dimensiones, o un esquema de ponderación basado en la popularidad.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% APÉNDICE(S) %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cleardoublepage
+\appendix
+\chapter{ENGINEERED}
+\label{app: engineered}
+
+A continuación se relacionan los repositorios que son de ingeniería y que se han analizado en este trabajo.
+
+https://github.com/AgilTec/cadenero
+https://github.com/brenoc/opentracks
+https://github.com/onaio/onadata	
+https://github.com/alu0100536829/prct11	
+https://github.com/clementine-player/Android-Remote
+https://github.com/rafallo/p2c
+https://github.com/gfx/Android-HankeiN		
+https://github.com/Ydle/RoomBundle			
+https://github.com/zeronullity/SDRwatchdog	
+https://github.com/linchproject/linch-servlet					
+https://github.com/tuanhiep/mqtt-jmeter							
+https://github.com/zeisler/active_mocker						
+https://github.com/NSLS-II/pyRafters							
+https://github.com/liquidise/Quickbase-Gem						
+https://github.com/franksl/ncsvlib							
+https://github.com/sangotaro/my-boxen							
+https://github.com/marsender/atoll-digital-library					
+https://github.com/mikesname/blueprints-sql-graph					
+https://github.com/SomethingExplosive/android_frameworks_av			
+https://github.com/wardrobecms/locales						
+https://github.com/lbitonti/liquibase-hana						
+https://github.com/Querela/ekIRC							
+https://github.com/tbruyelle/HappyContacts						
+https://github.com/videolan/x265								
+https://github.com/xenserver/xsconsole							
+https://github.com/higanworks-cookbooks/mruby					
+https://github.com/muchomasfacil/WysiwygBundle
+					
+https://github.com/jgauffin/SipSharp							
+https://github.com/jessy1092/jackpad							
+https://github.com/spring-projects/spring-net-codeconfig				
+https://github.com/Skobayashi/Weather							
+https://github.com/gpac/gpac								
+https://github.com/rhq-project/wildfly-cassandra					
+https://github.com/NathanSweet/dnsmadeeasy						
+https://github.com/Stibbons/pyyaml							
+https://github.com/emersion/bups								
+https://github.com/aelarabawy/glib							
+https://github.com/sphaero/uae4all-rpi							
+https://github.com/DragonSpawn/Json2Class						
+https://github.com/wangduoxiong/Egg							
+https://github.com/chef/knife-ec2								
+https://github.com/crbanman/AstroidEscape						
+https://github.com/android-ia/platform_external_libsepol				
+https://github.com/Serneum/jousting-core						
+https://github.com/davidkempers/django-tasks		
+https://github.com/Taapeli/ProtoLoader							
+https://github.com/vzvu3k6k/mcg_source_list						
+https://github.com/mthli/Tweetin								
+https://github.com/uProxy/obfuscation							
+https://github.com/hadleyrich/GerbLook							
+https://github.com/usgs/icoast								
+https://github.com/structured-commons/tools					
+https://github.com/ntuosproj/fastalg-nfqueue					
+https://github.com/OCA/banking-addons							
+https://github.com/ldrumm/good-talk							
+https://github.com/tanel/bugsnag-qt							
+https://github.com/gabepolk/double-dog							
+https://github.com/bryanjswift/simplenote-android	
+https://github.com/russellsimpkins-nyt/varnish-mmdb-vmod				
+https://github.com/BobKingstone/Pedlar-Cart						
+https://github.com/semantic-dependency-parsing/toolkit				
+https://github.com/numat/threeflex							
+https://github.com/slowmoVideo/slowmoVideo						
+https://github.com/TroyShaw/troykanoid						
+https://github.com/uakatt/kaikifs						
+https://github.com/Twisol/anachronism							
+https://github.com/jruby/jruby-ldap							
+https://github.com/collegedesis/bidwars							
+https://github.com/TI-OpenLink/ti-utils_soldel_maintenance			
+https://github.com/jittat/cafe-grader-judge-scripts				
+https://github.com/zopefoundation/zope.app.publication				
+https://github.com/metabrainz/libdiscid							
+https://github.com/cemagg/sucem-fem							
+https://github.com/zfsrogue/spl-crypto							
+https://github.com/packfire/concrete							
+https://github.com/Elive/emodule-productivity					
+https://github.com/ckw-mod/ckw-mod							
+https://github.com/AgencyPMG/PMG-WP-Core						
+https://github.com/vivid-planet/kwf-newsletter-demo				
+https://github.com/liu-chong/micropolis						
+https://github.com/CollectorsQuest/magnify-sdk
+https://github.com/NESCent/Taxonomy-Ontology-Tool
+https://github.com/mteodori/jira-git-plugin	
+https://github.com/sanguinariojoe/ocland
+https://github.com/grate-driver/grate			
+				
+https://github.com/singuerinc/puppet-font_explorer_pro
+https://github.com/kzoll/ztlogger
+https://github.com/couchbase/couchbase-net-client
+https://github.com/colszowka/phantomjs-gem
+https://github.com/djblets/djblets			
+https://github.com/hhru/tornado				
+https://github.com/proycon/pynlpl
+https://github.com/sonatype/plexus-compiler
+https://github.com/tgjones/ormongo							
+https://github.com/herumi/cybozulib							
+https://github.com/mkraft/fides							
+https://github.com/cerb-plugins/wgm.facebook					
+https://github.com/alanbem/Josser								
+https://github.com/ramusus/kinopoiskpy
+https://github.com/FrankHB/yslib
+https://github.com/jagregory/fluent-nhibernate 	
+https://github.com/niw/iphone_opencv_test 	
+https://github.com/veg/hyphy 	
+https://github.com/kennyma/health_graph 	
+https://github.com/microcai/gentoo-zh 	
+https://github.com/samirahmed/Iris-Voice-Automation 	
+https://github.com/lex-lingo/lingo 	
+https://github.com/pgoergler/Quartz 	
+https://github.com/nicanorperera/xaver-template 	
+https://github.com/jimlindstrom/xbrlware-ruby19 	
+https://github.com/aamattos/GMF-Tooling-Visual-Editor 	
+https://github.com/mconf/bigbluebutton_rails 		
+https://github.com/ramen/phply 	
+https://github.com/steveliles/dsl4xml 	
+https://github.com/abulrim/siscode 	
+https://github.com/otubo/qemu 	
+https://github.com/martynsmith/lg4l 	
+https://github.com/jburman/ZeroG 	
+https://github.com/achiu/rack-recaptcha 
+https://github.com/CRAVA/crava 	
+https://github.com/PowerKiKi/qTranslate 	
+https://github.com/vext01/hgd 	
+https://github.com/SRombauts/SQLiteCpp 	
+https://github.com/opencog/opencog 	
+https://github.com/Ariloy/redmine_messenger 
+https://github.com/Shuyang/uic-automatic-reviewer 	
+https://github.com/darioquintana/NHibernate-Shards 
+https://github.com/lukecampbell/h5py 
+https://github.com/RedTurtle/cciaa.modulistica 
+https://github.com/mpaladin/java-dirq 	
+https://github.com/mgkimsal/zfkit 	
+https://github.com/ddsc/ddsc-worker 
+https://github.com/mensfeld/FB-Video-URL-Converter 
+https://github.com/dalmirdasilva/RaspberryIO 	
+https://github.com/seblin/launchit 	
+https://github.com/alx/reprap-arduino-firmware 
+https://github.com/phillord/mathjax-latex 	
+https://github.com/smcameron/opencscad 	
+https://github.com/zopefoundation/zope.app.interface 	
+https://github.com/PuzzleOpenDataHackdayTeam/finsta-deck 
+https://github.com/verdigris/HappyNewYear 	
+https://github.com/cmonterrosa/search_routes 
+	
+https://github.com/gbagnoli/openphoto-utils 	
+https://github.com/Youscribe/opencv-cookbook 	
+https://github.com/englishtown/stash-hook-mirror 	
+https://github.com/lpotter/libalignedtimer 	
+https://github.com/sonatype/maven-guide-en 	
+https://github.com/CorlenS/ROIMemberLoot 
+https://github.com/mirego/bourgeois 	
+https://github.com/charliemorning/weibocrawler 	
+https://github.com/tomana/ofxONI1_5 	
+https://github.com/tjfontaine/node-addon-layer 	
+https://github.com/rcbops-cookbooks/swift-private-cloud 	
+https://github.com/jaapverloop/knot 	
+https://github.com/goccy/p5-Compiler-CodeGenerator-LLVM 	
+https://github.com/BadrIT/seo_pages 	
+https://github.com/fish2000/h5dj 	
+https://github.com/chbrown/pi 	
+https://github.com/ScottMcMichael/lronacPipeline 	
+https://github.com/dreikanter/pyke 
+https://github.com/iancook75/oscillocalc 
+https://github.com/novapost/django-ticketoffice 
+https://github.com/php-carteblanche/tool-form 
+https://github.com/erdavila/git-svn-diff 	
+https://github.com/robertf224/pyTunes 	
+https://github.com/etherdev/markdown_datafier 
+https://github.com/BradStevenson/Project-SciSearcher 	
+https://github.com/generators-io-projects/generators 
+https://github.com/yhteentoimivuuspalvelut/ckanext-ytp-drupal 
+https://github.com/bingoohuang/buka 
+https://github.com/melizalab/arfx 	
+https://github.com/barterli/barter.li 	
+https://github.com/giucam/termistor 	
+https://github.com/langner/cclib 	
+https://github.com/taky/joanne 	
+https://github.com/apanzerj/zit 	
+https://github.com/kzeleny/script.tmdb 	
+https://github.com/jlagerweij/swagger-springweb-maven-plugin 	
+https://github.com/openSUSE/osc-plugin-factory 	
+https://github.com/DevCabin/rootless 
+https://github.com/gagle/raspberrypi-openmax-jpeg 	
+https://github.com/yoshizow/global-pygments-plugin 
+https://github.com/oguna/SharpXFileParser 	
+https://github.com/altstone/doorscenter 	
+https://github.com/liulhdarks/darks-codec 	
+https://github.com/brigittewarner/trailblaze 	
+https://github.com/schjan/RailNet 	
+https://github.com/yahim91/FloatingContent 	
+https://github.com/futureimperfect/autopkg-notify 	
+https://github.com/hcs/hcs-cloud 	
+https://github.com/nsimplex/ktools 	
+https://github.com/takawitter/robodova 	
+https://github.com/ambitioninc/django-entity-emailer 
+https://github.com/Khan/frankenserver 	
+https://github.com/safaci2000/google-voice-java 	
+https://github.com/XPerience-NXT/android_build2 	
+https://github.com/jltjohanlindqvist/jltflash 
+https://github.com/M7S/dockbarx 	
+https://github.com/WSULib/quicksearch 	
+https://github.com/PigeonPack/pigeon-pack 	
+https://github.com/siwilkins/bible_passage 	
+https://github.com/UltraSabreman/Free_Sharp_Player 
+https://github.com/v3l0c1r4pt0r/HistoriaPojazdu 	
+https://github.com/RobinRadic/laravel-bukkit-swiftapi 
+https://github.com/waltervargas/prestashoperpconnect 	
+https://github.com/fperez/coulomb-3body 	
+https://github.com/versionone/V1TortoiseSVN 	
+https://github.com/koolkode/bpmn 	
+https://github.com/snemetz/puppet-dripstat 	
+https://github.com/nbari/py-sessions 	
+https://github.com/adejoux/file_sharer 	
+https://github.com/dsoprea/M2CryptoWin32 	
+https://github.com/godiard/imageviewer-activity 	
+https://github.com/non117/yuyushiki 	
+https://github.com/bwildenhain/air-quality-sensor 	
+https://github.com/akrasic/souschef 	
+https://github.com/blueplanet/task_chute 	
+https://github.com/MeldCE/wp-gallery-hierarchy 	
+https://github.com/lucasr/dspec 	
+https://github.com/inmoon/ProListView 	
+https://github.com/Jugendhackt/hackspace-dashboard 	
+https://github.com/AfterTheRainOfStars/QQStars 	
+https://github.com/os6sense/sunra_ffs_relay 	
+https://github.com/Kalbintion/Kdkbot 	
+https://github.com/NativeScript/nativescript-cli-tests 	
+https://github.com/nano-byte/LightTag 	
+https://github.com/ZachOhara/Bukkit-Location-Manager 	
+https://github.com/smartpension/signable 	
+https://github.com/fenicks/rubysoul-ng 	
+https://github.com/jjbunn/MultipathODL 	
+https://github.com/humangeo/DateSense 	
+https://github.com/globocom/content-gateway-ruby 	
+https://github.com/PiDyGB/android-slidinglayout 	
+https://github.com/relldoesphp/com.aghstrategies.giftmemberships 	
+https://github.com/blockchain/api-v1-client-php 	
+https://github.com/libdynd/libdynd 	
+https://github.com/halmd-org/cuda-wrapper 	
+https://github.com/lazymaniac/LexSem 	
+https://github.com/open-epicycle/Epicycle.Math-cs 	
+https://github.com/coreone/tex-boxen 	
+https://github.com/ausaccessfed/aaf-lipstick 	
+https://github.com/LSST/imgserv 	
+https://github.com/eetac/android-logging-log4j 	
+https://github.com/openregister/entry 	
+https://github.com/android -ia/platform_external_chromium_org_third_party_libjingle_source_talk 	
+https://github.com/cloudcopy/seafile 	
+https://github.com/RetroShare/ChatServer-Frontend 	
+https://github.com/calico-g/coraline 	
+https://github.com/kapilt/contentmirror 	
+https://github.com/Philippe2201/alura-provas2 	
+https://github.com/manmeetmlt/my_first_rails_app
+https://github.com/Chabadsuite/com.chabadsuite.batchactivityadd
+https://github.com/fritzmonkey/esquery
+https://github.com/diegocstn/NumberPickerView
+https://github.com/frozenith/CredKing
+https://github.com/hikmahealth/bahmni-core
+https://github.com/frozenith/CredSniper
+https://github.com/frozenith/PowerWebShot
+https://github.com/rorychristianmurray/animal-kingdom
+https://github.com/frozenith/DPAT
+https://github.com/Blaine876/chatroomAPI
+https://github.com/bassuny3003/ShareX
+https://github.com/Vladimir547/Glasses_By_ILYUSHIN_VLADIMIR
+https://github.com/rsmsnot/poppin-bottles
+https://github.com/DraconianLore/poppin-bottles
+https://github.com/yynickel/poppin-bottles
+https://github.com/zhuzhenping/faceswap
+https://github.com/Djuwita/calculating-lines-data-science-intro-
+https://github.com/ToyaMitchell/101-personal-site
+https://github.com/glenpgd/glenpgd-github.com
+https://github.com/anandangalig/react-context-system
+https://github.com/gitter-badger/DabEngine
+https://github.com/lauralaura14/css-kitten-wheelbarrow-lab-v-
+https://github.com/qhlxm/HotSpot-JVM-Linux-x86-Research
+https://github.com/ElementAI/NAF
+https://github.com/davidmnagy27/Ajax-Dictionarys
+https://github.com/miklo88/User-Interface
+https://github.com/joshlong90/System-Calls
+https://github.com/nicholasstano/operators-nyc-web-
+https://github.com/diomedes314/PATA
+https://github.com/stivenson/run_script
+https://github.com/kjannenga/flex-fishy
+https://github.com/kristoferjoseph/restafarian
+https://github.com/masayoshi-toku/papper-tweet
+https://github.com/seckisecki/SupervisedLearning-FindingDonorsForCharityML
+https://github.com/jkanchelov/PIXI.TextInput
+https://github.com/cleborys/materials
+https://github.com/Yimiao123/Coursera-ML-AndrewNg-Notes
+https://github.com/christianjgreen/bno055
+https://github.com/bimlas/bash-mosh
+https://github.com/tomoakimiura/php-qa-plaza
+https://github.com/reyesc27/Proyect1
+https://github.com/twichtendahl/TempConverter
+https://github.com/mcc85s/ADRecon
+https://github.com/ianstafford/qtpylib
+https://github.com/OmarElsebaey/Project_1_boston_housing
+https://github.com/tommasoauerbach/looping-times-nyc-web-060319
+https://github.com/ohosseinmardi/austin-nyc
+https://github.com/narendraanupoju/MRI_data_preparation
+https://github.com/Lutterus/t2SisOp
+https://github.com/orar/play-silhouette
+https://github.com/mvegaxx/monat
+https://github.com/sergioquadros/Machine_Learning_Tutorials
+https://github.com/pragmatux/mkos-mlo-common
+https://github.com/AustinMorrill/Open-Trivia-Quiz
+https://github.com/SarahQiong/WBC_Matlab
+https://github.com/adamstirtan/trailheadx19
+https://github.com/sukimsiriam/fbtools
+https://github.com/Fraks51/CppHW
+https://github.com/abramp20/CashMachineWeekend
+https://github.com/vagnerfonseca182/LIKEFOOD
+https://github.com/GgeekFreak/Depression-diagnostic-system-desktop-based
+https://github.com/davidson-lee/personal-site
+https://github.com/seshajay/FunWithML
+https://github.com/JuniorDugue/The-Book-APP
+https://github.com/anticomputer/semantic
+https://github.com/Fe-Ordan/ofxIisu
+https://github.com/garikoitz/nipype
+https://github.com/crowdbotics-apps/g-way-
+https://github.com/IgnoredRhyme520/Minecraft-Server-Jars
+https://github.com/sibonnet15/excel-to-python-data-science-intro-
+https://github.com/ramsestrejo/ShSDD-ICE2
+https://github.com/sohelsheikh91/Sample-Project
+https://github.com/WalczRobert/Lazy-Raider
+https://github.com/svngoku/javascript
+https://github.com/Raaj108/rnews-webapp
+https://github.com/VadimS4/fewpjs-js-fundamentals-variables-lab-seattle-web-career-
+https://github.com/wylcetal/ejercicios
+https://github.com/ron-ny2/rclone
+https://github.com/thshorrock/ionic
+https://github.com/seckisecki/UnsupervisedLearning-CreateCustomerSegments
+https://github.com/Martin444/React-hospedajes
+https://github.com/HapCuji/Build_Compilers
+https://github.com/MehmetRamiz/nodejs-3-Weather-App
+https://github.com/cha10vd/coroutines_concurrency
+https://github.com/ryantillis/cs-checkstyle
+https://github.com/shabigit/leetcode
+https://github.com/AA-CubeSat-Team/soci_cdh_rtos
+https://github.com/reedlex98/Clockesthic
+https://github.com/molecular-cell-biomechanics-lab/DiTaxa
+https://github.com/shabigit/LeetCodeAnimation
+https://github.com/jkoenig134/wysiwyg-e-java
+https://github.com/rshirani/bazel
+https://github.com/tiffanyrivas/GifTastic
+https://github.com/Callum-Mitchell/Chromavolt
+https://github.com/rsbondi/lnet
+https://github.com/wadegilmer/techjobs-console-java
+https://github.com/keunyop/IntuneDocs.ko-kr
+https://github.com/Bleizingard/material-components-android
+https://github.com/hellseee/adding-up
+https://github.com/mlxnle/Mycat-Server
+https://github.com/vianafn/Pop-Corn-o-Grupo-7-WEB
+https://github.com/astewart27/react-github-user-profile
+https://github.com/emptyopen/reactotron
+https://github.com/Eadancel/test_move
+https://github.com/jibrel/openmrs-config-jib
+https://github.com/molecular-cell-biomechanics-lab/MicroPheno
+https://github.com/kgullion/pugBot
+https://github.com/akuholla/camera
+https://github.com/yijun-zhang/stream_file_upload
+https://github.com/Djuwita/single-variable-regression-lab-data-science-intro-
+https://github.com/alttabs/Boston_House_Price_Prediction
+https://github.com/leomhcorrea/ep2_aed_1
+https://github.com/viniciusleati/studyingR
+https://github.com/zhengpingwan/awesome-python
+https://github.com/Beaulieu527/js-basics-control-flow-lab-online-web-pt-
+https://github.com/ditointernet/dito-spectacle-theme
+https://github.com/wxlost/KeepMyGoogleVoice
+https://github.com/dave-89/angulat-strict-css
+https://github.com/molecular-cell-biomechanics-lab/dimotif
+https://github.com/leechongchong/Credit-Card-Fraud-Detection-System
+https://github.com/zhengpingwan/system-design-primer
+https://github.com/KevinKelley/zdog
+https://github.com/reactome-fi/reactome_cancer
+https://github.com/longniansheng/gallery
+https://github.com/jacklee20151/nlp-tutorial
+https://github.com/kjersey690/news
+https://github.com/kernel-dev/inteloops
+https://github.com/daeyounglim/rainbow-bash-prompt
+https://github.com/Djuwita/applying-gradient-descent-lab-data-science-intro-
+https://github.com/zhengpingwan/public-apis
+https://github.com/Clew27/VG-Bundle-Algorithm-Prototyping
+https://github.com/Decman84/mkvserver_mk2
+https://github.com/axeltux/api-laravel
+https://github.com/ianstafford/pandas
+https://github.com/frozenith/learn-python3
+https://github.com/mauriciogontijo/gentelella
+https://github.com/zhengpingwan/Python
+https://github.com/frozenith/learn-python
+https://github.com/dalems4/dsc-instance-variables-lab-seattle-ds-career-
+https://github.com/znzn2013/task1
+https://github.com/ysnacrk/quicktranslater
+https://github.com/zhengpingwan/thefuck
+https://github.com/mike-roberts/Blueshift-iOS-SDK
+https://github.com/zinebkhanjari/ProjetJavaUml
+https://github.com/6stringninja/inav
+https://github.com/aenygma/hashdex
+https://github.com/hanbanana/Color-Picker
+https://github.com/Hikari0418/leetcode
+https://github.com/Jason-Cooke/plyr
+https://github.com/amajidsinar/ETL
+https://github.com/dtychero/core
+https://github.com/PythonDarkeningProjects/proyect
+https://github.com/losdor/fb-brute
+https://github.com/szieglerICF/aws-account-summary-windows
+https://github.com/clearxiaofeifei/cube-ui
+https://github.com/answjddnr/windows-cis-profile
+https://github.com/danielmarcgardner/portfolio-site
+https://github.com/tdbuchanan/sfdx-project
+https://github.com/sergaka/Personal-Quiz-Example-
+https://github.com/zhengpingwan/python-patterns
+https://github.com/phmiranda/senai-banco
+https://github.com/ZoraSantos/exercicio-blogapp
+https://github.com/bkakilli/RANSAC-circle-python
+https://github.com/Maksim1990/Laravel_Dockerize_OLD_Meet_Mate_APP
+https://github.com/aschams/dsc-introduction-section-intro-dc-ds-
+https://github.com/zhengpingwan/pandas
+https://github.com/cassiuscampos/AWSHelpers
+https://github.com/cfuxiang/nl2sql
+https://github.com/TheLonestar1/kj
+https://github.com/Tirth1200/jQueryCodeSnippets
+https://github.com/richardleach/whocalls
+https://github.com/richardli515/phylogenes-api
+https://github.com/dtychero/coreclr
+https://github.com/CerfVert94/Kernel-Module
+https://github.com/manojrajuladevi9/EF6-DBFirst-Demo
+https://github.com/dtychero/corefx
+https://github.com/xMizu/my-select-nyc-web-062419
+https://github.com/joelcoxokc/underbar-training
+https://github.com/ghost11886/FAEDER
+https://github.com/Coolerian/gamelife
+https://github.com/AlvisS66/VincentTV-Code
+https://github.com/vescamilla/devops-essentials-sample-app
+https://github.com/NinjaNymo/AltiumLib
+https://github.com/ssss-38438-org/click-to-deploy
+https://github.com/yj679/Dementia
+https://github.com/Gilbert-Adu/my_currency_converter
+https://github.com/hickeye/Talks-and-Presentations
+https://github.com/francois-drielsma/InstrumentKit
+https://github.com/JMVCoelho/m19
+https://github.com/IllSmithDa/salesforceNotes
+https://github.com/lawsonhung/parrot-ruby-dumbo-web-
+https://github.com/MahdiRahbar/ChatterBot
+https://github.com/orar/silhouette
+https://github.com/Hyperfine/pyTHM1176
+https://github.com/farfalle211/weather_transportation_app
+https://github.com/Byteflux/askyblock
+https://github.com/sjinks/winston-mail-lite
+https://github.com/howardjohn/file-based-istio
+https://github.com/MarkPartlett/dashboardcharts
+https://github.com/yuyime/how-does-navicat-encrypt-password
+https://github.com/joelcoxokc/toyproblems
+https://github.com/subhashdasyam/spring-boot-rest-example
+https://github.com/blackfist/CacheOnlyKeyWrapper
+https://github.com/jwickens/postgraphile
+https://github.com/cesarhdz/estatico-php
+https://github.com/maurotoro/UMI2018_ToroBergomi
+https://github.com/aschams/dsc-problems-data-science-can-solve-dc-ds-
+https://github.com/kargo-k/nyc-pigeon-organizer-seattle-web-060319
+https://github.com/EduBic/Cpp-A-Refreshing
+https://github.com/adsj1982/jsignpdf
+https://github.com/hajsong/personal
+https://github.com/teespring/omniauth_openid_connect
+https://github.com/bmacauley-reward/example-aws
+https://github.com/ashish-ucsb/ece_283_machine_learning
+https://github.com/estorey11/simple-partials-lab-online-web-ft-
+https://github.com/Benk0033/Constructor-Word-Guess
+https://github.com/Onboard-Informatics/postman-collections
+https://github.com/marcospereira/lagom-samples
+https://github.com/koudyk/ohbm
+https://github.com/GgeekFreak/Chronic-disease-detection-system-desktop-based
+https://github.com/gerardoMed/practica2
+https://github.com/phmiranda/senai-clinica
+https://github.com/nkatwesigye/OAuth2.0
+https://github.com/othaderek/rack-dynamic-web-apps-dumbo-web-
+https://github.com/cesarhdz/SeamLESS-PHP
+https://github.com/jslight90/nixpkgs-channels
+https://github.com/dguilmezian/paw-integrador
+https://github.com/Roelifela/ListaContato
+https://github.com/ffiaux/AlunosApp
+https://github.com/Rogerch99/Projects
+https://github.com/juliocesarfs/Project-site-UEG-work
+https://github.com/ThomasNigro/owen-home
+https://github.com/din-lab-train-data-v3/
+https://github.com/jalywang123/flask-video-streaming
+https://github.com/andreas-h/line_profiler-feedstock
+https://github.com/T-Gio/sfdx-project
+https://github.com/hexaforce/webpack-vue
+https://github.com/jhuxiang/LeetCode_Python
+https://github.com/Vinicius0li/Quiz
+https://github.com/sixtysix-Team/fbbrute
+https://github.com/Depau/swin
+https://github.com/smankoo/backup-gdrive
+https://github.com/srini100/grpc.io
+https://github.com/TallanGroberg/flash-cards
+https://github.com/sangel217/planetary-age
+https://github.com/ceanver/sourceCode
+https://github.com/escuelainformatica/mayo31
+https://github.com/colesam/typescript-ci
+https://github.com/reyesc27/Proyect2
+https://github.com/mengqiy/play-kubebuilder
+https://github.com/Agonec-bozhij/angular-bazel-example
+https://github.com/T1V/SystemKit
+https://github.com/Engitano/fs2-gcp
+https://github.com/Nain22/Courier
+https://github.com/jzheaux/spring-security-oauth-to-5-translation-dictionary
+https://github.com/bsiegel/azure-sdk-for-net
+https://github.com/Nexusflamehart/orcpub
+https://github.com/kolson256/sfdx-project
+https://github.com/alex-polosky/cs-dotnet-ef-npgsql-multi-db-error
+https://github.com/cesarhdz/flag-icon-css
+https://github.com/BevanR/php-coding-task
+https://github.com/raypage/sfdx-project
+https://github.com/judith-dev/react-child-proptypes
+
+A continuación se relacionan los repositorios que no son de ingeniería y que se han analizado en este trabajo.
+
+
+https://github.com/shirleyshz/shirleyshz.github.io
+https://github.com/thelukestor/learn-co-sandbox
+https://github.com/ErnisEr/Test_
+https://github.com/DeadSending/hello-world
+https://github.com/malteado/malty
+https://github.com/dalilahannouche/tournerpage
+https://github.com/lucaspada894/chat-app
+https://github.com/subtlymoney/0225Git
+https://github.com/Traci7822/RENAME_ME
+https://github.com/zainabroo/airbnbchallenge
+https://github.com/marcelogaray/auto-GA-v06
+https://github.com/EnricoJohn/CodeNation
+https://github.com/juanlozano24/concesionario
+https://github.com/ZeyadOsama/SoleekLabTask
+https://github.com/DerspaB/Programa-Parcial
+https://github.com/OVGULIU/tensor_derivative
+https://github.com/k-bosko/predicting_catalog_demand
+https://github.com/natomasvillageapartments/natomasvillageapartments.github.io
+https://github.com/wagner-luis97/AM
+https://github.com/larowlan/larowlan.github.io
+https://github.com/kre64/2D
+https://github.com/git2e/5378522d-2785-446a-b468-c200898f7835
+https://github.com/JefferyQ/el-repository-MFr
+https://github.com/joelyustiz/SEP-Components
+https://github.com/luangm123/Tech-Jalsa
+https://github.com/lipeA/clinica
+https://github.com/ujwalarora34/c0754449_Midterm_s2019mad3463
+https://github.com/alex93skr/Euler_Project
+https://github.com/LeonardoVivasAndrade/BolivarApp
+https://github.com/slalomchris/sfdx-project
+https://github.com/FFizzZZ/deeplearning.ai
+https://github.com/jacobmoore324/eclipse-repo
+https://github.com/Billdozer1547/sfdx-project
+https://github.com/1slutskaya/Insider2
+https://github.com/lautaumpierrez/CookieManager
+https://github.com/YevKozarchuk/test.github.io
+https://github.com/boniface100/Realm-App-assignment-3
+https://github.com/soeunlang/Spoon-Knife
+https://github.com/mvid/simpleforce
+https://github.com/HanVTran/Hello_World
+https://github.com/cearo/C195
+https://github.com/railcheg/hello-world
+https://github.com/noltron000/three-collector
+https://github.com/gholzrib/treinamento-ios_jogo_da_memoria
+https://github.com/ahmedengu/private-ai
+https://github.com/HanVTran/Data-Pipelines-with-Airflow
+https://github.com/vipulgarg192/c0753362_MidTerm_s2019MAD3463
+https://github.com/IsaacMolinari/teste
+https://github.com/Freelive2425/Clase_Funda_S10
+https://github.com/maksymbogdanov/SLAExtension
+https://github.com/charneff/oo-tic-tac-toe-online-web-ft-
+https://github.com/cc5212/2019-frequent-costars-imdb
+https://github.com/AnuragDharNEU/csye6225-summer2019-template
+https://github.com/claridiva2000/webdb-challenge
+https://github.com/smolaka/sfdx-project
+https://github.com/pkj-m/VertexSafeGraphs.jl
+https://github.com/alienturtle87/Devploit
+https://github.com/molecular-cell-biomechanics-lab/Deep-Proteomics
+https://github.com/charles201311/cms
+https://github.com/adioe3/noapp-please
+https://github.com/markbucko12341/massiveCARpackHQ
+https://github.com/ezequieloscarescobar/hamburguers
+https://github.com/NafeeJ/TextBlockMaker
+https://github.com/cesar-yoab/portfolio
+https://github.com/gmarshall5/Learning
+https://github.com/JonathanC3/minisuper_nolep
+https://github.com/yosrathala/ProgoLineScrap_Crawl
+https://github.com/mitsuaki1/test190601
+https://github.com/WilliamChou06/awesome-code
+https://github.com/Sebaolivares11/utem_thesis_template
+https://github.com/littlelight2019/java1
+https://github.com/jaroslawkid/dick
+https://github.com/fr3dn3t/card10_sequins
+https://github.com/ali-mozafari/FR-SRGAN
+https://github.com/emilylauyw/Detect_Dangerous_Driver
+https://github.com/hybalo-viacheslav/callfrodrop
+https://github.com/jamgochiana/RLPlayground
+https://github.com/liyanage/kicad-library-liyanage
+https://github.com/kiuwong/ARStudio_ChickenHat
+https://github.com/hmalik88/cryptoexchange
+https://github.com/stephane19/Boulder-Dash-Group1
+https://github.com/CallMeTheMasterHacker/Ring-of-Elysium
+https://github.com/brpiank/hello-world
+https://github.com/pythonpete32/AGPs
+https://github.com/autotester-one/integration-tests-
+https://github.com/gorchels/esm262baseball
+https://github.com/JohanPortilla/OP_CorrerBloque
+https://github.com/1slutskaya/Technologies_lab
+https://github.com/aulaalmir/TrabalhoAlmirAd
+https://github.com/ObertoIsOBS/discordjs
+https://github.com/flamelitface/ZolaHomeworks
+https://github.com/KuzeIII/OSCP-Archives
+https://github.com/tuflix/practica1
+https://github.com/agirrearri/3eval_ende
+https://github.com/otarampinelli/card
+https://github.com/benalavi/pop-dark-syntax
+https://github.com/lialsoftlab/minreq
+https://github.com/tyzbit/awake-docker
+https://github.com/tim-smart/awesome-contentful
+https://github.com/HakonaLabs/hello_world
+https://github.com/JoseDFS/TallerDos
+https://github.com/amritsinghrbc/Automation-Assignment
+https://github.com/JOSEALVESPEREIRA/pet_shop
+https://github.com/zvorgiygeonka/hello-world
+https://github.com/JohnCC330/webpy
+https://github.com/sml920505/rongge
+https://github.com/VolleyTKE/cuckoo
+https://github.com/francesquini/test
+https://github.com/ucd-rundergrad-club/S_Cheng_Rundergrad
+https://github.com/wbroome14/eventsPLUS-privacy-policy
+https://github.com/khounvandy68/supreme-dollop
+https://github.com/gunjanpatil23/ParticleFilterSLAM
+https://github.com/angelaaaateng/uchicago-msca-club.github.io
+https://github.com/Mady974/Mazed
+https://github.com/Vencesland/my-first-blog
+https://github.com/dumbbond/leanback-assistant
+https://github.com/glu251982/FlyTour
+https://github.com/osirrc/anserini-docker
+https://github.com/noltron000/three-snowball
+https://github.com/caiogirao/hello-world
+https://github.com/WittyRejoinder/sfdx-project
+https://github.com/BlakeGardner/cockpit-docs
+https://github.com/vguillet/aqmen
+https://github.com/bot-luc/LuC
+https://github.com/tarabhawnani/sfdx-project
+https://github.com/WillPoulson/node-database-example
+https://github.com/YurBurGer/2nd-keyboard
+https://github.com/pointgenesis/pointgenesis.io
+https://github.com/lowliver/LPoint
+https://github.com/vervallsweg/cast-web-api-android
+https://github.com/alejuarez/cs-technical-curriculum-public
+https://github.com/yixinmao/example_python_unittest
+https://github.com/Neumann789/JavaGuide
+https://github.com/1slutskaya/Technologies
+https://github.com/act1991/Python-100-Days
+https://github.com/ShanKwanCho/Song_Lyric_Finder
+https://github.com/JayTrask/JayTrask.github.io
+https://github.com/MahdiRahbar/awesome-cpp
+https://github.com/stenpiren/p1xt-guides
+https://github.com/Ejra92/memes
+https://github.com/rwchisholm/DX
+https://github.com/amojics/contactMeWeb
+https://github.com/josivantarcio/backup-github
+https://github.com/egecan12/JS_Guess_Who
+https://github.com/liqingshuchina/mtjiu
+https://github.com/distortedsignal/awesome-erlang
+https://github.com/zampolitx/test
+https://github.com/taylormcknight/weybolt
+https://github.com/wildewalkingtours/site
+https://github.com/rphilson/sfdx-project
+https://github.com/calimero2018/code1
+https://github.com/GoryMoon/Bingo
+https://github.com/xXHack/Dark
+https://github.com/victorhamon/sige-production
+https://github.com/stevex86/TopologicalDefect
+https://github.com/MichlosBSB/infra-test
+https://github.com/DeeGee1015/library.gym
+https://github.com/daticomunebologna/opendata 	
+https://github.com/unmisha/mycode 	
+https://github.com/hflicka/django-autoload 	
+https://github.com/mitchellzen/intrstmap 	
+https://github.com/rstoyanchev/dispatch-test 	
+https://github.com/jh9027/konqr 	
+https://github.com/iKolt/sample 	
+https://github.com/hasenj/arabic-writer 	
+https://github.com/dhellmann/metering-prototype 	
+https://github.com/nskrypnik/Pyramid-file-storage-app 	
+https://github.com/JorisSpekreijse/boekhoud 	
+https://github.com/henning1004/AddSomeFurniture_ReWrite 	
+https://github.com/crodas/Haanga2 	
+https://github.com/mikehamer/ardrone_tutorials 	
+https://github.com/kvm/BlueWhale 	
+https://github.com/darrensemail/hw2_rottenpotatoes 	
+https://github.com/jefigo/Bootcamp 	
+https://github.com/makavellious/sample_app 	
+https://github.com/ekingery/Bar-Napkin 	
+https://github.com/gra/nikitina 	
+https://github.com/Jim-Holmstroem/SQLightning 	
+https://github.com/WinSir/WinSir.Tools.Markdown.PhotosPost 	
+https://github.com/danlex/bstexample 	
+https://github.com/a1theredbull/FerrisWheel 	
+https://github.com/benshope/w5d4 	
+https://github.com/pngisnotgif/python 	
+https://github.com/Carlosmr/NaturalLanguageProccessing 	
+https://github.com/rewbs/ljcu.findbugs.ext 	
+https://github.com/pdonlon/Sudoku-Solver-2 	
+https://github.com/jerbio/My24HourTimerWPF 	
+https://github.com/richistron/slim-services 	
+https://github.com/andreeasandu/wim 	
+https://github.com/Mehdi23/TpJava 	
+https://github.com/nate-d-olson/MBWG 	
+https://github.com/novoalg/demo_app 	
+https://github.com/loboweissmann/groovy-grails-na-pratica 	
+https://github.com/jataggart/seven-languages 	
+https://github.com/aangarita/invent 	
+https://github.com/garrettlord/MHacks_Pill_Delivery_Quad 	
+https://github.com/liuhaodong/hw0-haodongl 
+https://github.com/lukefx/AccessManager2 	
+https://github.com/ruedigergad/qca-qt5 	
+https://github.com/pulkitsinghal/TestJavaClientsForCouchDB 	
+https://github.com/triplethreatg/elec424-lab2 
+https://github.com/Yogendra0Sharma/Python-Design-Patterns 	
+https://github.com/iso32/EncryptedMessage 	
+https://github.com/rohan1020/songsite 	
+https://github.com/amarnatht/p2.amar15.biz 	
+https://github.com/rwieckowski/demo-dynamic-proxy 
+https://github.com/philfromfmf/kovalevskiy 	
+https://github.com/bilastom/demo_app 	
+https://github.com/numerodix/pybits 	
+https://github.com/jeconje/sms 	
+https://github.com/kevin-ww/text.classfication 	
+https://github.com/castoridae/naval-battle-sim 	
+https://github.com/fazie/algorithms 	
+https://github.com/jw84/eddie 	
+https://github.com/reigner-yrastorza/htdigest-php-web-frontend 	
+https://github.com/hinedavid/dasesedus 	
+https://github.com/UTAustin/php-site-spring2013 	
+https://github.com/knighthunter09/XPEDIA 	
+https://github.com/stanlemon/lemon-app 	
+https://github.com/neutrino-git/TelerikAcademy 	
+https://github.com/drackows/poc-rmi 	
+https://github.com/mohitsehgal/MapsApp2 	
+https://github.com/torypayne/exercise4 	
+https://github.com/MZ992/Movie-rental-Store 	
+https://github.com/lmtreser/Python 	
+https://github.com/timbooker/Simple.Data.Linqpad.Tracelistener 	
+https://github.com/r-julien/txl-project 	
+https://github.com/praetorius/demo1 	
+https://github.com/manuelblanch/ebreescool 	
+https://github.com/Jorgtre/Cpp 	
+https://github.com/mmcguinn/PoolVisor 	
+https://github.com/nogrudge/first_app 	
+https://github.com/AlexandreAbraham/movements 	
+https://github.com/thiendv/GSO 	
+https://github.com/PaulStoffregen/k72memtest 	
+https://github.com/zwgirl/summer 	
+https://github.com/crisguitar/ProjectEulerProblems 	
+https://github.com/rikikun/SpringExample 	
+https://github.com/xieyilong/test 	
+https://github.com/valerie7869/sample_app4 	
+https://github.com/gastitan/Criaturas 
+https://github.com/robertbachmann/openbsd-libcrypto 	
+https://github.com/nicolasfaure/evaluacion 	
+https://github.com/Youngs285/Chapter5Problems 	
+https://github.com/msoltysik/Flask-Mega-Tutorial 	
+https://github.com/johnnyshih99/pulseMVCsample 	
+https://github.com/smellytofu/customer_relationship_applicaions 	
+https://github.com/jpleau/hockeystreams-ruby 	
+https://github.com/t-larsen/test 	
+https://github.com/anthonylife/EventRecommendation 	
+https://github.com/zfh1005/demoPackage 	
+https://github.com/Leozzer/Python-for-DB 	
+https://github.com/yangjisheng/footballlotterycrawler 	
+https://github.com/hectormoreno87/FinditOut 	
+https://github.com/davidcrotty/DependancyInjection 	
+https://github.com/jack2606/spotify-voter 	
+https://github.com/Robbi-Blechdose/StarTrekMod 	
+https://github.com/lizuqiliang/AssassinPlatformerGame 	
+https://github.com/ycj0808/Travel 	
+https://github.com/lalorincon/patron-mvc 	
+https://github.com/mizoguchi-y/first_app 	
+https://github.com/MaikGrunw1/Maik 		
+https://github.com/RUAN0007/Crisis_Management_System 	
+https://github.com/dmzadorin/prime 	
+https://github.com/DarkmatterVale/Pocket-Spacecraft 	
+https://github.com/mpaskew/isc-dev 	
+https://github.com/demon7452/C 	
+https://github.com/biwin/eleven 	
+https://github.com/fijiaaron/qa.perfected 	
+https://github.com/Impulser/OpenRSS 	 	
+https://github.com/lejund/etsydemo 	 	
+https://github.com/Avoduhcado/Press-X-to-Win 	
+https://github.com/gskielian/Android_01_Java 	
+https://github.com/notcompletelylow/Lab08forBoshart 	
+https://github.com/Dorga/mymuseum 	
+https://github.com/icotanchev/scripting_lang_first_project 	
+https://github.com/Gribbleshnibit8/NVSE-Docs-Manager 	
+https://github.com/korugant/nbad-xtra-assignment 	
+https://github.com/TrinhThiThuyDung/shopping 	
+https://github.com/oorion/chess 	
+https://github.com/moroojaldeeb/xceed 	
+https://github.com/fernandomsilva/Final-Project--RJ-bus- 	
+https://github.com/JcFowles/MathCalculators 	
+https://github.com/jos3pir3s/fofinho-de-bico-js
+https://github.com/Vallium/get_next_line42 	
+https://github.com/kandx/OA-PHP 	
+https://github.com/vin047/helloworld-java 	
+https://github.com/EminemJeff/dimsumapp 	
+https://github.com/stevewitman/rails-practice-nested-resources 	
+https://github.com/yusuke1116/VastariCsharpcode 	
+https://github.com/mkrzman/KaraokeFinder 	
+https://github.com/akhilabs/Distributed-Computing 	
+https://github.com/ItWorksOnMyMachine/HuntTheWumpus_SHS 	
+https://github.com/mpratt/Weg 	
+https://github.com/XenoBlaze/hello-world 	
+https://github.com/tatelucas/mayan 	
+https://github.com/matthewhoendorf/hoendomd-lab06-IntList-master 	
+https://github.com/svoges/toy_app 	
+https://github.com/mohamedahmedabdelfattah/System-Outage 	
+https://github.com/theoriginallazybum/Algebra-Solver2 	
+https://github.com/esevi/exam01 	
+https://github.com/insane-stdios/WebCalculator 	
+https://github.com/nawalathar/Lab4_NawalAthar 	
+https://github.com/justanotheruser/Diplom 	
+https://github.com/asiunov/utils 	
+https://github.com/Marghytis/SarahsWorld 	
+https://github.com/bleakwood/ducking-tyrion 
+https://github.com/tiptobi/HLM-App
+https://github.com/cursorcl/trustee.android.app					
+https://github.com/dschobel/movies							
+https://github.com/vivekrk/RobolectricSample						
+https://github.com/jamessha78/BloombergHack_App
+https://github.com/SomeSmallProjects/MyCode						
+https://github.com/hepl-3infogra-quelu/Todo						
+https://github.com/khuongnt/luongcms							
+https://github.com/kapaseker/mysitetutorial						
+https://github.com/classic-city-rails/isislvx-rthw					
+https://github.com/KostadinStefanov/Team-PAPAYA-					
+https://github.com/threeStone313/productCatalogManagementSystem		
+https://github.com/no-wa-ke/BSPareidolia						
+https://github.com/zakhar-herych/refresher-cpp					
+https://github.com/mikaeldui/PyAvanza							
+https://github.com/mk44/javapublic							
+https://github.com/gulatiak/sample_app							
+https://github.com/robert-school/ludum-dare22					
+https://github.com/FedorSelitsky/ruby-mccabe-halstead				
+https://github.com/xionon/hacounter							
+https://github.com/liorkesos/drupalcamp							
+https://github.com/eurismarpires/teste_git						
+https://github.com/vindula/vindula.blog
+https://github.com/ElGringov2/swrpgcompanion						
+https://github.com/nomack84/spring-security-rest-example				
+https://github.com/dgilbert85/gitimmersion						
+https://github.com/respinar/athletes							
+https://github.com/ik11235/AOJcontest-counter					
+https://github.com/naXa777/dummy-web-app-2						
+https://github.com/NataBangun/Riskesdas							
+https://github.com/bteng22/string-calculator-kata					
+https://github.com/cougarTech2228/sensorSystem					
+https://github.com/eyantra/CS684_Rangoli-Bot_2011					
+https://github.com/Bamboy/12-Seconds-Gamejam						
+https://github.com/spapageo0x01/dioskrS							
+https://github.com/xiaolonw/nips14_loc_seg_testonly				
+https://github.com/onogithub/NovelIDE							
+https://github.com/guts2014/StockRun							
+https://github.com/wznshuai/AntiLoseDevice						
+https://github.com/xiongjunliang/topcoder						
+https://github.com/Evervolv/android_device_htc_common				
+https://github.com/ArtyomRusak/blog							
+https://github.com/pavankumar2203/SnippetsForAmazonWebServices		
+https://github.com/Josie-zou/Project							
+https://github.com/davidmalcolm/smoketest						
+https://github.com/mer-packages/qtgraphicaleffects					
+https://github.com/aasheer/depot								
+https://github.com/jimlambie/smooze-store	
+https://github.com/endowdly/EngineeringInALockedCloset				
+https://github.com/hartzellt/first_app							
+https://github.com/kuuji/android-supsup							
+https://github.com/Harwkx/laboxid-base-devel						
+https://github.com/DzonyKalafut/LWJGL3DEngine					
+https://github.com/DSBell/cs190lab5_bell99						
+https://github.com/keiji0/libobj								
+https://github.com/criddell/demo_app	
+https://github.com/guihsabino/Validar-IP-e-Mascara					
+https://github.com/cis-yogendra/cis-cart						
+https://github.com/strawlab/visualization_common					
+https://github.com/slorange/Diablo3-AuctionHouse-Bot				
+https://github.com/JackHolland/Tap							
+https://github.com/troyastorino/16.83-power-subsystem	
+https://github.com/morenomariscal/clase_10				
+https://github.com/jlas/misc									
+https://github.com/lalanne/Scientific-Hpc						
+https://github.com/ratnakarrao-nyros/inplace						
+https://github.com/cseslam/simply-ubuntu	
+https://github.com/Kvothes/Test						
+https://github.com/mcansky/-bearded-octocat						
+https://github.com/wooga/fb-payment-v2-demo-ruby
+https://github.com/Stabledog/bin-pub							
+https://github.com/wikimedia/operations-debs-vips					
+https://github.com/rjewell/disclosed.org						
+https://github.com/jinyb09017/crawler							
+https://github.com/rcbau/hacks	
+https://github.com/TerryThreatt/react-yelp-clone					
+https://github.com/platipy/publications							
+https://github.com/utsavgupta7/myfirst							
+https://github.com/torokp/udb								
+https://github.com/Janberk/MediaBoxMngr							
+https://github.com/toop/pyramid_doc_chinese
+https://github.com/yurek-0/yurek-0.github.io						
+https://github.com/funtiik/sample_app							
+https://github.com/willdc/project3							
+https://github.com/YukihiroMoriyama/SplitTheCost					
+https://github.com/gallaghd27/demo_app
+https://github.com/angela2020/Tripadvisor						
+https://github.com/makuto72/ns-3_tir							
+https://github.com/jaimeceballos/Tor-k							
+https://github.com/sdecri/JoinTextFiles							
+https://github.com/jordankomnick/HW02Final						
+https://github.com/CodigoMonki/MonoAndroidSamples					
+https://github.com/HiroakiKamon/demo_app						
+https://github.com/hubeicaolei/whereislover						
+https://github.com/gnilkreb/Fowler
+https://github.com/siephen/dbt-helper
+https://github.com/software-engineering-amsterdam/sea-of-ql			
+https://github.com/hellrage/NachGeom	
+https://github.com/lihuaiqiu/lihuaiqiu.github.io
+https://github.com/JoaoPirolo/App_RachandoAConta
+https://github.com/luxal99/market_app
+https://github.com/lambda-labs-13-stock-price-2/preprocessing-pipeline	
+https://github.com/webNeat/Quiddich							
+https://github.com/KarinaMontesTrevino/codeup.dev	
+https://github.com/bmacauley-reward/example-zeit-now				
+https://github.com/Anoopc444/test	
+https://github.com/williamwang0/opencv
+https://github.com/melunekip/SHIELD
+https://github.com/Jessiewithani/Check_Yo_Self
+https://github.com/jindradev/vscode							
+https://github.com/patrickw14/cse190	
+https://github.com/Deep15P/Portfolio-4
+https://github.com/ffbesp/pstepup	
+https://github.com/acvan11/-GA-repractice-1my_first_express_app		
+https://github.com/bellcom/bosa_attendees	
+https://github.com/dtslocum/hello-world						
+https://github.com/danielfdzperez/shooter_consola_2_jugadores
+https://github.com/dhochbaum/js-basics-online-shopping-lab-js-intro-
+https://github.com/ryjones/indy-sdk		
+https://github.com/fmmartinez/paper4
+https://github.com/todrobbins/cabal-desktop-mini		
+https://github.com/our-power/inner-warehouse-monitor
+https://github.com/johndpope/pretrained-weights					
+https://github.com/GreenCoin-Project/Forum	
+https://github.com/EloneSampaio/odoo12-custom-report				
+https://github.com/QuizzesGroup1/Quizzes1	
+https://github.com/takezoe/fluency
+https://github.com/Karasuma1412/programs
+https://github.com/lawsonhung/method-scope-lab-dumbo-web-
+https://github.com/KyleAMathews/testing-medium-export			
+https://github.com/42IN11EWd/RAS-Android	
+https://github.com/Barrymuch/WifiSMS
+https://github.com/lucasmv/desenvolvedor.io		
+https://github.com/stuartraetaylor/diydog-beerxml	
+https://github.com/ahujaprabhpreet/csye6225-summer2019-template		
+https://github.com/mayurisinkar/esdl-mayuri-sanika
+https://github.com/br0wnie/gulp-size
+https://github.com/VijayMVC/MasterSchedule
+https://github.com/AprilHGraves/aA-W7D5
+https://github.com/DannyGH/pi
+https://github.com/myagley/mlog
+https://github.com/Moneyalls123/Moneyfalls123
+https://github.com/santiagocardo80/pull-request
+https://github.com/whitfty1/sfdx-project
+https://github.com/Daniel-Acosta-L/cosa
+https://github.com/game-5/finale
+https://github.com/atfost3r/AutomateTheBoringStuff
+https://github.com/sharonk515/calculating-distance-data-science-intro-
+https://github.com/BrandonDBell/trailheadx19-sfdx-bootcamp
+https://github.com/liqingshuchina/vue-first
+https://github.com/wuyunxiangwyx/oie-resources
+https://github.com/prnta/duvida-tipagem-js
+https://github.com/tyunegov/Explorer
+https://github.com/lucaspolo/universodev
+https://github.com/niekang/JavaScriptCore
+https://github.com/VivienYH/hello-world
+https://github.com/hafssaeloiaabane/dattt
+https://github.com/Gavin-Kimberlin/Gavins-Portfolio
+https://github.com/edivldo/junior
+https://github.com/rb670586/background-generator
+https://github.com/hunsakerjeff/sfdx-project
+https://github.com/Niffery/Q-Master
+https://github.com/IrKor/awesome-ton
+https://github.com/mashhour04/mern-boilerplate
+https://github.com/robertliscano/challenge
+https://github.com/funmi5/Banka
+https://github.com/LiuJin3042/OSX-KVM
+https://github.com/pragmatux/ptux-sdk-boneblack
+https://github.com/Vindicia/vindicia.github.io
+https://github.com/anderspitman/iobio-backend
+https://github.com/mateusz-piotrowski/mateusz-piotrowski.github.io
+https://github.com/rswgnu/keycastr
+https://github.com/Fengyu94/homework
+https://github.com/Adahel/LomLib
+
+
 
 
 \cleardoublepage
@@ -1206,3 +1992,6 @@ Como ya adelanté al final del capítulo anterior, tanto las dimensiones utilizada
 % http://texblog.org/2014/04/22/using-google-scholar-to-download-bibtex-citations/
 
 \end{document}
+
+
+
