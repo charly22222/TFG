@@ -31,6 +31,8 @@
 \usepackage[nottoc, notlot, notlof, notindex]{tocbibind} %% Opciones de índice
 \usepackage{latexsym}  %% Logo LaTeX
 \usepackage[table,xcdraw]{xcolor}
+\usepackage{caption}
+\usepackage{subcaption}
 
 \title{Aplicación de Big Data a Proyectos de Ingeniería en GitHub}
 \author{Carlos Morón Barrios}
@@ -440,7 +442,7 @@ Está basado en la función
 
 \begin{equation}
 f(r)=\left\{ \begin{array}{ll} verdadero & si\:\: score(r)\geq score_{ref}\\
-falso & cualquier otro caso\end{array}
+falso & cualquier otro caso\end{array}\right.
 \label{eq:}
 \end{equation}
 
@@ -615,7 +617,7 @@ Utilidad: se dice que un repositorio contiene un proyecto de ingeniería si es si
 
 Para saber si la elección de esos parámetros y pesos son adecuados, se ha escogido un conjunto de repositorios manualmente y que se ha comprobado que contienen proyectos de ingeniería de software. Además, se van a distinguir entre los repositorios que provienen de una organización (que llamaremos Organización) y los que tienen un propósito general para todos los usuarios (que llamaremos Utilidad).
 
-Organización: se han examinado manualmente repositorios de organizaciones conocidas como Amazon, Apache, Facebook, Google y Microsoft y se han elegido manualmente un conjunto de 1.000 repositorios que cumplen alguna de estas características (incluidos en el apéndice de la memoria): tiene licencia de código abierto, usa comentarios para documentar el código, usa integración continua y contiene pruebas unitarias. Además, estos 1.000 repositorios se han seleccionados 500 con proyecto de ingeniería y 500 que no contienen proyecto de ingeniería. En la figura 4.1 \grex{referencia} se muestra el número de repositorios de cada tipo (``engineered'' y ``non-engineered'') agrupados por lenguaje de programación en la organización, donde no proyecto significa en este caso que no son repositorios de organizaciones.
+Organización: se han examinado manualmente repositorios de organizaciones conocidas como Amazon, Apache, Facebook, Google y Microsoft y se han elegido manualmente un conjunto de 1.000 repositorios que cumplen alguna de estas características (incluidos en el apéndice de la memoria): tiene licencia de código abierto, usa comentarios para documentar el código, usa integración continua y contiene pruebas unitarias. Además, estos 1.000 repositorios se han seleccionados 500 con proyecto de ingeniería y 500 que no contienen proyecto de ingeniería. En la figura \ref{fig:norepost} se muestra el número de repositorios de cada tipo (``engineered'' y ``non-engineered'') agrupados por lenguaje de programación en la organización, donde no proyecto significa en este caso que no son repositorios de organizaciones.
 
 
 \begin{figure}[ht]
@@ -646,28 +648,177 @@ Utilidad: estos repositorios se escogieron manualmente de una muestra aleatoria 
 En la figura 4.2 se muestra el número de repositorios de cada tipo (``engineered'' y ``non-engineered'') agrupados por lenguaje de programación en el conjunto de datos de utilidad.
 
 \begin{figure}[ht]
-	\centering
-		\includegraphics[width=14cm,clip]{img/Dist_repos.pdf}
-	\caption{Distribución del número de puntuación de los repositorios; (a) en la organización y (b) utilidad del conjunto de datos}
+     \centering
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura-4-3-a.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura-4-3-b.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+     
+        \caption{Distribución del número de puntuación de los repositorios; (a) en la organización y (b) utilidad del conjunto de datos}
+        
 \end{figure}
+
+%\begin{figure}[ht]
+	%\centering
+		%\includegraphics[width=14cm,clip]{img/Dist_repos.pdf}
+	%\caption{Distribución del número de puntuación de los repositorios; (a) en la organización y (b) utilidad del conjunto de datos}
+%\end{figure}
 
 Por otro lado, en la figura 4.3 se puede ver la distribución del número de repositorios de cada tipo (``engineered'' y ``non-engineered'') pertenecientes a organización y utilidad.
 
 \begin{figure}[ht]
-	\centering
-		\includegraphics[width=12cm,clip]{img/dist_dim.pdf}
-	\caption{Distribución de las dimensiones de repositorios en el conjunto de datos de la organización.}
-	\label{fig:dist_dim}
+     \centering
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura4-4a.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura4-4b.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+		
+		\newline
+		\begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura4-4c.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura4-4d.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+    \newline
+		\begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura4-4e.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura4-4f.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+		\newline
+		\begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura4-4g.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura4-4h.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+        
+        \caption{Distribución de las dimensiones de repositorios en el conjunto de datos de la organización}
+        
 \end{figure}
+
+
+%\begin{figure}[ht]
+	%\centering
+		%\includegraphics[width=12cm,clip]{img/dist_dim.pdf}
+	%\caption{Distribución de las dimensiones de repositorios en el conjunto de datos de la organización.}
+	%\label{fig:dist_dim}
+%\end{figure}
 
 En las figuras 4.4 y 4.5 se muestran las distribuciones de las siete dimensiones obtenidas de los repositorios en la organización y los conjuntos de datos de utilidad, respectivamente.
 
 \begin{figure}[ht]
-	\centering
-		\includegraphics[width=14cm,clip]{img/dist_dim2.pdf}
-	\caption{Distribución de las dimensiones obtenidas de los repositorios en el conjunto de datos de utilidad.}
-	\label{fig:dist_dim2}
+     \centering
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura4-5a.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura4-5b.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+		
+		\newline
+		\begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura4-5c.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura4-5d.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+    \newline
+		\begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura4-5e.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura4-5f.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+		\newline
+		\begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura4-5g.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura4-5h.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+    
+     
+        \caption{Distribución de las dimensiones obtenidas de los repositorios en el conjunto de datos de utilidad.}
+        
 \end{figure}
+
+
+%\begin{figure}[ht]
+	%\centering
+		%\includegraphics[width=14cm,clip]{img/dist_dim2.pdf}
+	%\caption{Distribución de las dimensiones obtenidas de los repositorios en el conjunto de datos de utilidad.}
+	%\label{fig:dist_dim2}
+%\end{figure}
 
 Una vez que ya sabemos calcular las dimensiones de los repositorios, nos surge la duda de qué relación puede haber entre las distintas dimensiones y si que una sea mayor que otra tiene alguna influencia en el resultado final de catalogar a ese repositorio como ingeniería de software o no. Para saber esto hemos recurrido a métodos estadísticos como la correlación de Spearman Rank Co-efficient ($\rho$) para evaluar la correlación entre las diferentes dimensiones.
 
@@ -748,14 +899,77 @@ En este capítulo se presentan los resultados de la validación de los clasificado
 
 En esta sección, se presenta el enfoque y los resultados de la validación de los clasificadores basados en la puntuación y Random Forest entrenados con conjuntos de datos de organización y utilidad. La validación se ha realizado en un conjunto de 300 repositorios llamado conjunto de validación, para el que se estableció manualmente la verdadera clasificación. Se consideró la validación desde dos perspectivas: interna, en la que se validaba el rendimiento de los propios clasificadores, y externa, en la que se comparaba el rendimiento de los clasificadores con el de un esquema de clasificación que utilizaron Ray y colaboradores como criterio (Ray et al. 2014), como por ejemplo, el tamaño del proyecto, tamaño del equipo y tamaño del commit. Se utilizó tasa de falsos positivos (FPR), tasa de falsos negativos (FNR), precisión, memoria y F-medida para evaluar el rendimiento de la clasificación.
 
-
-
-\begin{figure}[htbp]
-	\centering
-		\includegraphics{img/distconval.pdf}
-	\caption{Distribución de las dimensiones de los repositorios en el conjunto de validación.}
-	\label{fig:distconval}
+\begin{figure}[ht]
+     \centering
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura5-1a.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura5-1b.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+		\hfill
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura5-1c.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+		
+		\newline
+		\begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura5-1d.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura5-1e.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura5-1f.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+    \newline
+		\begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura5-1g.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura5-1h.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+		
+     
+        \caption{Distribución de las dimensiones de los repositorios en el conjunto de validación.}
+        
 \end{figure}
+
+
+%\begin{figure}[htbp]
+	%\centering
+		%\includegraphics{img/distconval.pdf}
+	%\caption{Distribución de las dimensiones de los repositorios en el conjunto de validación.}
+	%\label{fig:distconval}
+%\end{figure}
 
 
 \subsection{Establecer la verdad fundamental}
@@ -876,13 +1090,78 @@ La comparación se muestra en la figura 5.5, donde las medianas de la mayoría de 
 
 Las dimensiones utilizadas para representar repositorios de código fuente en el modelo de clasificación son subjetivas. Además de las dimensiones, los umbrales y pesos utilizados en el clasificador basado en la puntuación también son subjetivos. Aunque creemos que las ponderaciones y las dimensiones que se han utilizado son aceptables en el contexto de este estudio, sin embargo, se pueden utilizar esquemas de ponderación alternativos para mitigar parte de la subjetividad empleada. Algunos de estos enfoques alternativos se pueden orientar en el uso de algoritmos de aprendizaje automáticos para evaluar la importancia de las dimensiones utilizando repositorios en un conjunto de datos de entrenamiento, una ponderación uniforme entre dimensiones, o un esquema de ponderación basado en la popularidad. 
 
-
-\begin{figure}[htbp]
-	\centering
-		\includegraphics{img/fig5-4.pdf}
-	\caption{Comparación de la distribución de las dimensiones de los repositorios con diferentes etiquetas de clasificación manual pero todas propiedad de organizaciones.}
-	\label{fig:fig5-4}
+\begin{figure}[ht]
+     \centering
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura5-4a.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura5-4b.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+		\hfill
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura5-4c.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+		
+		\newline
+		\begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura5-4d.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura5-4e.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura5-4f.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+    \newline
+		\begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura5-4g.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img/Figura5-4h.jpg}
+         \caption{}
+         \label{}
+     \end{subfigure}
+		
+     
+        \caption{Distribución de las dimensiones de los repositorios en el conjunto de validación.}
+        
 \end{figure}
+
+
+
+%\begin{figure}[htbp]
+	%\centering
+		%\includegraphics{img/fig5-4.pdf}
+	%\caption{Comparación de la distribución de las dimensiones de los repositorios con diferentes etiquetas de clasificación manual pero todas propiedad de organizaciones.}
+	%\label{fig:fig5-4}
+%\end{figure}
 
 
 
